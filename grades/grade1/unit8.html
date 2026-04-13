@@ -1,4 +1,295 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>20以内的进位加法 | L-MATH 乐学数学</title><link rel="stylesheet" href="../../assets/css/style.css"><link rel="stylesheet" href="../../components/footer.css"><style>* { margin: 0; padding: 0; box-sizing: border-box; } body { background: linear-gradient(180deg, #FFF5EB 0%, #FFF 100%); min-height: 100vh; } .unit-header { background: linear-gradient(135deg, #FF6B6B 0%, #FFA8A8 100%); color: white; padding: 48px 24px 32px; text-align: center; } .unit-header .back-btn { color: white; font-weight: 600; font-size: 0.95rem; margin-bottom: 20px; opacity: 0.9; display: inline-flex; align-items: center; gap: 6px; text-decoration: none; } .unit-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.8rem; margin-bottom: 8px; } .unit-content { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; } .lesson-card { background: white; border-radius: 20px; padding: 28px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); } .lesson-title { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.3rem; color: #FF6B6B; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; } .lesson-title .num { width: 32px; height: 32px; background: #FF6B6B; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; } .learn-box { background: #FFF5F5; border-radius: 12px; padding: 16px 20px; margin-bottom: 16px; border-left: 4px solid #FF6B6B; } .learn-box h4 { color: #FF6B6B; margin-bottom: 8px; } .learn-box ul { padding-left: 20px; color: #555; font-size: 0.9rem; line-height: 1.8; } .calc-demo { display: flex; justify-content: center; align-items: center; gap: 16px; margin: 20px 0; font-size: 1.5rem; font-weight: 700; color: #FF6B6B; } .practice-box { background: linear-gradient(135deg, #E8F8F5 0%, #D6FFF0 100%); border-radius: 16px; padding: 24px; border: 2px solid #69DB7C; } .practice-box h3 { font-family: 'ZCOOL KuaiLe', cursive; color: #2D8A4E; margin-bottom: 16px; } .question { background: white; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; } .q-num { width: 28px; height: 28px; background: #69DB7C; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; } .q-text { font-size: 0.95rem; color: #333; }</style></head>
-<body><div class="unit-header"><a href="index.html" class="back-btn">← 返回一年级上册</a><h1>第八单元：20以内的进位加法</h1><p class="unit-desc">凑十法、9加几、8加几</p></div><div class="unit-content"><div class="lesson-card"><div class="lesson-title"><span class="num">1</span>学习目标</div><div class="learn-box"><h4>📌 本课重点</h4><ul><li>掌握20以内进位加法的计算方法</li><li>学会用"凑十法"计算</li><li>能正确计算9加几、8加几、7加几等</li></ul></div></div><div class="lesson-card"><div class="lesson-title"><span class="num">2</span>凑十法</div><div class="learn-box"><h4>🔑 凑十法口诀</h4><ul><li>看大数，分小数，凑成十，加剩数</li><li>例：9 + 4 = ?</li><li>把4分成1和3，9 + 1 = 10，10 + 3 = 13</li></ul></div><div class="calc-demo"><span>9 + 4 = 13</span></div></div><div class="lesson-card"><div class="lesson-title"><span class="num">3</span>计算练习</div><div class="learn-box"><h4>📝 9加几</h4><ul><li>9 + 2 = 11 &nbsp;&nbsp; 9 + 3 = 12 &nbsp;&nbsp; 9 + 4 = 13</li><li>9 + 5 = 14 &nbsp;&nbsp; 9 + 6 = 15 &nbsp;&nbsp; 9 + 7 = 16</li><li>9 + 8 = 17 &nbsp;&nbsp; 9 + 9 = 18</li></ul></div><div class="learn-box"><h4>📝 8加几</h4><ul><li>8 + 3 = 11 &nbsp;&nbsp; 8 + 4 = 12 &nbsp;&nbsp; 8 + 5 = 13</li><li>8 + 6 = 14 &nbsp;&nbsp; 8 + 7 = 15 &nbsp;&nbsp; 8 + 8 = 16</li></ul></div></div><div class="practice-box"><h3>✏️ 练一练</h3><div class="question"><span class="q-num">1</span><span class="q-text">7 + 5 = ? 用凑十法算一算</span></div><div class="question"><span class="q-num">2</span><span class="q-text">6 + 6 = ?</span></div><div class="question"><span class="q-num">3</span><span class="q-text">小明有8块糖，妈妈又给了他5块，一共多少块？</span></div></div></div><footer class="footer"><div class="container"><p class="footer-text">🧮 L-MATH 乐学数学 一年级上册</p></div></footer></body></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第八单元 - 20以内的进位加法 | L-MATH 乐学数学</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../components/footer.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: linear-gradient(180deg, #FFF5EB 0%, #FFF 100%); min-height: 100vh; }
+    .unit-header {
+      background: linear-gradient(135deg, #20C997 0%, #63E6BE 100%);
+      color: white; padding: 48px 24px 32px; text-align: center;
+    }
+    .unit-header .back-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: white; font-weight: 600; font-size: 0.95rem;
+      margin-bottom: 20px; opacity: 0.9;
+    }
+    .unit-header .back-btn:hover { opacity: 1; text-decoration: underline; }
+    .unit-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.8rem; margin-bottom: 8px; }
+    .unit-header .unit-desc { opacity: 0.9; font-size: 0.95rem; }
+    .unit-content { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; }
+    .lesson-card {
+      background: white; border-radius: 20px; padding: 28px; margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #f0f0f0;
+    }
+    .lesson-title {
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: 1.3rem; color: #20C997;
+      margin-bottom: 16px; display: flex; align-items: center; gap: 10px;
+    }
+    .lesson-title .num { 
+      width: 32px; height: 32px; background: #20C997; color: white;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem; font-weight: 700;
+    }
+    .learn-box {
+      background: #E6FCF5; border-radius: 12px; padding: 16px 20px;
+      margin-bottom: 16px; border-left: 4px solid #20C997;
+    }
+    .learn-box h4 { font-size: 0.95rem; color: #087F5B; margin-bottom: 8px; }
+    .learn-box ul { padding-left: 20px; color: #555; font-size: 0.9rem; line-height: 1.8; }
+    .example-box {
+      background: #F8F9FA; border-radius: 12px; padding: 20px;
+      margin: 16px 0;
+    }
+    .example-box h4 { font-size: 0.9rem; color: #888; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .calc-demo {
+      background: white; border-radius: 16px; padding: 24px;
+      text-align: center; margin: 16px 0;
+    }
+    .calc-row {
+      display: flex; align-items: center; justify-content: center;
+      gap: 10px; font-size: 1.5rem; flex-wrap: wrap;
+    }
+    .calc-operator {
+      background: #20C997; color: white;
+      width: 32px; height: 32px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1rem;
+    }
+    .make-ten-demo {
+      display: flex; flex-direction: column; align-items: center; gap: 16px;
+      padding: 20px; background: white; border-radius: 12px;
+    }
+    .make-ten-row {
+      display: flex; align-items: center; gap: 20px;
+      font-size: 1.8rem;
+    }
+    .arrow {
+      font-size: 2rem; color: #20C997;
+    }
+    .formula-table {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+      margin: 20px 0;
+    }
+    .formula-cell {
+      background: white; border-radius: 12px; padding: 16px;
+      text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .formula-cell .equation {
+      font-size: 1.3rem; font-weight: 700; color: #20C997;
+      font-family: 'ZCOOL KuaiLe', cursive;
+    }
+    .practice-box {
+      background: linear-gradient(135deg, #E8F8F5 0%, #D6FFF0 100%);
+      border-radius: 16px; padding: 24px; border: 2px solid #69DB7C;
+    }
+    .practice-box h3 {
+      font-family: 'ZCOOL KuaiLe', cursive; color: #2D8A4E;
+      margin-bottom: 16px; display: flex; align-items: center; gap: 8px;
+    }
+    .question {
+      background: white; border-radius: 12px; padding: 16px 20px;
+      margin-bottom: 12px; display: flex; align-items: center; gap: 12px;
+    }
+    .q-num {
+      width: 28px; height: 28px; background: #69DB7C; color: white;
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
+    }
+    .q-text { font-size: 0.95rem; color: #333; }
+    .check-btn {
+      display: block; width: 100%; max-width: 200px; margin: 20px auto 0;
+      padding: 12px 24px; background: #69DB7C; color: white;
+      border: none; border-radius: 999px; font-size: 1rem; font-weight: 700;
+      cursor: pointer; transition: all 0.3s;
+    }
+    .check-btn:hover { background: #4CB87A; transform: scale(1.02); }
+    .breadcrumb {
+      background: white; padding: 16px 24px; border-radius: 12px;
+      margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .breadcrumb-list {
+      display: flex; align-items: center; gap: 8px;
+      list-style: none; flex-wrap: wrap;
+    }
+    .breadcrumb-item a { color: #20C997; text-decoration: none; }
+    .breadcrumb-item a:hover { text-decoration: underline; }
+    .breadcrumb-item span { color: #888; }
+    .breadcrumb-separator { color: #ccc; }
+  </style>
+</head>
+<body>
+  <div class="unit-header">
+    <a href="index.html" class="back-btn">← 返回一年级上册</a>
+    <h1>第八单元：20以内的进位加法</h1>
+    <p class="unit-desc">凑十法 · 进位加法</p>
+  </div>
+
+  <div class="unit-content">
+    <nav class="breadcrumb" aria-label="面包屑导航">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item"><a href="../../index.html">首页</a></li>
+        <li class="breadcrumb-separator">›</li>
+        <li class="breadcrumb-item"><a href="index.html">一年级</a></li>
+        <li class="breadcrumb-separator">›</li>
+        <li class="breadcrumb-item"><a href="index.html">上册</a></li>
+        <li class="breadcrumb-separator">›</li>
+        <li class="breadcrumb-item"><span>进位加法</span></li>
+      </ol>
+    </nav>
+
+    <!-- 学习目标 -->
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">1</span>学习目标</div>
+      <div class="learn-box">
+        <h4>📌 本课重点</h4>
+        <ul>
+          <li>掌握"凑十法"计算 20 以内的进位加法</li>
+          <li>熟练计算 9 加几、8 加几、7 加几、6 加几</li>
+          <li>理解进位的概念</li>
+          <li>能运用进位加法解决简单的实际问题</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 凑十法 -->
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">2</span>凑十法</div>
+      <div class="example-box">
+        <h4>🔢 什么是凑十法？</h4>
+        <p style="color:#555;font-size:0.95rem;line-height:1.8;text-align:center;">
+          看大数，分小数，<br>
+          凑成十，加剩数。
+        </p>
+      </div>
+
+      <div class="example-box">
+        <h4>💡 例题：9 + 5 = ?</h4>
+        <div class="make-ten-demo">
+          <div class="make-ten-row">
+            <span>9</span>
+            <span>+</span>
+            <span>5</span>
+          </div>
+          <div class="arrow">⬇️</div>
+          <div class="make-ten-row">
+            <span>9</span>
+            <span>+</span>
+            <span style="color:#20C997;font-weight:700;">1</span>
+            <span>+</span>
+            <span>4</span>
+          </div>
+          <div class="arrow">⬇️</div>
+          <div class="make-ten-row">
+            <span style="color:#20C997;font-weight:700;">10</span>
+            <span>+</span>
+            <span>4</span>
+            <span>=</span>
+            <span style="color:#20C997;font-weight:700;">14</span>
+          </div>
+        </div>
+        <p style="text-align:center;color:#555;margin-top:12px;">
+          把 5 分成 1 和 4，9 + 1 = 10，10 + 4 = <strong>14</strong>
+        </p>
+      </div>
+
+      <div class="example-box">
+        <h4>💡 例题：8 + 6 = ?</h4>
+        <div class="make-ten-demo">
+          <div class="make-ten-row">
+            <span>8</span>
+            <span>+</span>
+            <span>6</span>
+          </div>
+          <div class="arrow">⬇️</div>
+          <div class="make-ten-row">
+            <span>8</span>
+            <span>+</span>
+            <span style="color:#20C997;font-weight:700;">2</span>
+            <span>+</span>
+            <span>4</span>
+          </div>
+          <div class="arrow">⬇️</div>
+          <div class="make-ten-row">
+            <span style="color:#20C997;font-weight:700;">10</span>
+            <span>+</span>
+            <span>4</span>
+            <span>=</span>
+            <span style="color:#20C997;font-weight:700;">14</span>
+          </div>
+        </div>
+        <p style="text-align:center;color:#555;margin-top:12px;">
+          把 6 分成 2 和 4，8 + 2 = 10，10 + 4 = <strong>14</strong>
+        </p>
+      </div>
+    </div>
+
+    <!-- 常用算式 -->
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">3</span>常用进位加法算式</div>
+      <div class="formula-table">
+        <div class="formula-cell"><div class="equation">9+2=11</div></div>
+        <div class="formula-cell"><div class="equation">9+3=12</div></div>
+        <div class="formula-cell"><div class="equation">9+4=13</div></div>
+        <div class="formula-cell"><div class="equation">9+5=14</div></div>
+        <div class="formula-cell"><div class="equation">9+6=15</div></div>
+        <div class="formula-cell"><div class="equation">9+7=16</div></div>
+        <div class="formula-cell"><div class="equation">8+3=11</div></div>
+        <div class="formula-cell"><div class="equation">8+4=12</div></div>
+        <div class="formula-cell"><div class="equation">8+5=13</div></div>
+        <div class="formula-cell"><div class="equation">7+4=11</div></div>
+        <div class="formula-cell"><div class="equation">7+5=12</div></div>
+        <div class="formula-cell"><div class="equation">6+5=11</div></div>
+      </div>
+
+      <div class="example-box">
+        <h4>💡 凑十歌</h4>
+        <p style="color:#555;font-size:1rem;line-height:2;text-align:center;font-family:'ZCOOL KuaiLe',cursive;">
+          一九一九好朋友，<br>
+          二八二八手拉手，<br>
+          三七三七真亲密，<br>
+          四六四六一起走，<br>
+          五五凑成一双手！
+        </p>
+      </div>
+    </div>
+
+    <!-- 练一练 -->
+    <div class="practice-box">
+      <h3>✏️ 练一练</h3>
+      <div class="question">
+        <span class="q-num">1</span>
+        <span class="q-text">9 + 6 = ____</span>
+      </div>
+      <div class="question">
+        <span class="q-num">2</span>
+        <span class="q-text">8 + 7 = ____</span>
+      </div>
+      <div class="question">
+        <span class="q-num">3</span>
+        <span class="q-text">7 + 5 = ____</span>
+      </div>
+      <div class="question">
+        <span class="q-num">4</span>
+        <span class="q-text">6 + 8 = ____</span>
+      </div>
+      <div class="question">
+        <span class="q-num">5</span>
+        <span class="q-text">9 + 9 = ____</span>
+      </div>
+      <button class="check-btn" onclick="alert('太棒了！继续加油！🌟')">检查答案</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">🧮 L-MATH 乐学数学 · 一年级上册</p>
+    </div>
+  </footer>
+</body>
+</html>

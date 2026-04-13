@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>6~10的认识和加减法 | L-MATH 乐学数学</title>
+  <title>第五单元 - 6~10的认识和加减法 | L-MATH 乐学数学</title>
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../../components/footer.css">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: linear-gradient(180deg, #FFF5EB 0%, #FFF 100%); min-height: 100vh; }
     .unit-header {
-      background: linear-gradient(135deg, #4DABF7 0%, #74C0FC 100%);
+      background: linear-gradient(135deg, #E64980 0%, #FF6B9D 100%);
       color: white; padding: 48px 24px 32px; text-align: center;
     }
     .unit-header .back-btn {
@@ -22,80 +22,252 @@
     .unit-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.8rem; margin-bottom: 8px; }
     .unit-header .unit-desc { opacity: 0.9; font-size: 0.95rem; }
     .unit-content { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; }
-    .topic-card {
-      background: white; border-radius: 20px; padding: 24px; margin-bottom: 20px;
+    .lesson-card {
+      background: white; border-radius: 20px; padding: 28px; margin-bottom: 24px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #f0f0f0;
-      text-decoration: none; color: inherit; display: block;
-      transition: all 0.3s;
     }
-    .topic-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
-    .topic-header { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
-    .topic-num {
-      width: 48px; height: 48px; border-radius: 14px;
+    .lesson-title {
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: 1.3rem; color: #E64980;
+      margin-bottom: 16px; display: flex; align-items: center; gap: 10px;
+    }
+    .lesson-title .num { 
+      width: 32px; height: 32px; background: #E64980; color: white;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem; font-weight: 700;
+    }
+    .learn-box {
+      background: #FFF0F6; border-radius: 12px; padding: 16px 20px;
+      margin-bottom: 16px; border-left: 4px solid #E64980;
+    }
+    .learn-box h4 { font-size: 0.95rem; color: #C2255C; margin-bottom: 8px; }
+    .learn-box ul { padding-left: 20px; color: #555; font-size: 0.9rem; line-height: 1.8; }
+    .example-box {
+      background: #F8F9FA; border-radius: 12px; padding: 20px;
+      margin: 16px 0;
+    }
+    .example-box h4 { font-size: 0.9rem; color: #888; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .number-row {
+      display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;
+      font-size: 2rem; margin: 20px 0;
+    }
+    .number-card {
+      background: white; border-radius: 16px; padding: 16px;
+      text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      min-width: 80px;
+    }
+    .number-card .digit {
+      font-size: 2.5rem; font-weight: 700; color: #E64980;
+      font-family: 'ZCOOL KuaiLe', cursive;
+    }
+    .number-card .objects {
+      font-size: 1.2rem; margin-top: 8px;
+    }
+    .calc-demo {
+      background: white; border-radius: 16px; padding: 24px;
+      text-align: center; margin: 16px 0;
+    }
+    .calc-row {
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.4rem; color: white; font-weight: 800;
+      gap: 15px; font-size: 1.8rem; flex-wrap: wrap;
     }
-    .topic-title { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.2rem; color: #333; }
-    .topic-desc { font-size: 0.9rem; color: #888; margin-left: 64px; }
-    .topic-arrow { float: right; color: #ccc; font-size: 1.2rem; margin-top: -30px; }
+    .calc-operator {
+      background: #E64980; color: white;
+      width: 36px; height: 36px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1.2rem;
+    }
+    .practice-box {
+      background: linear-gradient(135deg, #E8F8F5 0%, #D6FFF0 100%);
+      border-radius: 16px; padding: 24px; border: 2px solid #69DB7C;
+    }
+    .practice-box h3 {
+      font-family: 'ZCOOL KuaiLe', cursive; color: #2D8A4E;
+      margin-bottom: 16px; display: flex; align-items: center; gap: 8px;
+    }
+    .question {
+      background: white; border-radius: 12px; padding: 16px 20px;
+      margin-bottom: 12px; display: flex; align-items: center; gap: 12px;
+    }
+    .q-num {
+      width: 28px; height: 28px; background: #69DB7C; color: white;
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
+    }
+    .q-text { font-size: 0.95rem; color: #333; }
+    .check-btn {
+      display: block; width: 100%; max-width: 200px; margin: 20px auto 0;
+      padding: 12px 24px; background: #69DB7C; color: white;
+      border: none; border-radius: 999px; font-size: 1rem; font-weight: 700;
+      cursor: pointer; transition: all 0.3s;
+    }
+    .check-btn:hover { background: #4CB87A; transform: scale(1.02); }
+    .breadcrumb {
+      background: white; padding: 16px 24px; border-radius: 12px;
+      margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .breadcrumb-list {
+      display: flex; align-items: center; gap: 8px;
+      list-style: none; flex-wrap: wrap;
+    }
+    .breadcrumb-item a { color: #E64980; text-decoration: none; }
+    .breadcrumb-item a:hover { text-decoration: underline; }
+    .breadcrumb-item span { color: #888; }
+    .breadcrumb-separator { color: #ccc; }
   </style>
 </head>
 <body>
   <div class="unit-header">
     <a href="index.html" class="back-btn">← 返回一年级上册</a>
     <h1>第五单元：6~10的认识和加减法</h1>
-    <p class="unit-desc">认识6~10各数 · 加减法练习</p>
+    <p class="unit-desc">认识更大的数字 · 学习10以内加减</p>
   </div>
 
   <div class="unit-content">
-    <a href="unit5-1.html" class="topic-card">
-      <div class="topic-header">
-        <div class="topic-num" style="background:#FF6B6B;">6</div>
-        <span class="topic-title">认识6和7</span>
+    <nav class="breadcrumb" aria-label="面包屑导航">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item"><a href="../../index.html">首页</a></li>
+        <li class="breadcrumb-separator">›</li>
+        <li class="breadcrumb-item"><a href="index.html">一年级</a></li>
+        <li class="breadcrumb-separator">›</li>
+        <li class="breadcrumb-item"><a href="index.html">上册</a></li>
+        <li class="breadcrumb-separator">›</li>
+        <li class="breadcrumb-item"><span>6~10的认识</span></li>
+      </ol>
+    </nav>
+
+    <!-- 学习目标 -->
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">1</span>学习目标</div>
+      <div class="learn-box">
+        <h4>📌 本课重点</h4>
+        <ul>
+          <li>认识数字 6、7、8、9、10，会读会写</li>
+          <li>理解数的顺序和大小比较</li>
+          <li>学习 10 以内的加法</li>
+          <li>学习 10 以内的减法</li>
+          <li>认识数的组成（如：8可以分成3和5）</li>
+        </ul>
       </div>
-      <p class="topic-desc">学习数字6、7，会读会写，知道它们的大小</p>
-      <span class="topic-arrow">→</span>
-    </a>
-    <a href="unit5-2.html" class="topic-card">
-      <div class="topic-header">
-        <div class="topic-num" style="background:#FFA94D;">7</div>
-        <span class="topic-title">6和7的加减法</span>
+    </div>
+
+    <!-- 认识数字 -->
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">2</span>认识数字 6~10</div>
+      <div class="number-row">
+        <div class="number-card">
+          <div class="digit">6</div>
+          <div class="objects">🎈🎈🎈🎈🎈🎈</div>
+        </div>
+        <div class="number-card">
+          <div class="digit">7</div>
+          <div class="objects">🌈🌈🌈🌈🌈🌈🌈</div>
+        </div>
+        <div class="number-card">
+          <div class="digit">8</div>
+          <div class="objects">🐙</div>
+        </div>
+        <div class="number-card">
+          <div class="digit">9</div>
+          <div class="objects">🐱🐱🐱🐱🐱🐱🐱🐱🐱</div>
+        </div>
+        <div class="number-card">
+          <div class="digit">10</div>
+          <div class="objects">👐</div>
+        </div>
       </div>
-      <p class="topic-desc">学习6和7的加法、减法</p>
-      <span class="topic-arrow">→</span>
-    </a>
-    <a href="unit5-3.html" class="topic-card">
-      <div class="topic-header">
-        <div class="topic-num" style="background:#FFD93D;">8</div>
-        <span class="topic-title">认识8和9</span>
+      <p style="text-align:center;color:#555;margin-top:16px;">
+        我们有 <strong>10</strong> 根手指，所以10是一个很重要的数字！
+      </p>
+    </div>
+
+    <!-- 加法学习 -->
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">3</span>10以内的加法</div>
+      <div class="example-box">
+        <h4>➕ 加法练习</h4>
+        <div class="calc-demo">
+          <div class="calc-row">
+            <span>🍎🍎🍎🍎</span>
+            <span class="calc-operator">+</span>
+            <span>🍎🍎🍎</span>
+            <span class="calc-operator">=</span>
+            <span>🍎🍎🍎🍎🍎🍎🍎</span>
+          </div>
+          <p style="margin-top:16px;font-size:1.5rem;color:#E64980;font-weight:700;">
+            4 + 3 = 7
+          </p>
+        </div>
       </div>
-      <p class="topic-desc">学习数字8、9，会比较大小</p>
-      <span class="topic-arrow">→</span>
-    </a>
-    <a href="unit5-4.html" class="topic-card">
-      <div class="topic-header">
-        <div class="topic-num" style="background:#69DB7C;">9</div>
-        <span class="topic-title">8和9的加减法</span>
+
+      <div class="example-box">
+        <h4>💡 凑十歌</h4>
+        <p style="color:#555;font-size:1rem;line-height:2;text-align:center;font-family:'ZCOOL KuaiLe',cursive;">
+          一九一九好朋友，<br>
+          二八二八手拉手，<br>
+          三七三七真亲密，<br>
+          四六四六一起走，<br>
+          五五凑成一双手！
+        </p>
       </div>
-      <p class="topic-desc">学习8和9的加法、减法</p>
-      <span class="topic-arrow">→</span>
-    </a>
-    <a href="unit5-5.html" class="topic-card">
-      <div class="topic-header">
-        <div class="topic-num" style="background:#4DABF7;">10</div>
-        <span class="topic-title">认识10</span>
+    </div>
+
+    <!-- 减法学习 -->
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">4</span>10以内的减法</div>
+      <div class="example-box">
+        <h4>➖ 减法练习</h4>
+        <div class="calc-demo">
+          <div class="calc-row">
+            <span>🍎🍎🍎🍎🍎🍎🍎🍎</span>
+            <span class="calc-operator">-</span>
+            <span>🍎🍎🍎</span>
+            <span class="calc-operator">=</span>
+            <span>🍎🍎🍎🍎🍎</span>
+          </div>
+          <p style="margin-top:16px;font-size:1.5rem;color:#E64980;font-weight:700;">
+            8 - 3 = 5
+          </p>
+        </div>
       </div>
-      <p class="topic-desc">学习数字10，认识"十"的概念</p>
-      <span class="topic-arrow">→</span>
-    </a>
-    <a href="unit5-6.html" class="topic-card">
-      <div class="topic-header">
-        <div class="topic-num" style="background:#9775FA;">+</div>
-        <span class="topic-title">10的加减法</span>
+
+      <div class="example-box">
+        <h4>💡 数的组成</h4>
+        <p style="color:#555;font-size:0.95rem;line-height:1.8;">
+          🔹 6 可以分成 3 和 3<br>
+          🔹 7 可以分成 4 和 3<br>
+          🔹 8 可以分成 5 和 3<br>
+          🔹 9 可以分成 5 和 4<br>
+          🔹 10 可以分成 5 和 5
+        </p>
       </div>
-      <p class="topic-desc">学习10的加法和减法，"凑十法"入门</p>
-      <span class="topic-arrow">→</span>
-    </a>
+    </div>
+
+    <!-- 练一练 -->
+    <div class="practice-box">
+      <h3>✏️ 练一练</h3>
+      <div class="question">
+        <span class="q-num">1</span>
+        <span class="q-text">6 + 3 = ____</span>
+      </div>
+      <div class="question">
+        <span class="q-num">2</span>
+        <span class="q-text">9 - 4 = ____</span>
+      </div>
+      <div class="question">
+        <span class="q-num">3</span>
+        <span class="q-text">7 + ____ = 10</span>
+      </div>
+      <div class="question">
+        <span class="q-num">4</span>
+        <span class="q-text">10 - 6 = ____</span>
+      </div>
+      <div class="question">
+        <span class="q-num">5</span>
+        <span class="q-text">5 + 5 = ____</span>
+      </div>
+      <button class="check-btn" onclick="alert('太棒了！继续加油！🌟')">检查答案</button>
+    </div>
   </div>
 
   <footer class="footer">

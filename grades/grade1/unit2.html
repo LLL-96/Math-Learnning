@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>位置 - 上下前后 | L-MATH 乐学数学</title>
+  <title>第二单元 - 位置 | L-MATH 乐学数学</title>
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../../components/footer.css">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: linear-gradient(180deg, #FFF5EB 0%, #FFF 100%); min-height: 100vh; }
     .unit-header {
-      background: linear-gradient(135deg, #FFA94D 0%, #FFD93D 100%);
-      color: #333; padding: 48px 24px 32px; text-align: center;
+      background: linear-gradient(135deg, #FFA94D 0%, #FFC078 100%);
+      color: white; padding: 48px 24px 32px; text-align: center;
     }
     .unit-header .back-btn {
       display: inline-flex; align-items: center; gap: 6px;
-      color: #333; font-weight: 600; font-size: 0.95rem;
-      margin-bottom: 20px; opacity: 0.8;
+      color: white; font-weight: 600; font-size: 0.95rem;
+      margin-bottom: 20px; opacity: 0.9;
     }
     .unit-header .back-btn:hover { opacity: 1; text-decoration: underline; }
     .unit-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.8rem; margin-bottom: 8px; }
-    .unit-header .unit-desc { opacity: 0.8; font-size: 0.95rem; }
+    .unit-header .unit-desc { opacity: 0.9; font-size: 0.95rem; }
     .unit-content { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; }
     .lesson-card {
       background: white; border-radius: 20px; padding: 28px; margin-bottom: 24px;
@@ -28,7 +28,7 @@
     }
     .lesson-title {
       font-family: 'ZCOOL KuaiLe', cursive;
-      font-size: 1.3rem; color: #E67700;
+      font-size: 1.3rem; color: #FFA94D;
       margin-bottom: 16px; display: flex; align-items: center; gap: 10px;
     }
     .lesson-title .num { 
@@ -37,10 +37,10 @@
       font-size: 0.9rem; font-weight: 700;
     }
     .learn-box {
-      background: #FFF9E6; border-radius: 12px; padding: 16px 20px;
+      background: #FFF8ED; border-radius: 12px; padding: 16px 20px;
       margin-bottom: 16px; border-left: 4px solid #FFA94D;
     }
-    .learn-box h4 { font-size: 0.95rem; color: #E67700; margin-bottom: 8px; }
+    .learn-box h4 { font-size: 0.95rem; color: #FFA94D; margin-bottom: 8px; }
     .learn-box ul { padding-left: 20px; color: #555; font-size: 0.9rem; line-height: 1.8; }
     .example-box {
       background: #F8F9FA; border-radius: 12px; padding: 20px;
@@ -48,18 +48,17 @@
     }
     .example-box h4 { font-size: 0.9rem; color: #888; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
     .position-demo {
-      display: flex; justify-content: center; align-items: center;
-      gap: 20px; margin: 20px 0; flex-wrap: wrap;
+      display: flex; flex-direction: column; align-items: center; gap: 20px;
+      padding: 20px; background: white; border-radius: 12px;
     }
-    .pos-item {
-      width: 80px; height: 80px; border-radius: 16px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 2.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    .position-row {
+      display: flex; align-items: center; gap: 40px;
+      font-size: 2rem;
     }
-    .pos-label {
-      text-align: center; margin-top: 8px; font-size: 0.85rem; color: #666;
+    .position-label {
+      font-size: 1rem; color: #666; font-weight: 600;
+      padding: 4px 12px; background: #f0f0f0; border-radius: 8px;
     }
-    .arrow { font-size: 2rem; color: #FFA94D; }
     .practice-box {
       background: linear-gradient(135deg, #E8F8F5 0%, #D6FFF0 100%);
       border-radius: 16px; padding: 24px; border: 2px solid #69DB7C;
@@ -78,25 +77,57 @@
       font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
     }
     .q-text { font-size: 0.95rem; color: #333; }
+    .check-btn {
+      display: block; width: 100%; max-width: 200px; margin: 20px auto 0;
+      padding: 12px 24px; background: #69DB7C; color: white;
+      border: none; border-radius: 999px; font-size: 1rem; font-weight: 700;
+      cursor: pointer; transition: all 0.3s;
+    }
+    .check-btn:hover { background: #4CB87A; transform: scale(1.02); }
+    .breadcrumb {
+      background: white; padding: 16px 24px; border-radius: 12px;
+      margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .breadcrumb-list {
+      display: flex; align-items: center; gap: 8px;
+      list-style: none; flex-wrap: wrap;
+    }
+    .breadcrumb-item a { color: #FFA94D; text-decoration: none; }
+    .breadcrumb-item a:hover { text-decoration: underline; }
+    .breadcrumb-item span { color: #888; }
+    .breadcrumb-separator { color: #ccc; }
   </style>
 </head>
 <body>
   <div class="unit-header">
     <a href="index.html" class="back-btn">← 返回一年级上册</a>
-    <h1>第二课：位置</h1>
-    <p class="unit-desc">上、下、前、后 · 认识位置关系</p>
+    <h1>第二单元：位置</h1>
+    <p class="unit-desc">认识上下、前后、左右</p>
   </div>
 
   <div class="unit-content">
+    <nav class="breadcrumb" aria-label="面包屑导航">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item"><a href="../../index.html">首页</a></li>
+        <li class="breadcrumb-separator">›</li>
+        <li class="breadcrumb-item"><a href="index.html">一年级</a></li>
+        <li class="breadcrumb-separator">›</li>
+        <li class="breadcrumb-item"><a href="index.html">上册</a></li>
+        <li class="breadcrumb-separator">›</li>
+        <li class="breadcrumb-item"><span>位置</span></li>
+      </ol>
+    </nav>
+
     <!-- 学习目标 -->
     <div class="lesson-card">
       <div class="lesson-title"><span class="num">1</span>学习目标</div>
       <div class="learn-box">
         <h4>📌 本课重点</h4>
         <ul>
-          <li>认识"上、下、前、后"四个方位词</li>
-          <li>能描述物体的位置关系</li>
-          <li>知道位置是相对的，参照物不同，位置可能不同</li>
+          <li>认识"上、下"的位置关系，能用上下描述物体位置</li>
+          <li>认识"前、后"的位置关系，能用前后描述物体位置</li>
+          <li>认识"左、右"的位置关系，能区分自己的左手和右手</li>
+          <li>能用位置词描述生活中物体的相对位置</li>
         </ul>
       </div>
     </div>
@@ -104,31 +135,67 @@
     <!-- 知识讲解 -->
     <div class="lesson-card">
       <div class="lesson-title"><span class="num">2</span>知识讲解</div>
+      
       <div class="example-box">
-        <h4>🎨 上下关系</h4>
+        <h4>⬆️⬇️ 上下</h4>
         <div class="position-demo">
-          <div><div class="pos-item" style="background:#87CEEB;">☁️</div><div class="pos-label">云在上面</div></div>
-          <span class="arrow">↓</span>
-          <div><div class="pos-item" style="background:#90EE90;">🏠</div><div class="pos-label">房子在下面</div></div>
+          <div class="position-row">
+            <span>🎈</span>
+            <span class="position-label">上</span>
+          </div>
+          <div style="font-size: 1.2rem; color: #888;">桌子</div>
+          <div class="position-row">
+            <span>🐱</span>
+            <span class="position-label">下</span>
+          </div>
         </div>
-        <p style="text-align:center;color:#555;font-size:0.95rem;">云在房子的<b style="color:#E67700;">上面</b>，房子在云的<b style="color:#E67700;">下面</b></p>
+        <p style="text-align:center;color:#555;margin-top:16px;">
+          气球在桌子的<span style="color:#FFA94D;font-weight:700;">上面</span>，小猫在桌子的<span style="color:#FFA94D;font-weight:700;">下面</span>
+        </p>
       </div>
+
       <div class="example-box">
-        <h4>🎨 前后关系</h4>
+        <h4>⬅️➡️ 前后</h4>
         <div class="position-demo">
-          <div><div class="pos-item" style="background:#FFB6C1;">🐱</div><div class="pos-label">小猫在前</div></div>
-          <span class="arrow">→</span>
-          <div><div class="pos-item" style="background:#DDA0DD;">🐶</div><div class="pos-label">小狗在后</div></div>
+          <div class="position-row">
+            <span>🚶</span>
+            <span style="font-size:1.5rem;">→</span>
+            <span class="position-label">前</span>
+          </div>
+          <div style="font-size: 1.2rem; color: #888;">面向的方向是"前"</div>
+          <div class="position-row">
+            <span class="position-label">后</span>
+            <span style="font-size:1.5rem;">→</span>
+            <span>🚶</span>
+          </div>
         </div>
-        <p style="text-align:center;color:#555;font-size:0.95rem;">小猫在小狗的<b style="color:#E67700;">前面</b>，小狗在小猫的<b style="color:#E67700;">后面</b></p>
+        <p style="text-align:center;color:#555;margin-top:16px;">
+          面向的地方是<span style="color:#FFA94D;font-weight:700;">前</span>，背对的地方是<span style="color:#FFA94D;font-weight:700;">后</span>
+        </p>
       </div>
-      <div class="learn-box">
-        <h4>💡 小提示</h4>
-        <ul>
-          <li>说"上、下"时，要和谁比</li>
-          <li>说"前、后"时，也要知道和谁比</li>
-          <li>东西不同，位置可能不一样哦！</li>
-        </ul>
+
+      <div class="example-box">
+        <h4>👋 左右</h4>
+        <div class="position-demo">
+          <div style="font-size: 4rem;">👋</div>
+          <div style="display:flex;gap:60px;margin-top:10px;">
+            <span class="position-label">左手</span>
+            <span class="position-label">右手</span>
+          </div>
+        </div>
+        <p style="text-align:center;color:#555;margin-top:16px;">
+          写字的手通常是<span style="color:#FFA94D;font-weight:700;">右手</span>，另一只手是<span style="color:#FFA94D;font-weight:700;">左手</span>
+        </p>
+      </div>
+
+      <div class="example-box">
+        <h4>💡 位置小口诀</h4>
+        <p style="color:#555;font-size:1rem;line-height:2;text-align:center;font-family:'ZCOOL KuaiLe',cursive;">
+          头顶上面是天，<br>
+          脚下下面是地，<br>
+          面向前面走，<br>
+          左手右手分两边！
+        </p>
       </div>
     </div>
 
@@ -137,16 +204,17 @@
       <h3>✏️ 练一练</h3>
       <div class="question">
         <span class="q-num">1</span>
-        <span class="q-text">书包在桌子的<b style="color:#E67700;">下面</b>，那桌子在书包的____面？</span>
+        <span class="q-text">太阳在房子的____面（上/下）</span>
       </div>
       <div class="question">
         <span class="q-num">2</span>
-        <span class="q-text">小明站在小红的前面，小红站在小明的____面？</span>
+        <span class="q-text">排队时，小明在小红的前面，小红在小明的____面（前/后）</span>
       </div>
       <div class="question">
         <span class="q-num">3</span>
-        <span class="q-text">看图说一说：鸟儿在天上飞，鱼儿在水里游，鸟儿在鱼的____面？</span>
+        <span class="q-text">举起你的____手（左/右），向老师问好</span>
       </div>
+      <button class="check-btn" onclick="alert('太棒了！继续加油！🌟')">检查答案</button>
     </div>
   </div>
 
