@@ -59,6 +59,29 @@
       margin-bottom: 24px;
     }
     .back-link:hover { text-decoration: underline; }
+    
+    /* 面包屑导航 */
+    .breadcrumb {
+      background: white;
+      padding: 16px 24px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .breadcrumb-list {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    .breadcrumb-item a {
+      color: #FF6B6B;
+      text-decoration: none;
+    }
+    .breadcrumb-item a:hover { text-decoration: underline; }
+    .breadcrumb-item span { color: #888; }
+    .breadcrumb-separator { color: #ccc; }
   </style>
 </head>
 <body>
@@ -70,7 +93,15 @@
   </div>
 
   <div class="grade-body">
-    <a href="../../index.html" class="back-link">← 返回首页</a>
+    <nav class="breadcrumb" aria-label="面包屑导航">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item"><a href="../../index.html">首页</a></li>
+        <li class="breadcrumb-separator">›</li>
+        <li class="breadcrumb-item"><span>一年级</span></li>
+        <li class="breadcrumb-separator">›</li>
+        <li class="breadcrumb-item"><span>上册</span></li>
+      </ol>
+    </nav>
     
     <div style="display:flex;gap:12px;justify-content:center;margin-bottom:24px;">
       <a href="index.html" style="padding:10px 24px;border-radius:999px;font-weight:600;font-size:0.95rem;background:#FF6B6B;color:white;border:2px solid #FF6B6B;text-decoration:none;">上册</a>

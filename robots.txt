@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lll-96.github.io/Math-Learnning/sitemap.xml

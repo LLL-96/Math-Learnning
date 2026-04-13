@@ -76,6 +76,29 @@
       cursor: pointer; transition: all 0.3s;
     }
     .check-btn:hover { background: #4CB87A; transform: scale(1.02); }
+    
+    /* 面包屑导航 */
+    .breadcrumb {
+      background: white;
+      padding: 16px 24px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .breadcrumb-list {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    .breadcrumb-item a {
+      color: #FF6B6B;
+      text-decoration: none;
+    }
+    .breadcrumb-item a:hover { text-decoration: underline; }
+    .breadcrumb-item span { color: #888; }
+    .breadcrumb-separator { color: #ccc; }
   </style>
 </head>
 <body>
@@ -86,6 +109,17 @@
   </div>
 
   <div class="unit-content">
+    <nav class="breadcrumb" aria-label="面包屑导航">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item"><a href="../../index.html">首页</a></li>
+        <li class="breadcrumb-separator">›</li>
+        <li class="breadcrumb-item"><a href="index.html">一年级</a></li>
+        <li class="breadcrumb-separator">›</li>
+        <li class="breadcrumb-item"><a href="index.html">上册</a></li>
+        <li class="breadcrumb-separator">›</li>
+        <li class="breadcrumb-item"><span>准备课</span></li>
+      </ol>
+    </nav>
     <!-- 学习目标 -->
     <div class="lesson-card">
       <div class="lesson-title"><span class="num">1</span>学习目标</div>

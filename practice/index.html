@@ -28,15 +28,32 @@
       transition: all 0.3s; cursor: pointer; text-decoration: none; color: inherit;
     }
     .unit-practice-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+    .unit-practice-card.available { border-left: 4px solid #69DB7C; }
     .unit-num { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 700; color: white; font-size: 0.95rem; flex-shrink: 0; }
+    .unit-info { flex: 1; }
     .unit-info h4 { font-size: 0.95rem; color: #2D3436; margin-bottom: 3px; }
     .unit-info p { font-size: 0.8rem; color: #aaa; }
-    .coming-soon { display: inline-block; background: #f1f3f4; color: #999; font-size: 0.75rem; padding: 2px 8px; border-radius: 999px; margin-left: auto; }
+    .unit-status { 
+      display: inline-block; font-size: 0.75rem; padding: 4px 10px; border-radius: 999px; margin-left: auto;
+      font-weight: 600;
+    }
+    .unit-status.available { background: #D4EDDA; color: #28A745; }
+    .unit-status.coming-soon { background: #f1f3f4; color: #999; }
     .back-link { display: inline-flex; align-items: center; gap: 6px; color: #2D8A4E; font-weight: 600; font-size: 0.95rem; margin-bottom: 24px; }
     .back-link:hover { text-decoration: underline; }
     .notice-box { background: linear-gradient(135deg, #E8F4FF 0%, #D6EEFF 100%); border-radius: 16px; padding: 20px 24px; border: 2px solid #4DABF7; margin-bottom: 32px; }
     .notice-box h3 { color: #2b7ed9; margin-bottom: 8px; font-family: 'ZCOOL KuaiLe', cursive; }
     .notice-box p { color: #555; font-size: 0.9rem; line-height: 1.7; }
+    .stats-box { 
+      display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .stat-item {
+      background: white; padding: 16px 24px; border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06); text-align: center;
+    }
+    .stat-item .num { font-size: 1.8rem; font-weight: 800; color: #FF6B35; }
+    .stat-item .label { font-size: 0.85rem; color: #888; }
   </style>
 </head>
 <body>
@@ -59,144 +76,543 @@
   <div class="practice-body">
     <a href="../index.html" class="back-link">← 返回首页</a>
 
+    <div class="stats-box">
+      <div class="stat-item">
+        <div class="num" id="available-count">6</div>
+        <div class="label">已上线单元</div>
+      </div>
+      <div class="stat-item">
+        <div class="num" id="total-questions">25+</div>
+        <div class="label">练习题数量</div>
+      </div>
+      <div class="stat-item">
+        <div class="num" id="completed-count">-</div>
+        <div class="label">已完成练习</div>
+      </div>
+    </div>
+
     <div class="notice-box">
-      <h3>💡 练习功能开发中</h3>
-      <p>练习中心正在建设中。各单元的互动练习题将陆续上线，敬请期待！<br>每个单元都配有课后练习题，包括选择题、填空题和应用题，提交后即时显示答案与解析。</p>
+      <h3>💡 如何使用练习中心</h3>
+      <p>点击带有 <span style="color: #28A745; font-weight: 600;">开始练习</span> 标签的单元即可开始互动练习。<br>每道题都有详细解析，答完后可查看正确答案和解题思路。</p>
     </div>
 
     <div class="grade-section">
       <div class="grade-title"><span class="emoji">🌱</span> 一年级</div>
       <div class="unit-grid">
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FF6B6B">上1</div><div class="unit-info"><h4>准备课</h4><p>数一数 · 比多少</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FFA94D">上2</div><div class="unit-info"><h4>位置</h4><p>上下左右前后</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FFD93D;color:#333">上3</div><div class="unit-info"><h4>1~5的认识</h4><p>比大小 · 加减法</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#69DB7C">上4</div><div class="unit-info"><h4>认识图形（一）</h4><p>立体图形</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#4DABF7">上5</div><div class="unit-info"><h4>6~10的认识</h4><p>组成 · 运算</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#9775FA">上6</div><div class="unit-info"><h4>11-20各数的认识</h4><p>数数 · 写数</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#E64980">上7</div><div class="unit-info"><h4>认识钟表</h4><p>整时 · 半时</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FF6B6B">上8</div><div class="unit-info"><h4>20以内进位加法</h4><p>凑十法</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#74C0FC">下1</div><div class="unit-info"><h4>认识图形（二）</h4><p>平面图形</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FDA2A2">下2</div><div class="unit-info"><h4>20以内退位减法</h4><p>破十法</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FFD43B;color:#333">下3</div><div class="unit-info"><h4>分类与整理</h4><p>统计分类</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#8CE99A">下4</div><div class="unit-info"><h4>100以内数的认识</h4><p>组成 · 顺序</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#74C0FC">下5</div><div class="unit-info"><h4>认识人民币</h4><p>元角分</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#B197FC">下6</div><div class="unit-info"><h4>100以内加减法（一）</h4><p>口算</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#F783AC">下7</div><div class="unit-info"><h4>找规律</h4><p>图形 · 数字规律</p></div><span class="coming-soon">即将上线</span></div>
+        <a href="quiz.html?unit=grade1-unit1" class="unit-practice-card available">
+          <div class="unit-num" style="background:#FF6B6B">上1</div>
+          <div class="unit-info"><h4>准备课</h4><p>数一数 · 比多少</p></div>
+          <span class="unit-status available">开始练习</span>
+        </a>
+        <a href="quiz.html?unit=grade1-unit2" class="unit-practice-card available">
+          <div class="unit-num" style="background:#FFA94D">上2</div>
+          <div class="unit-info"><h4>位置</h4><p>上下左右前后</p></div>
+          <span class="unit-status available">开始练习</span>
+        </a>
+        <a href="quiz.html?unit=grade1-unit3" class="unit-practice-card available">
+          <div class="unit-num" style="background:#FFD93D;color:#333">上3</div>
+          <div class="unit-info"><h4>1~5的认识</h4><p>比大小 · 加减法</p></div>
+          <span class="unit-status available">开始练习</span>
+        </a>
+        <a href="quiz.html?unit=grade1-unit4" class="unit-practice-card available">
+          <div class="unit-num" style="background:#69DB7C">上4</div>
+          <div class="unit-info"><h4>认识图形（一）</h4><p>立体图形</p></div>
+          <span class="unit-status available">开始练习</span>
+        </a>
+        <a href="quiz.html?unit=grade1-unit5" class="unit-practice-card available">
+          <div class="unit-num" style="background:#4DABF7">上5</div>
+          <div class="unit-info"><h4>6~10的认识</h4><p>组成 · 运算</p></div>
+          <span class="unit-status available">开始练习</span>
+        </a>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#9775FA">上6</div>
+          <div class="unit-info"><h4>11-20各数的认识</h4><p>数数 · 写数</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#E64980">上7</div>
+          <div class="unit-info"><h4>认识钟表</h4><p>整时 · 半时</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FF6B6B">上8</div>
+          <div class="unit-info"><h4>20以内进位加法</h4><p>凑十法</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#74C0FC">下1</div>
+          <div class="unit-info"><h4>认识图形（二）</h4><p>平面图形</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FDA2A2">下2</div>
+          <div class="unit-info"><h4>20以内退位减法</h4><p>破十法</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FFD43B;color:#333">下3</div>
+          <div class="unit-info"><h4>分类与整理</h4><p>统计分类</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#8CE99A">下4</div>
+          <div class="unit-info"><h4>100以内数的认识</h4><p>组成 · 顺序</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#74C0FC">下5</div>
+          <div class="unit-info"><h4>认识人民币</h4><p>元角分</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#B197FC">下6</div>
+          <div class="unit-info"><h4>100以内加减法（一）</h4><p>口算</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#F783AC">下7</div>
+          <div class="unit-info"><h4>找规律</h4><p>图形 · 数字规律</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
       </div>
     </div>
 
     <div class="grade-section">
       <div class="grade-title"><span class="emoji">🌿</span> 二年级</div>
       <div class="unit-grid">
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FF6B6B">上1</div><div class="unit-info"><h4>长度单位</h4><p>厘米和米</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FFA94D">上2</div><div class="unit-info"><h4>100以内加减法（二）</h4><p>竖式计算</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FFD43B;color:#333">上3</div><div class="unit-info"><h4>角的初步认识</h4><p>直角 · 锐角 · 钝角</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#69DB7C">上4</div><div class="unit-info"><h4>表内乘法（一）</h4><p>1-6乘法口诀</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#4DABF7">上5</div><div class="unit-info"><h4>观察物体（一）</h4><p>三视图</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#9775FA">上6</div><div class="unit-info"><h4>表内乘法（二）</h4><p>7-9乘法口诀</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#E64980">上7</div><div class="unit-info"><h4>认识时间</h4><p>几时几分</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FF6B6B">上8</div><div class="unit-info"><h4>数学广角——搭配</h4><p>排列组合</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#74C0FC">下1</div><div class="unit-info"><h4>数据收集整理</h4><p>统计表</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FDA2A2">下2</div><div class="unit-info"><h4>表内除法（一）</h4><p>平均分</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FFD43B;color:#333">下3</div><div class="unit-info"><h4>图形的运动（一）</h4><p>对称 · 平移</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#8CE99A">下4</div><div class="unit-info"><h4>表内除法（二）</h4><p>用口诀求商</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#74C0FC">下5</div><div class="unit-info"><h4>混合运算</h4><p>同级 · 两级运算</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#B197FC">下6</div><div class="unit-info"><h4>有余数的除法</h4><p>余数</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#F783AC">下7</div><div class="unit-info"><h4>万以内数的认识</h4><p>读数写数</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#69DB7C">下8</div><div class="unit-info"><h4>克和千克</h4><p>质量单位</p></div><span class="coming-soon">即将上线</span></div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FF6B6B">上1</div>
+          <div class="unit-info"><h4>长度单位</h4><p>厘米和米</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FFA94D">上2</div>
+          <div class="unit-info"><h4>100以内加减法（二）</h4><p>竖式计算</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FFD43B;color:#333">上3</div>
+          <div class="unit-info"><h4>角的初步认识</h4><p>直角 · 锐角 · 钝角</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <a href="quiz.html?unit=grade2-unit4" class="unit-practice-card available">
+          <div class="unit-num" style="background:#69DB7C">上4</div>
+          <div class="unit-info"><h4>表内乘法（一）</h4><p>1-6乘法口诀</p></div>
+          <span class="unit-status available">开始练习</span>
+        </a>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#4DABF7">上5</div>
+          <div class="unit-info"><h4>观察物体（一）</h4><p>三视图</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#9775FA">上6</div>
+          <div class="unit-info"><h4>表内乘法（二）</h4><p>7-9乘法口诀</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#E64980">上7</div>
+          <div class="unit-info"><h4>认识时间</h4><p>几时几分</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FF6B6B">上8</div>
+          <div class="unit-info"><h4>数学广角——搭配</h4><p>排列组合</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#74C0FC">下1</div>
+          <div class="unit-info"><h4>数据收集整理</h4><p>统计表</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FDA2A2">下2</div>
+          <div class="unit-info"><h4>表内除法（一）</h4><p>平均分</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FFD43B;color:#333">下3</div>
+          <div class="unit-info"><h4>图形的运动（一）</h4><p>对称 · 平移</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#8CE99A">下4</div>
+          <div class="unit-info"><h4>表内除法（二）</h4><p>用口诀求商</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#74C0FC">下5</div>
+          <div class="unit-info"><h4>混合运算</h4><p>同级 · 两级运算</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#B197FC">下6</div>
+          <div class="unit-info"><h4>有余数的除法</h4><p>余数</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#F783AC">下7</div>
+          <div class="unit-info"><h4>万以内数的认识</h4><p>读数写数</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#69DB7C">下8</div>
+          <div class="unit-info"><h4>克和千克</h4><p>质量单位</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
       </div>
     </div>
 
     <div class="grade-section">
       <div class="grade-title"><span class="emoji">🌳</span> 三年级</div>
       <div class="unit-grid">
-        <div class="unit-practice-card"><div class="unit-num" style="background:#4DABF7">上1</div><div class="unit-info"><h4>时、分、秒</h4><p>时间换算</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#74C0FC">上2</div><div class="unit-info"><h4>万以内加减法（一）</h4><p>口算</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FFD43B;color:#333">上3</div><div class="unit-info"><h4>测量</h4><p>毫米 · 千米 · 吨</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#69DB7C">上4</div><div class="unit-info"><h4>万以内加减法（二）</h4><p>笔算</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#9775FA">上5</div><div class="unit-info"><h4>倍的认识</h4><p>求几倍</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#E64980">上6</div><div class="unit-info"><h4>多位数乘一位数</h4><p>笔算乘法</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FF6B6B">上7</div><div class="unit-info"><h4>长方形和正方形</h4><p>周长计算</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FFA94D">上8</div><div class="unit-info"><h4>分数的初步认识</h4><p>几分之一</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#B197FC">下1</div><div class="unit-info"><h4>位置与方向</h4><p>八个方向</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#F783AC">下2</div><div class="unit-info"><h4>除数是一位数的除法</h4><p>笔算除法</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FFD43B;color:#333">下3</div><div class="unit-info"><h4>复式统计表</h4><p>统计读图</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#8CE99A">下4</div><div class="unit-info"><h4>两位数乘两位数</h4><p>笔算</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#4DABF7">下5</div><div class="unit-info"><h4>面积</h4><p>面积单位 · 计算</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#74C0FC">下6</div><div class="unit-info"><h4>年、月、日</h4><p>大月小月 · 平年闰年</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#9775FA">下7</div><div class="unit-info"><h4>小数的初步认识</h4><p>读写 · 简单计算</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#E64980">下8</div><div class="unit-info"><h4>数学广角——搭配（二）</h4><p>排列组合</p></div><span class="coming-soon">即将上线</span></div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#4DABF7">上1</div>
+          <div class="unit-info"><h4>时、分、秒</h4><p>时间换算</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#74C0FC">上2</div>
+          <div class="unit-info"><h4>万以内加减法（一）</h4><p>口算</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FFD43B;color:#333">上3</div>
+          <div class="unit-info"><h4>测量</h4><p>毫米 · 千米 · 吨</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#69DB7C">上4</div>
+          <div class="unit-info"><h4>万以内加减法（二）</h4><p>笔算</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#9775FA">上5</div>
+          <div class="unit-info"><h4>倍的认识</h4><p>求几倍</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#E64980">上6</div>
+          <div class="unit-info"><h4>多位数乘一位数</h4><p>笔算乘法</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FF6B6B">上7</div>
+          <div class="unit-info"><h4>长方形和正方形</h4><p>周长计算</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FFA94D">上8</div>
+          <div class="unit-info"><h4>分数的初步认识</h4><p>几分之一</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#B197FC">下1</div>
+          <div class="unit-info"><h4>位置与方向</h4><p>八个方向</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#F783AC">下2</div>
+          <div class="unit-info"><h4>除数是一位数的除法</h4><p>笔算除法</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FFD43B;color:#333">下3</div>
+          <div class="unit-info"><h4>复式统计表</h4><p>统计读图</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#8CE99A">下4</div>
+          <div class="unit-info"><h4>两位数乘两位数</h4><p>笔算</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#4DABF7">下5</div>
+          <div class="unit-info"><h4>面积</h4><p>面积单位 · 计算</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#74C0FC">下6</div>
+          <div class="unit-info"><h4>年、月、日</h4><p>大月小月 · 平年闰年</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#9775FA">下7</div>
+          <div class="unit-info"><h4>小数的初步认识</h4><p>读写 · 简单计算</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#E64980">下8</div>
+          <div class="unit-info"><h4>数学广角——搭配（二）</h4><p>排列组合</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
       </div>
     </div>
 
     <div class="grade-section">
       <div class="grade-title"><span class="emoji">⭐</span> 四年级</div>
       <div class="unit-grid">
-        <div class="unit-practice-card"><div class="unit-num" style="background:#9775FA">上1</div><div class="unit-info"><h4>大数的认识</h4><p>亿以内数</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#B197FC">上2</div><div class="unit-info"><h4>公顷和平方千米</h4><p>土地面积</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#E64980">上3</div><div class="unit-info"><h4>角的度量</h4><p>量角 · 画角</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FF6B6B">上4</div><div class="unit-info"><h4>三位数乘两位数</h4><p>笔算</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FFA94D">上5</div><div class="unit-info"><h4>平行四边形和梯形</h4><p>平行 · 垂直</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FFD43B;color:#333">上6</div><div class="unit-info"><h4>除数是两位数的除法</h4><p>试商</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#69DB7C">上7</div><div class="unit-info"><h4>条形统计图</h4><p>绘制读图</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#4DABF7">上8</div><div class="unit-info"><h4>数学广角——优化</h4><p>沏茶问题</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#74C0FC">下1</div><div class="unit-info"><h4>四则运算</h4><p>运算顺序</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#9775FA">下2</div><div class="unit-info"><h4>观察物体（二）</h4><p>三视图</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#B197FC">下3</div><div class="unit-info"><h4>运算定律</h4><p>交换 · 结合 · 分配律</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#E64980">下4</div><div class="unit-info"><h4>小数的意义和性质</h4><p>意义 · 性质</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FF6B6B">下5</div><div class="unit-info"><h4>三角形</h4><p>分类 · 内角和</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FFA94D">下6</div><div class="unit-info"><h4>小数的加法和减法</h4><p>笔算</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FFD43B;color:#333">下7</div><div class="unit-info"><h4>图形的运动（二）</h4><p>轴对称 · 平移</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#69DB7C">下8</div><div class="unit-info"><h4>平均数与统计图</h4><p>数据分析</p></div><span class="coming-soon">即将上线</span></div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#9775FA">上1</div>
+          <div class="unit-info"><h4>大数的认识</h4><p>亿以内数</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#B197FC">上2</div>
+          <div class="unit-info"><h4>公顷和平方千米</h4><p>土地面积</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#E64980">上3</div>
+          <div class="unit-info"><h4>角的度量</h4><p>量角 · 画角</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FF6B6B">上4</div>
+          <div class="unit-info"><h4>三位数乘两位数</h4><p>笔算</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FFA94D">上5</div>
+          <div class="unit-info"><h4>平行四边形和梯形</h4><p>平行 · 垂直</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FFD43B;color:#333">上6</div>
+          <div class="unit-info"><h4>除数是两位数的除法</h4><p>试商</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#69DB7C">上7</div>
+          <div class="unit-info"><h4>条形统计图</h4><p>绘制读图</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#4DABF7">上8</div>
+          <div class="unit-info"><h4>数学广角——优化</h4><p>沏茶问题</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#74C0FC">下1</div>
+          <div class="unit-info"><h4>四则运算</h4><p>运算顺序</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#9775FA">下2</div>
+          <div class="unit-info"><h4>观察物体（二）</h4><p>三视图</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#B197FC">下3</div>
+          <div class="unit-info"><h4>运算定律</h4><p>交换 · 结合 · 分配律</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#E64980">下4</div>
+          <div class="unit-info"><h4>小数的意义和性质</h4><p>意义 · 性质</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FF6B6B">下5</div>
+          <div class="unit-info"><h4>三角形</h4><p>分类 · 内角和</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FFA94D">下6</div>
+          <div class="unit-info"><h4>小数的加法和减法</h4><p>笔算</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FFD43B;color:#333">下7</div>
+          <div class="unit-info"><h4>图形的运动（二）</h4><p>轴对称 · 平移</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#69DB7C">下8</div>
+          <div class="unit-info"><h4>平均数与统计图</h4><p>数据分析</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
       </div>
     </div>
 
     <div class="grade-section">
       <div class="grade-title"><span class="emoji">🌟</span> 五年级</div>
       <div class="unit-grid">
-        <div class="unit-practice-card"><div class="unit-num" style="background:#4DABF7">上1</div><div class="unit-info"><h4>小数乘法</h4><p>笔算</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#74C0FC">上2</div><div class="unit-info"><h4>位置</h4><p>用数对表示</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#9775FA">上3</div><div class="unit-info"><h4>小数除法</h4><p>笔算</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#B197FC">上4</div><div class="unit-info"><h4>可能性</h4><p>可能性大小</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#E64980">上5</div><div class="unit-info"><h4>简易方程</h4><p>解方程</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FF6B6B">上6</div><div class="unit-info"><h4>多边形的面积</h4><p>公式应用</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FFA94D">下1</div><div class="unit-info"><h4>观察物体（三）</h4><p>三视图</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FFD43B;color:#333">下2</div><div class="unit-info"><h4>因数与倍数</h4><p>质数合数</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#69DB7C">下3</div><div class="unit-info"><h4>长方体和正方体</h4><p>表面积 · 体积</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#4DABF7">下4</div><div class="unit-info"><h4>分数的意义和性质</h4><p>通分 · 约分</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#74C0FC">下5</div><div class="unit-info"><h4>图形的运动（三）</h4><p>旋转</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#9775FA">下6</div><div class="unit-info"><h4>分数的加法和减法</h4><p>异分母加减</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#B197FC">下7</div><div class="unit-info"><h4>折线统计图</h4><p>绘制读图</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#E64980">下8</div><div class="unit-info"><h4>数学广角——找次品</h4><p>推理优化</p></div><span class="coming-soon">即将上线</span></div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#4DABF7">上1</div>
+          <div class="unit-info"><h4>小数乘法</h4><p>笔算</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#74C0FC">上2</div>
+          <div class="unit-info"><h4>位置</h4><p>用数对表示</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#9775FA">上3</div>
+          <div class="unit-info"><h4>小数除法</h4><p>笔算</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#B197FC">上4</div>
+          <div class="unit-info"><h4>可能性</h4><p>可能性大小</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#E64980">上5</div>
+          <div class="unit-info"><h4>简易方程</h4><p>解方程</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FF6B6B">上6</div>
+          <div class="unit-info"><h4>多边形的面积</h4><p>公式应用</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FFA94D">下1</div>
+          <div class="unit-info"><h4>观察物体（三）</h4><p>三视图</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FFD43B;color:#333">下2</div>
+          <div class="unit-info"><h4>因数与倍数</h4><p>质数 · 合数</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#69DB7C">下3</div>
+          <div class="unit-info"><h4>长方体和正方体</h4><p>表面积 · 体积</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#4DABF7">下4</div>
+          <div class="unit-info"><h4>分数的意义和性质</h4><p>意义 · 性质</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#74C0FC">下5</div>
+          <div class="unit-info"><h4>图形的运动（三）</h4><p>旋转</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#9775FA">下6</div>
+          <div class="unit-info"><h4>分数的加法和减法</h4><p>同分母 · 异分母</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#B197FC">下7</div>
+          <div class="unit-info"><h4>折线统计图</h4><p>绘制读图</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#E64980">下8</div>
+          <div class="unit-info"><h4>数学广角——找次品</h4><p>逻辑推理</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
       </div>
     </div>
 
     <div class="grade-section">
       <div class="grade-title"><span class="emoji">🎓</span> 六年级</div>
       <div class="unit-grid">
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FF6B6B">上1</div><div class="unit-info"><h4>分数乘法</h4><p>分数乘分数</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FFA94D">上2</div><div class="unit-info"><h4>位置与方向（二）</h4><p>方向距离定位</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FFD43B;color:#333">上3</div><div class="unit-info"><h4>分数除法</h4><p>除法运算</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#69DB7C">上4</div><div class="unit-info"><h4>比</h4><p>比例分配</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#4DABF7">上5</div><div class="unit-info"><h4>圆</h4><p>周长 · 面积</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#9775FA">上6</div><div class="unit-info"><h4>百分数（一）</h4><p>意义 · 互化</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#E64980">上7</div><div class="unit-info"><h4>扇形统计图</h4><p>读图分析</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FF6B6B">上8</div><div class="unit-info"><h4>数学广角——数与形</h4><p>数形结合</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#74C0FC">下1</div><div class="unit-info"><h4>负数</h4><p>数轴 · 比较</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#9775FA">下2</div><div class="unit-info"><h4>百分数（二）</h4><p>利率 · 折扣</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#B197FC">下3</div><div class="unit-info"><h4>圆柱与圆锥</h4><p>表面积 · 体积</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#E64980">下4</div><div class="unit-info"><h4>比例</h4><p>正反比例</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FFA94D">下5</div><div class="unit-info"><h4>数学广角——鸽巢问题</h4><p>抽屉原理</p></div><span class="coming-soon">即将上线</span></div>
-        <div class="unit-practice-card"><div class="unit-num" style="background:#FFD43B;color:#333">下6</div><div class="unit-info"><h4>总复习</h4><p>知识梳理</p></div><span class="coming-soon">即将上线</span></div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FF6B6B">上1</div>
+          <div class="unit-info"><h4>分数乘法</h4><p>计算 · 应用</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FFA94D">上2</div>
+          <div class="unit-info"><h4>位置与方向（二）</h4><p>描述路线</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FFD43B;color:#333">上3</div>
+          <div class="unit-info"><h4>分数除法</h4><p>倒数 · 计算</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#69DB7C">上4</div>
+          <div class="unit-info"><h4>比</h4><p>比的意义 · 性质</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#4DABF7">上5</div>
+          <div class="unit-info"><h4>圆</h4><p>周长 · 面积</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#9775FA">上6</div>
+          <div class="unit-info"><h4>百分数（一）</h4><p>意义 · 应用</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#B197FC">上7</div>
+          <div class="unit-info"><h4>扇形统计图</h4><p>绘制读图</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#E64980">上8</div>
+          <div class="unit-info"><h4>数学广角——数与形</h4><p>数形结合</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#74C0FC">下1</div>
+          <div class="unit-info"><h4>负数</h4><p>意义 · 应用</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#9775FA">下2</div>
+          <div class="unit-info"><h4>百分数（二）</h4><p>折扣 · 成数</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#B197FC">下3</div>
+          <div class="unit-info"><h4>圆柱与圆锥</h4><p>表面积 · 体积</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#E64980">下4</div>
+          <div class="unit-info"><h4>比例</h4><p>比例的意义 · 性质</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FF6B6B">下5</div>
+          <div class="unit-info"><h4>数学广角——鸽巢问题</h4><p>抽屉原理</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
+        <div class="unit-practice-card">
+          <div class="unit-num" style="background:#FFA94D">下6</div>
+          <div class="unit-info"><h4>整理与复习</h4><p>系统复习</p></div>
+          <span class="unit-status coming-soon">即将上线</span>
+        </div>
       </div>
     </div>
-
   </div>
 
   <footer class="footer">
     <div class="container">
-      <p class="footer-text">🧮 L-MATH 乐学数学 · 练习中心</p>
+      <p class="footer-text">🧮 L-MATH 乐学数学 · 小学数学人教版学习平台</p>
+      <p class="footer-sub">开源项目 · 欢迎贡献内容与题目</p>
     </div>
   </footer>
+
+  <script>
+    // 计算已完成练习数量
+    function updateStats() {
+      let completed = 0;
+      const availableUnits = ['grade1-unit1', 'grade1-unit2', 'grade1-unit3', 'grade1-unit4', 'grade1-unit5', 'grade2-unit4'];
+      
+      availableUnits.forEach(unit => {
+        const history = localStorage.getItem(`practice-${unit}`);
+        if (history) {
+          const data = JSON.parse(history);
+          if (data.length > 0) completed++;
+        }
+      });
+      
+      document.getElementById('completed-count').textContent = completed > 0 ? completed : '-';
+    }
+    
+    updateStats();
+  </script>
 </body>
 </html>

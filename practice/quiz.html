@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>互动练习 | L-MATH 乐学数学</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../components/navbar.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: linear-gradient(180deg, #FFF5EB 0%, #FFF 100%); min-height: 100vh; }
+    
+    .quiz-header {
+      background: linear-gradient(135deg, #FF6B35 0%, #FF8C5A 100%);
+      color: white; padding: 80px 24px 40px; text-align: center;
+    }
+    .quiz-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 2rem; margin-bottom: 8px; }
+    .quiz-header p { opacity: 0.9; }
+    
+    .quiz-container { max-width: 800px; margin: 0 auto; padding: 40px 24px; }
+    
+    /* 练习头部 */
+    .practice-quiz-header {
+      text-align: center; margin-bottom: 32px;
+    }
+    .practice-quiz-header h2 {
+      font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.5rem; color: #2D3436;
+      margin-bottom: 20px;
+    }
+    .progress-bar {
+      width: 100%; max-width: 400px; height: 8px;
+      background: #E9ECEF; border-radius: 4px;
+      margin: 0 auto 12px; overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%; background: linear-gradient(90deg, #FF6B35, #FF8C5A);
+      border-radius: 4px; transition: width 0.3s ease;
+    }
+    .progress-text {
+      color: #636E72; font-size: 0.9rem;
+    }
+    
+    /* 题目区域 */
+    .practice-quiz-body {
+      background: white; border-radius: 20px;
+      padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .question-box {
+      display: flex; gap: 16px; margin-bottom: 28px;
+    }
+    .question-num {
+      width: 40px; height: 40px; background: #FF6B35; color: white;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1.1rem; flex-shrink: 0;
+    }
+    .question-text {
+      font-size: 1.15rem; color: #2D3436; line-height: 1.7;
+      padding-top: 6px;
+    }
+    
+    /* 选项 */
+    .options-box { display: flex; flex-direction: column; gap: 12px; }
+    .option-btn {
+      display: flex; align-items: center; gap: 16px;
+      padding: 16px 20px; background: #F8F9FA; border: 2px solid transparent;
+      border-radius: 12px; cursor: pointer; transition: all 0.2s;
+      text-align: left; font-size: 1rem;
+    }
+    .option-btn:hover {
+      background: #FFF4EE; border-color: #FF6B35;
+    }
+    .option-btn.correct {
+      background: #D4EDDA; border-color: #28A745;
+    }
+    .option-btn.wrong {
+      background: #F8D7DA; border-color: #DC3545;
+    }
+    .option-btn:disabled { cursor: not-allowed; }
+    .option-label {
+      width: 32px; height: 32px; background: white;
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      font-weight: 700; color: #FF6B35; border: 2px solid #E9ECEF;
+    }
+    .option-btn.correct .option-label {
+      background: #28A745; color: white; border-color: #28A745;
+    }
+    .option-btn.wrong .option-label {
+      background: #DC3545; color: white; border-color: #DC3545;
+    }
+    
+    /* 填空题 */
+    .fill-blank {
+      display: flex; gap: 12px; flex-wrap: wrap;
+    }
+    .fill-blank input {
+      flex: 1; min-width: 150px; padding: 14px 20px;
+      border: 2px solid #E9ECEF; border-radius: 12px;
+      font-size: 1.1rem; text-align: center;
+    }
+    .fill-blank input:focus {
+      outline: none; border-color: #FF6B35;
+    }
+    .fill-blank input.correct {
+      background: #D4EDDA; border-color: #28A745;
+    }
+    .fill-blank input.wrong {
+      background: #F8D7DA; border-color: #DC3545;
+    }
+    .submit-btn {
+      padding: 14px 32px; background: #FF6B35; color: white;
+      border: none; border-radius: 12px; font-size: 1rem; font-weight: 700;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .submit-btn:hover { background: #E85A25; }
+    
+    /* 反馈 */
+    .feedback-box {
+      margin-top: 24px; padding: 20px; border-radius: 12px;
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .feedback-box.correct {
+      background: #D4EDDA; border: 2px solid #28A745;
+    }
+    .feedback-box.wrong {
+      background: #F8D7DA; border: 2px solid #DC3545;
+    }
+    .feedback-icon { font-size: 2rem; }
+    .feedback-text strong {
+      display: block; margin-bottom: 8px; font-size: 1.1rem;
+    }
+    .feedback-text p { color: #555; line-height: 1.6; }
+    
+    /* 下一题按钮 */
+    .next-btn {
+      display: block; width: 100%; max-width: 300px;
+      margin: 24px auto 0; padding: 16px 32px;
+      background: linear-gradient(135deg, #FF6B35 0%, #FF8C5A 100%);
+      color: white; border: none; border-radius: 999px;
+      font-size: 1.1rem; font-weight: 700; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .next-btn:hover {
+      transform: translateY(-2px); box-shadow: 0 8px 20px rgba(255,107,53,0.3);
+    }
+    
+    /* 结果页面 */
+    .result-box {
+      text-align: center; padding: 40px 20px;
+    }
+    .result-emoji { font-size: 5rem; margin-bottom: 20px; }
+    .result-box h3 {
+      font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.8rem;
+      color: #2D3436; margin-bottom: 16px;
+    }
+    .result-score {
+      font-size: 3rem; font-weight: 800; color: #FF6B35;
+      margin-bottom: 8px;
+    }
+    .result-percentage {
+      font-size: 1.2rem; color: #636E72; margin-bottom: 32px;
+    }
+    .result-actions {
+      display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+    }
+    .restart-btn, .back-practice-btn {
+      padding: 14px 28px; border-radius: 999px;
+      font-size: 1rem; font-weight: 700; cursor: pointer;
+      transition: all 0.2s; text-decoration: none;
+    }
+    .restart-btn {
+      background: white; color: #FF6B35; border: 2px solid #FF6B35;
+    }
+    .restart-btn:hover {
+      background: #FFF4EE;
+    }
+    .back-practice-btn {
+      background: linear-gradient(135deg, #FF6B35 0%, #FF8C5A 100%);
+      color: white; border: none;
+    }
+    .back-practice-btn:hover {
+      transform: translateY(-2px); box-shadow: 0 8px 20px rgba(255,107,53,0.3);
+    }
+    
+    /* 未找到 */
+    .not-found {
+      text-align: center; padding: 60px 20px;
+    }
+    .not-found-emoji { font-size: 4rem; margin-bottom: 20px; }
+    .not-found h3 {
+      font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.5rem;
+      color: #2D3436; margin-bottom: 12px;
+    }
+    .not-found p { color: #636E72; margin-bottom: 24px; }
+    .back-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 24px; background: #FF6B35; color: white;
+      border-radius: 999px; text-decoration: none; font-weight: 600;
+    }
+    
+    /* 导航栏调整 */
+    .navbar { background: rgba(255,255,255,0.95) !important; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="nav-logo">🧮</span>
+      <span class="nav-title">L-MATH 乐学数学</span>
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">首页</a>
+      <a href="index.html">练习中心</a>
+    </div>
+  </nav>
+
+  <div class="quiz-header">
+    <h1>🎯 互动练习</h1>
+    <p>选择正确答案，检验学习成果</p>
+  </div>
+
+  <div class="quiz-container">
+    <div id="practice-container"></div>
+  </div>
+
+  <script src="practice.js"></script>
+  <script>
+    // 从 URL 获取单元 ID
+    const urlParams = new URLSearchParams(window.location.search);
+    const unitId = urlParams.get('unit') || 'grade1-unit1';
+    
+    // 初始化练习
+    initPractice(unitId);
+  </script>
+</body>
+</html>
