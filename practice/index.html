@@ -39,6 +39,19 @@
     }
     .unit-status.available { background: #D4EDDA; color: #28A745; }
     .unit-status.coming-soon { background: #f1f3f4; color: #999; }
+    .unit-progress {
+      display: flex; flex-direction: column; align-items: flex-end; gap: 4px;
+    }
+    .progress-mini {
+      width: 60px; height: 6px; background: #eee; border-radius: 3px; overflow: hidden;
+    }
+    .progress-mini-fill {
+      height: 100%; background: linear-gradient(90deg, #69DB7C, #4CB87A); border-radius: 3px;
+      transition: width 0.3s ease;
+    }
+    .progress-text-mini {
+      font-size: 0.7rem; color: #888;
+    }
     .back-link { display: inline-flex; align-items: center; gap: 6px; color: #2D8A4E; font-weight: 600; font-size: 0.95rem; margin-bottom: 24px; }
     .back-link:hover { text-decoration: underline; }
     .notice-box { background: linear-gradient(135deg, #E8F4FF 0%, #D6EEFF 100%); border-radius: 16px; padding: 20px 24px; border: 2px solid #4DABF7; margin-bottom: 32px; }
@@ -596,13 +609,32 @@
   </footer>
 
   <script>
-    // 计算已完成练习数量
+    // 统计已完成练习数量并显示进度
     function updateStats() {
-      let completed = 0;
       const availableUnits = ['grade1-unit1', 'grade1-unit2', 'grade1-unit3', 'grade1-unit4', 'grade1-unit5', 'grade2-unit4'];
+      let completed = 0;
       
       availableUnits.forEach(unit => {
         const history = localStorage.getItem(`practice-${unit}`);
+        const progress = getUnitProgress(unit);
+        
+        // 更新卡片上的进度显示
+        const card = document.querySelector(`a[href="quiz.html?unit=${unit}"]`);
+        if (card && progress) {
+          const statusEl = card.querySelector('.unit-status');
+          if (statusEl) {
+            const bestScore = progress.bestScore;
+            statusEl.outerHTML = `
+              <div class="unit-progress">
+                <div class="progress-mini">
+                  <div class="progress-mini-fill" style="width: ${bestScore}%"></div>
+                </div>
+                <span class="progress-text-mini">${bestScore}% 正确率</span>
+              </div>
+            `;
+          }
+        }
+        
         if (history) {
           const data = JSON.parse(history);
           if (data.length > 0) completed++;
@@ -610,6 +642,20 @@
       });
       
       document.getElementById('completed-count').textContent = completed > 0 ? completed : '-';
+    }
+    
+    // 获取单元进度
+    function getUnitProgress(unitId) {
+      const key = `practice-${unitId}`;
+      const history = JSON.parse(localStorage.getItem(key) || '[]');
+      if (history.length === 0) return null;
+      
+      const latest = history[history.length - 1];
+      return {
+        lastScore: latest.percentage,
+        attempts: history.length,
+        bestScore: Math.max(...history.map(h => h.percentage))
+      };
     }
     
     updateStats();
