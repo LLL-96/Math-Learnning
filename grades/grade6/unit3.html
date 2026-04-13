@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>分数除法 | L-MATH 乐学数学</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../components/footer.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: linear-gradient(180deg, #FFF5EB 0%, #FFF 100%); min-height: 100vh; }
+    .unit-header { background: linear-gradient(135deg, #FF6B6B 0%, #FFA8A8 100%); color: white; padding: 48px 24px 32px; text-align: center; }
+    .unit-header .back-btn { display: inline-flex; align-items: center; gap: 6px; color: white; font-weight: 600; font-size: 0.95rem; margin-bottom: 20px; opacity: 0.9; }
+    .unit-header .back-btn:hover { opacity: 1; text-decoration: underline; }
+    .unit-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.8rem; margin-bottom: 8px; }
+    .unit-header .unit-desc { opacity: 0.9; font-size: 0.95rem; }
+    .unit-content { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; }
+    .lesson-card { background: white; border-radius: 20px; padding: 28px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; }
+    .lesson-title { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.3rem; color: #FF6B6B; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .lesson-title .num { width: 32px; height: 32px; background: #FF6B6B; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 700; }
+    .learn-box { background: #FFF5F5; border-radius: 12px; padding: 16px 20px; margin-bottom: 16px; border-left: 4px solid #FF6B6B; }
+    .learn-box h4 { font-size: 0.95rem; color: #FF6B6B; margin-bottom: 8px; }
+    .learn-box ul { padding-left: 20px; color: #555; font-size: 0.9rem; line-height: 1.8; }
+    .example-box { background: #F8F9FA; border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .example-box h4 { font-size: 0.9rem; color: #888; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .calc-demo { display: flex; justify-content: center; gap: 32px; margin: 20px 0; flex-wrap: wrap; }
+    .calc-item { background: white; border-radius: 12px; padding: 16px 24px; text-align: center; border: 1px solid #FFF5F5; }
+    .calc-item .expr { font-size: 1.3rem; color: #FF6B6B; font-weight: 700; font-family: monospace; }
+    .calc-item .result { font-size: 1.1rem; color: #333; margin-top: 8px; }
+    .practice-box { background: linear-gradient(135deg, #E8F8F5 0%, #D6FFF0 100%); border-radius: 16px; padding: 24px; border: 2px solid #69DB7C; }
+    .practice-box h3 { font-family: 'ZCOOL KuaiLe', cursive; color: #2D8A4E; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .question { background: white; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+    .q-num { width: 28px; height: 28px; background: #69DB7C; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+    .q-text { font-size: 0.95rem; color: #333; }
+  </style>
+</head>
+<body>
+  <div class="unit-header">
+    <a href="index.html" class="back-btn">← 返回六年级上册</a>
+    <h1>第三单元：分数除法</h1>
+    <p class="unit-desc">分数除以整数 · 一个数除以分数</p>
+  </div>
+
+  <div class="unit-content">
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">1</span>学习目标</div>
+      <div class="learn-box">
+        <h4>📌 本课重点</h4>
+        <ul>
+          <li>掌握分数除法的计算方法</li>
+          <li>理解分数除法的意义</li>
+          <li>能解决实际问题</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">2</span>分数除以整数</div>
+      <div class="example-box">
+        <h4>计算方法</h4>
+        <div class="calc-demo">
+          <div class="calc-item"><div class="expr">4/5 ÷ 2</div><div class="result">= 2/5</div></div>
+          <div class="calc-item"><div class="expr">6/7 ÷ 3</div><div class="result">= 2/7</div></div>
+        </div>
+        <p style="text-align:center;color:#555;font-size:0.9rem;line-height:1.8;">
+          分数除以整数，等于分数乘这个整数的倒数。<br>
+          <b style="color:#FF6B6B;">4/5 ÷ 2 = 4/5 × 1/2 = 2/5</b>
+        </p>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">3</span>一个数除以分数</div>
+      <div class="example-box">
+        <h4>核心法则</h4>
+        <p style="color:#555;font-size:0.95rem;line-height:1.8;">
+          除以一个分数，等于乘这个分数的倒数。<br><br>
+          <b style="color:#FF6B6B;">a ÷ b/c = a × c/b</b><br><br>
+          例：6 ÷ 2/3 = 6 × 3/2 = 9
+        </p>
+      </div>
+    </div>
+
+    <div class="practice-box">
+      <h3>练一练</h3>
+      <div class="question"><span class="q-num">1</span><span class="q-text">8/9 ÷ 4 = ?</span></div>
+      <div class="question"><span class="q-num">2</span><span class="q-text">3/4 ÷ 1/2 = ?</span></div>
+      <div class="question"><span class="q-num">3</span><span class="q-text">一块布长3/4米，做一条围巾用1/8米，可以做几条？</span></div>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><p class="footer-text">L-MATH 乐学数学 六年级上册</p></div></footer>
+</body>
+</html>

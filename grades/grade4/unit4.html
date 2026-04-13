@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>三位数乘两位数 | L-MATH 乐学数学</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../components/footer.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: linear-gradient(180deg, #FFF5EB 0%, #FFF 100%); min-height: 100vh; }
+    .unit-header { background: linear-gradient(135deg, #4DABF7 0%, #74C0FC 100%); color: white; padding: 48px 24px 32px; text-align: center; }
+    .unit-header .back-btn { display: inline-flex; align-items: center; gap: 6px; color: white; font-weight: 600; font-size: 0.95rem; margin-bottom: 20px; opacity: 0.9; }
+    .unit-header .back-btn:hover { opacity: 1; text-decoration: underline; }
+    .unit-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.8rem; margin-bottom: 8px; }
+    .unit-header .unit-desc { opacity: 0.9; font-size: 0.95rem; }
+    .unit-content { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; }
+    .lesson-card { background: white; border-radius: 20px; padding: 28px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; }
+    .lesson-title { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.3rem; color: #2b7ed9; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .lesson-title .num { width: 32px; height: 32px; background: #4DABF7; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 700; }
+    .learn-box { background: #E8F4FF; border-radius: 12px; padding: 16px 20px; margin-bottom: 16px; border-left: 4px solid #4DABF7; }
+    .learn-box h4 { font-size: 0.95rem; color: #2b7ed9; margin-bottom: 8px; }
+    .learn-box ul { padding-left: 20px; color: #555; font-size: 0.9rem; line-height: 1.8; }
+    .example-box { background: #F8F9FA; border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .example-box h4 { font-size: 0.9rem; color: #888; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .calc-step { background: white; border-radius: 12px; padding: 16px 20px; margin: 12px 0; border: 1px solid #E8F4FF; }
+    .calc-step .formula { font-size: 1.6rem; color: #2b7ed9; font-weight: 700; text-align: center; margin: 8px 0; font-family: monospace; }
+    .calc-step p { font-size: 0.95rem; color: #333; line-height: 1.8; }
+    .practice-box { background: linear-gradient(135deg, #FFF5F5 0%, #FFE8E8 100%); border-radius: 16px; padding: 24px; border: 2px solid #FF6B6B; }
+    .practice-box h3 { font-family: 'ZCOOL KuaiLe', cursive; color: #D63031; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .question { background: white; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+    .q-num { width: 28px; height: 28px; background: #FF6B6B; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+    .q-text { font-size: 0.95rem; color: #333; }
+  </style>
+</head>
+<body>
+  <div class="unit-header">
+    <a href="index.html" class="back-btn">← 返回四年级上册</a>
+    <h1>第四单元：三位数乘两位数</h1>
+    <p class="unit-desc">笔算乘法 · 积的变化规律</p>
+  </div>
+
+  <div class="unit-content">
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">1</span>学习目标</div>
+      <div class="learn-box">
+        <h4>📌 本课重点</h4>
+        <ul>
+          <li>掌握三位数乘两位数的笔算方法</li>
+          <li>理解积的变化规律</li>
+          <li>能解决实际问题</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">2</span>笔算方法</div>
+      <div class="example-box">
+        <h4>✏️ 竖式计算：134 × 12</h4>
+        <div class="calc-step">
+          <div class="formula">   134<br>×  12<br>──────</div>
+          <p>步骤一：134 × 2 = 268</p>
+          <p>步骤二：134 × 10 = 1340（十位乘以十位）</p>
+          <p>步骤三：268 + 1340 = 1608</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">3</span>积的变化规律</div>
+      <div class="example-box">
+        <h4>📐 规律</h4>
+        <p style="color:#555;font-size:0.95rem;line-height:1.8;">
+          一个因数不变，另一个因数乘几，积也乘几。<br><br>
+          2 × 6 = 12<br>
+          (2×10) × 6 = 120<br>
+          2 × (6×5) = 60
+        </p>
+      </div>
+    </div>
+
+    <div class="practice-box">
+      <h3>✏️ 练一练</h3>
+      <div class="question"><span class="q-num">1</span><span class="q-text">145 × 23 = ?</span></div>
+      <div class="question"><span class="q-num">2</span><span class="q-text">每套运动服135元，买12套要多少钱？</span></div>
+      <div class="question"><span class="q-num">3</span><span class="q-text">3 × 8 = 24，30 × 8 = ?</span></div>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><p class="footer-text">🧮 L-MATH 乐学数学 · 四年级上册</p></div></footer>
+</body>
+</html>

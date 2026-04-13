@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>认识图形（一）| L-MATH 乐学数学</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../components/footer.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: linear-gradient(180deg, #FFF5EB 0%, #FFF 100%); min-height: 100vh; }
+    .unit-header {
+      background: linear-gradient(135deg, #69DB7C 0%, #8CE99A 100%);
+      color: white; padding: 48px 24px 32px; text-align: center;
+    }
+    .unit-header .back-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: white; font-weight: 600; font-size: 0.95rem;
+      margin-bottom: 20px; opacity: 0.9;
+    }
+    .unit-header .back-btn:hover { opacity: 1; text-decoration: underline; }
+    .unit-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.8rem; margin-bottom: 8px; }
+    .unit-header .unit-desc { opacity: 0.9; font-size: 0.95rem; }
+    .unit-content { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; }
+    .lesson-card {
+      background: white; border-radius: 20px; padding: 28px; margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #f0f0f0;
+    }
+    .lesson-title {
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: 1.3rem; color: #2D8A4E;
+      margin-bottom: 16px; display: flex; align-items: center; gap: 10px;
+    }
+    .lesson-title .num { 
+      width: 32px; height: 32px; background: #69DB7C; color: white;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem; font-weight: 700;
+    }
+    .learn-box {
+      background: #E8F8F5; border-radius: 12px; padding: 16px 20px;
+      margin-bottom: 16px; border-left: 4px solid #69DB7C;
+    }
+    .learn-box h4 { font-size: 0.95rem; color: #2D8A4E; margin-bottom: 8px; }
+    .learn-box ul { padding-left: 20px; color: #555; font-size: 0.9rem; line-height: 1.8; }
+    .shapes-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 16px; margin: 20px 0;
+    }
+    .shape-card {
+      background: #F8F9FA; border-radius: 16px; padding: 20px;
+      text-align: center; border: 2px solid #E8F8F5;
+    }
+    .shape-icon { font-size: 4rem; margin-bottom: 8px; }
+    .shape-name { font-weight: 700; color: #333; font-size: 1.1rem; }
+    .shape-desc { font-size: 0.85rem; color: #888; margin-top: 4px; }
+    .example-box {
+      background: #F8F9FA; border-radius: 12px; padding: 20px;
+      margin: 16px 0;
+    }
+    .example-box h4 { font-size: 0.9rem; color: #888; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .real-life { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; font-size: 2.5rem; margin: 16px 0; }
+    .practice-box {
+      background: linear-gradient(135deg, #FFF5F5 0%, #FFE8E8 100%);
+      border-radius: 16px; padding: 24px; border: 2px solid #FF6B6B;
+    }
+    .practice-box h3 {
+      font-family: 'ZCOOL KuaiLe', cursive; color: #D63031;
+      margin-bottom: 16px; display: flex; align-items: center; gap: 8px;
+    }
+    .question {
+      background: white; border-radius: 12px; padding: 16px 20px;
+      margin-bottom: 12px; display: flex; align-items: center; gap: 12px;
+    }
+    .q-num {
+      width: 28px; height: 28px; background: #FF6B6B; color: white;
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
+    }
+    .q-text { font-size: 0.95rem; color: #333; }
+  </style>
+</head>
+<body>
+  <div class="unit-header">
+    <a href="index.html" class="back-btn">← 返回一年级上册</a>
+    <h1>第四课：认识图形（一）</h1>
+    <p class="unit-desc">长方体 · 正方体 · 圆柱 · 球</p>
+  </div>
+
+  <div class="unit-content">
+    <!-- 学习目标 -->
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">1</span>学习目标</div>
+      <div class="learn-box">
+        <h4>📌 本课重点</h4>
+        <ul>
+          <li>认识长方体、正方体、圆柱和球</li>
+          <li>知道它们的名称，能辨认形状</li>
+          <li>能在生活中找到这些形状的物体</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 知识讲解 -->
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">2</span>认识立体图形</div>
+      <div class="shapes-grid">
+        <div class="shape-card">
+          <div class="shape-icon">📦</div>
+          <div class="shape-name">长方体</div>
+          <div class="shape-desc">长长的，有6个面</div>
+        </div>
+        <div class="shape-card">
+          <div class="shape-icon">🎁</div>
+          <div class="shape-name">正方体</div>
+          <div class="shape-desc">方方的，6个面一样大</div>
+        </div>
+        <div class="shape-card">
+          <div class="shape-icon">🥫</div>
+          <div class="shape-name">圆柱</div>
+          <div class="shape-desc">圆圆的柱子，上下一样粗</div>
+        </div>
+        <div class="shape-card">
+          <div class="shape-icon">🏀</div>
+          <div class="shape-name">球</div>
+          <div class="shape-desc">圆圆的，能滚来滚去</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 生活中的图形 -->
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">3</span>生活中的图形</div>
+      <div class="example-box">
+        <h4>🏠 找一找身边的图形</h4>
+        <div class="real-life">
+          📚 <span style="font-size:1rem;color:#888">书本</span>
+          🧊 <span style="font-size:1rem;color:#888">魔方</span>
+          🥤 <span style="font-size:1rem;color:#888">易拉罐</span>
+          ⚽ <span style="font-size:1rem;color:#888">足球</span>
+        </div>
+        <p style="text-align:center;color:#555;font-size:0.95rem;">你还能找到哪些？和同学说一说！</p>
+      </div>
+    </div>
+
+    <!-- 练一练 -->
+    <div class="practice-box">
+      <h3>✏️ 练一练</h3>
+      <div class="question">
+        <span class="q-num">1</span>
+        <span class="q-text">牙膏盒是什么形状？📦</span>
+      </div>
+      <div class="question">
+        <span class="q-num">2</span>
+        <span class="q-text">皮球是什么形状？🏀</span>
+      </div>
+      <div class="question">
+        <span class="q-num">3</span>
+        <span class="q-text">茶叶罐是什么形状？🥫</span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">🧮 L-MATH 乐学数学 · 一年级上册</p>
+    </div>
+  </footer>
+</body>
+</html>

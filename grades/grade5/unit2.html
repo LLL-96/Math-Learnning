@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>位置 | L-MATH 乐学数学</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../components/footer.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: linear-gradient(180deg, #FFF5EB 0%, #FFF 100%); min-height: 100vh; }
+    .unit-header { background: linear-gradient(135deg, #9775FA 0%, #B197FC 100%); color: white; padding: 48px 24px 32px; text-align: center; }
+    .unit-header .back-btn { display: inline-flex; align-items: center; gap: 6px; color: white; font-weight: 600; font-size: 0.95rem; margin-bottom: 20px; opacity: 0.9; }
+    .unit-header .back-btn:hover { opacity: 1; text-decoration: underline; }
+    .unit-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.8rem; margin-bottom: 8px; }
+    .unit-header .unit-desc { opacity: 0.9; font-size: 0.95rem; }
+    .unit-content { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; }
+    .lesson-card { background: white; border-radius: 20px; padding: 28px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; }
+    .lesson-title { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.3rem; color: #7048e8; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .lesson-title .num { width: 32px; height: 32px; background: #9775FA; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 700; }
+    .learn-box { background: #F3E8FF; border-radius: 12px; padding: 16px 20px; margin-bottom: 16px; border-left: 4px solid #9775FA; }
+    .learn-box h4 { font-size: 0.95rem; color: #7048e8; margin-bottom: 8px; }
+    .learn-box ul { padding-left: 20px; color: #555; font-size: 0.9rem; line-height: 1.8; }
+    .example-box { background: #F8F9FA; border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .example-box h4 { font-size: 0.9rem; color: #888; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .coord-demo { display: flex; justify-content: center; margin: 20px 0; }
+    .coord-grid { display: grid; grid-template-columns: repeat(5, 40px); gap: 2px; }
+    .coord-cell { width: 40px; height: 40px; background: white; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+    .coord-cell.highlight { background: #F3E8FF; border-color: #9775FA; }
+    .practice-box { background: linear-gradient(135deg, #E8F8F5 0%, #D6FFF0 100%); border-radius: 16px; padding: 24px; border: 2px solid #69DB7C; }
+    .practice-box h3 { font-family: 'ZCOOL KuaiLe', cursive; color: #2D8A4E; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .question { background: white; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+    .q-num { width: 28px; height: 28px; background: #69DB7C; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+    .q-text { font-size: 0.95rem; color: #333; }
+  </style>
+</head>
+<body>
+  <div class="unit-header">
+    <a href="index.html" class="back-btn">← 返回五年级上册</a>
+    <h1>第二单元：位置</h1>
+    <p class="unit-desc">用数对表示位置</p>
+  </div>
+
+  <div class="unit-content">
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">1</span>学习目标</div>
+      <div class="learn-box">
+        <h4>📌 本课重点</h4>
+        <ul>
+          <li>会用数对表示位置</li>
+          <li>理解数对中两个数的含义</li>
+          <li>能在方格纸上用数对确定位置</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">2</span>什么是数对？</div>
+      <div class="example-box">
+        <h4>📍 数对的写法</h4>
+        <p style="color:#555;font-size:0.95rem;line-height:1.8;">
+          数对由<b style="color:#7048e8;">两个数</b>组成，中间用逗号隔开，用括号括起来。<br><br>
+          <b style="color:#7048e8;">(列, 行)</b> — 先写列数，再写行数<br><br>
+          例如：(3, 2) 表示第3列第2行的位置
+        </p>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">3</span>用数对找位置</div>
+      <div class="example-box">
+        <h4>🎯 找一找</h4>
+        <div class="coord-demo">
+          <div class="coord-grid">
+            <div class="coord-cell">🍎</div><div class="coord-cell"></div><div class="coord-cell highlight">⭐</div><div class="coord-cell"></div><div class="coord-cell"></div>
+            <div class="coord-cell"></div><div class="coord-cell highlight">🍐</div><div class="coord-cell"></div><div class="coord-cell"></div><div class="coord-cell"></div>
+            <div class="coord-cell"></div><div class="coord-cell"></div><div class="coord-cell"></div><div class="coord-cell highlight">🍊</div><div class="coord-cell"></div>
+          </div>
+        </div>
+        <p style="text-align:center;color:#555;font-size:0.9rem;">⭐在第3列第3行 → 数对(3, 3) | 🍐在第2列第2行 → 数对(2, 2) | 🍊在第4列第1行 → 数对(4, 1)</p>
+      </div>
+    </div>
+
+    <div class="practice-box">
+      <h3>✏️ 练一练</h3>
+      <div class="question"><span class="q-num">1</span><span class="q-text">小明的座位在第4列第3行，用数对表示是( , )</span></div>
+      <div class="question"><span class="q-num">2</span><span class="q-text">数对(5, 2)表示第几列第几行？</span></div>
+      <div class="question"><span class="q-num">3</span><span class="q-text">(2, 3)和(3, 2)是同一个位置吗？</span></div>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><p class="footer-text">🧮 L-MATH 乐学数学 · 五年级上册</p></div></footer>
+</body>
+</html>

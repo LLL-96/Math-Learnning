@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>长度单位 | L-MATH 乐学数学</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../components/footer.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: linear-gradient(180deg, #FFF5EB 0%, #FFF 100%); min-height: 100vh; }
+    .unit-header {
+      background: linear-gradient(135deg, #FF6B6B 0%, #FFA8A8 100%);
+      color: white; padding: 48px 24px 32px; text-align: center;
+    }
+    .unit-header .back-btn { display: inline-flex; align-items: center; gap: 6px; color: white; font-weight: 600; font-size: 0.95rem; margin-bottom: 20px; opacity: 0.9; }
+    .unit-header .back-btn:hover { opacity: 1; text-decoration: underline; }
+    .unit-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.8rem; margin-bottom: 8px; }
+    .unit-header .unit-desc { opacity: 0.9; font-size: 0.95rem; }
+    .unit-content { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; }
+    .lesson-card { background: white; border-radius: 20px; padding: 28px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; }
+    .lesson-title { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.3rem; color: #FF6B6B; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .lesson-title .num { width: 32px; height: 32px; background: #FF6B6B; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 700; }
+    .learn-box { background: #FFF5F5; border-radius: 12px; padding: 16px 20px; margin-bottom: 16px; border-left: 4px solid #FF6B6B; }
+    .learn-box h4 { font-size: 0.95rem; color: #FF6B6B; margin-bottom: 8px; }
+    .learn-box ul { padding-left: 20px; color: #555; font-size: 0.9rem; line-height: 1.8; }
+    .example-box { background: #F8F9FA; border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .example-box h4 { font-size: 0.9rem; color: #888; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .measure-demo { display: flex; justify-content: center; gap: 32px; margin: 24px 0; flex-wrap: wrap; }
+    .measure-item { text-align: center; }
+    .measure-icon { font-size: 4rem; margin-bottom: 8px; }
+    .measure-name { font-weight: 700; color: #333; font-size: 1.1rem; }
+    .measure-desc { font-size: 0.85rem; color: #888; margin-top: 4px; }
+    .practice-box { background: linear-gradient(135deg, #E8F8F5 0%, #D6FFF0 100%); border-radius: 16px; padding: 24px; border: 2px solid #69DB7C; }
+    .practice-box h3 { font-family: 'ZCOOL KuaiLe', cursive; color: #2D8A4E; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .question { background: white; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+    .q-num { width: 28px; height: 28px; background: #69DB7C; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+    .q-text { font-size: 0.95rem; color: #333; }
+  </style>
+</head>
+<body>
+  <div class="unit-header">
+    <a href="index.html" class="back-btn">← 返回二年级上册</a>
+    <h1>第一单元：长度单位</h1>
+    <p class="unit-desc">厘米和米 · 认识线段 · 解决问题</p>
+  </div>
+
+  <div class="unit-content">
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">1</span>学习目标</div>
+      <div class="learn-box">
+        <h4>📌 本课重点</h4>
+        <ul>
+          <li>认识长度单位：厘米(cm)和米(m)</li>
+          <li>知道1米=100厘米</li>
+          <li>会用刻度尺量物体的长度</li>
+          <li>认识线段，会画线段</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">2</span>认识长度单位</div>
+      <div class="measure-demo">
+        <div class="measure-item">
+          <div class="measure-icon">📏</div>
+          <div class="measure-name">厘米 (cm)</div>
+          <div class="measure-desc">量较短的物体<br>如铅笔、橡皮</div>
+        </div>
+        <div class="measure-item">
+          <div class="measure-icon">📐</div>
+          <div class="measure-name">米 (m)</div>
+          <div class="measure-desc">量较长的物体<br>如教室、操场</div>
+        </div>
+      </div>
+      <div class="example-box">
+        <h4>💡 记一记</h4>
+        <p style="text-align:center;font-size:1.2rem;color:#FF6B6B;font-weight:700;">1米 = 100厘米</p>
+        <p style="text-align:center;color:#888;font-size:0.9rem;margin-top:8px;">也可以写成：1m = 100cm</p>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">3</span>认识线段</div>
+      <div class="example-box">
+        <h4>📏 什么是线段？</h4>
+        <p style="color:#555;font-size:0.95rem;line-height:1.8;">
+          线段是<b>直的</b>，有<b>两个端点</b>，可以<b>量出长度</b>。<br><br>
+          画线段的方法：<br>
+          1. 先画一个端点<br>
+          2. 用尺子从端点开始画直线<br>
+          3. 画到想要的长度，再画另一个端点
+        </p>
+      </div>
+    </div>
+
+    <div class="practice-box">
+      <h3>✏️ 练一练</h3>
+      <div class="question"><span class="q-num">1</span><span class="q-text">量一量你的铅笔有多长？</span></div>
+      <div class="question"><span class="q-num">2</span><span class="q-text">教室的门大约高2____？（填"厘米"或"米"）</span></div>
+      <div class="question"><span class="q-num">3</span><span class="q-text">3米 = ____厘米</span></div>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><p class="footer-text">🧮 L-MATH 乐学数学 · 二年级上册</p></div></footer>
+</body>
+</html>

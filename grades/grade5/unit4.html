@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>可能性 | L-MATH 乐学数学</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../components/footer.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: linear-gradient(180deg, #FFF5EB 0%, #FFF 100%); min-height: 100vh; }
+    .unit-header { background: linear-gradient(135deg, #9775FA 0%, #B197FC 100%); color: white; padding: 48px 24px 32px; text-align: center; }
+    .unit-header .back-btn { display: inline-flex; align-items: center; gap: 6px; color: white; font-weight: 600; font-size: 0.95rem; margin-bottom: 20px; opacity: 0.9; }
+    .unit-header .back-btn:hover { opacity: 1; text-decoration: underline; }
+    .unit-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.8rem; margin-bottom: 8px; }
+    .unit-header .unit-desc { opacity: 0.9; font-size: 0.95rem; }
+    .unit-content { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; }
+    .lesson-card { background: white; border-radius: 20px; padding: 28px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; }
+    .lesson-title { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.3rem; color: #7048e8; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .lesson-title .num { width: 32px; height: 32px; background: #9775FA; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 700; }
+    .learn-box { background: #F3E8FF; border-radius: 12px; padding: 16px 20px; margin-bottom: 16px; border-left: 4px solid #9775FA; }
+    .learn-box h4 { font-size: 0.95rem; color: #7048e8; margin-bottom: 8px; }
+    .learn-box ul { padding-left: 20px; color: #555; font-size: 0.9rem; line-height: 1.8; }
+    .prob-scale { display: flex; justify-content: space-between; align-items: center; margin: 24px 0; padding: 0 10px; }
+    .prob-point { text-align: center; min-width: 80px; }
+    .prob-point .emoji { font-size: 2.5rem; margin-bottom: 6px; }
+    .prob-point .label { font-weight: 700; color: #7048e8; font-size: 0.9rem; }
+    .prob-point .prob { font-size: 0.8rem; color: #888; }
+    .example-box { background: #F8F9FA; border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .example-box h4 { font-size: 0.9rem; color: #888; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .practice-box { background: linear-gradient(135deg, #FFF5F5 0%, #FFE8E8 100%); border-radius: 16px; padding: 24px; border: 2px solid #FF6B6B; }
+    .practice-box h3 { font-family: 'ZCOOL KuaiLe', cursive; color: #D63031; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .question { background: white; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+    .q-num { width: 28px; height: 28px; background: #FF6B6B; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+    .q-text { font-size: 0.95rem; color: #333; }
+  </style>
+</head>
+<body>
+  <div class="unit-header">
+    <a href="index.html" class="back-btn">← 返回五年级上册</a>
+    <h1>第四单元：可能性</h1>
+    <p class="unit-desc">确定事件与不确定事件 · 可能性的大小</p>
+  </div>
+
+  <div class="unit-content">
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">1</span>学习目标</div>
+      <div class="learn-box">
+        <h4>📌 本课重点</h4>
+        <ul>
+          <li>理解"一定"、"可能"、"不可能"的含义</li>
+          <li>会判断事件发生的可能性大小</li>
+          <li>能用分数表示可能性</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">2</span>确定与不确定</div>
+      <div class="prob-scale">
+        <div class="prob-point"><div class="emoji">❌</div><div class="label">不可能</div><div class="prob">可能性 = 0</div></div>
+        <div class="prob-point"><div class="emoji">❓</div><div class="label">可能</div><div class="prob">0 < 可能 < 1</div></div>
+        <div class="prob-point"><div class="emoji">✅</div><div class="label">一定</div><div class="prob">可能性 = 1</div></div>
+      </div>
+      <div class="example-box">
+        <h4>🎲 举例</h4>
+        <p style="color:#555;font-size:0.95rem;line-height:1.8;">
+          <b>一定发生</b>：太阳每天从东方升起<br>
+          <b>不可能发生</b>：月亮比太阳大<br>
+          <b>可能发生</b>：明天会下雨<br>
+          <b>不可能发生</b>：人活一千年
+        </p>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">3</span>可能性的大小</div>
+      <div class="example-box">
+        <h4>🎰 摸球游戏</h4>
+        <p style="color:#555;font-size:0.95rem;line-height:1.8;">
+          盒子里有3个红球、7个白球。<br>
+          摸到红球的可能性 = 3/(3+7) = 3/10<br>
+          摸到白球的可能性 = 7/(3+7) = 7/10<br><br>
+          <b style="color:#7048e8;">白球更多，摸到白球的可能性更大。</b>
+        </p>
+      </div>
+    </div>
+
+    <div class="practice-box">
+      <h3>✏️ 练一练</h3>
+      <div class="question"><span class="q-num">1</span><span class="q-text">盒子里有5个红球和5个蓝球，摸到红球的可能性是几分之几？</span></div>
+      <div class="question"><span class="q-num">2</span><span class="q-text">说一说生活中"一定"、"可能"、"不可能"的例子</span></div>
+      <div class="question"><span class="q-num">3</span><span class="q-text">转盘游戏：转到一等奖的可能性大还是二等奖？</span></div>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><p class="footer-text">🧮 L-MATH 乐学数学 · 五年级上册</p></div></footer>
+</body>
+</html>

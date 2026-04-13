@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>找规律 | L-MATH 乐学数学</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../components/footer.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: linear-gradient(180deg, #FFF5EB 0%, #FFF 100%); min-height: 100vh; }
+    .unit-header { background: linear-gradient(135deg, #FF6B6B 0%, #FFA8A8 100%); color: white; padding: 48px 24px 32px; text-align: center; }
+    .unit-header .back-btn { display: inline-flex; align-items: center; gap: 6px; color: white; font-weight: 600; font-size: 0.95rem; margin-bottom: 20px; opacity: 0.9; }
+    .unit-header .back-btn:hover { opacity: 1; text-decoration: underline; }
+    .unit-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.8rem; margin-bottom: 8px; }
+    .unit-header .unit-desc { opacity: 0.9; font-size: 0.95rem; }
+    .unit-content { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; }
+    .lesson-card { background: white; border-radius: 20px; padding: 28px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; }
+    .lesson-title { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.3rem; color: #FF6B6B; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .lesson-title .num { width: 32px; height: 32px; background: #FF6B6B; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 700; }
+    .learn-box { background: #FFF5F5; border-radius: 12px; padding: 16px 20px; margin-bottom: 16px; border-left: 4px solid #FF6B6B; }
+    .learn-box h4 { font-size: 0.95rem; color: #FF6B6B; margin-bottom: 8px; }
+    .learn-box ul { padding-left: 20px; color: #555; font-size: 0.9rem; line-height: 1.8; }
+    .pattern-demo { display: flex; gap: 8px; justify-content: center; margin: 20px 0; flex-wrap: wrap; }
+    .pattern-item { width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 700; }
+    .pattern-row { text-align: center; margin: 12px 0; }
+    .pattern-row .seq { font-size: 1.1rem; color: #333; margin-bottom: 4px; }
+    .practice-box { background: linear-gradient(135deg, #E8F8F5 0%, #D6FFF0 100%); border-radius: 16px; padding: 24px; border: 2px solid #69DB7C; }
+    .practice-box h3 { font-family: 'ZCOOL KuaiLe', cursive; color: #2D8A4E; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .question { background: white; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+    .q-num { width: 28px; height: 28px; background: #69DB7C; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+    .q-text { font-size: 0.95rem; color: #333; }
+  </style>
+</head>
+<body>
+  <div class="unit-header">
+    <a href="index2.html" class="back-btn">← 返回一年级下册</a>
+    <h1>第七单元：找规律</h1>
+    <p class="unit-desc">图形的规律 · 数的规律</p>
+  </div>
+
+  <div class="unit-content">
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">1</span>学习目标</div>
+      <div class="learn-box">
+        <h4>📌 本课重点</h4>
+        <ul>
+          <li>发现图形排列的规律</li>
+          <li>发现数字排列的规律</li>
+          <li>会按规律填数</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">2</span>图形的规律</div>
+      <div class="pattern-demo">
+        <div class="pattern-item" style="background:#FF6B6B;color:white;">●</div>
+        <div class="pattern-item" style="background:#4DABF7;color:white;">●</div>
+        <div class="pattern-item" style="background:#69DB7C;color:white;">●</div>
+        <div class="pattern-item" style="background:#FF6B6B;color:white;">●</div>
+        <div class="pattern-item" style="background:#4DABF7;color:white;">●</div>
+        <div class="pattern-item" style="background:#69DB7C;color:white;">●</div>
+        <div class="pattern-item" style="background:#FF6B6B;color:white;border:2px dashed #ccc;color:#FF6B6B;background:white;">?</div>
+      </div>
+      <div class="learn-box">
+        <h4>🔍 发现规律</h4>
+        <ul>
+          <li>规律：红 → 蓝 → 绿 → 红 → 蓝 → 绿……</li>
+          <li>每3个一组，重复出现</li>
+          <li>下一个是：<b style="color:#FF6B6B;">红色</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">3</span>数的规律</div>
+      <div class="pattern-row">
+        <div class="seq">2, 4, 6, 8, <span style="color:#FF6B6B;font-weight:700;">10</span>, <span style="color:#FF6B6B;font-weight:700;">12</span>……</div>
+        <div style="font-size:0.85rem;color:#888;">规律：+2</div>
+      </div>
+      <div class="pattern-row">
+        <div class="seq">5, 10, 15, <span style="color:#FF6B6B;font-weight:700;">20</span>, <span style="color:#FF6B6B;font-weight:700;">25</span>……</div>
+        <div style="font-size:0.85rem;color:#888;">规律：+5</div>
+      </div>
+      <div class="pattern-row">
+        <div class="seq">10, 20, 30, <span style="color:#FF6B6B;font-weight:700;">40</span>, <span style="color:#FF6B6B;font-weight:700;">50</span>……</div>
+        <div style="font-size:0.85rem;color:#888;">规律：+10</div>
+      </div>
+    </div>
+
+    <div class="practice-box">
+      <h3>✏️ 练一练</h3>
+      <div class="question"><span class="q-num">1</span><span class="q-text">找规律：3, 6, 9, 12, _ , _</span></div>
+      <div class="question"><span class="q-num">2</span><span class="q-text">找规律：1, 3, 5, 7, _ , _</span></div>
+      <div class="question"><span class="q-num">3</span><span class="q-text">观察教室里哪些东西是有规律排列的？</span></div>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><p class="footer-text">🧮 L-MATH 乐学数学 一年级下册</p></div></footer>
+</body>
+</html>

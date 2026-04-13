@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数据收集整理 | L-MATH 乐学数学</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../components/footer.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: linear-gradient(180deg, #FFF5EB 0%, #FFF 100%); min-height: 100vh; }
+    .unit-header { background: linear-gradient(135deg, #FFA94D 0%, #FFD93D 100%); color: #333; padding: 48px 24px 32px; text-align: center; }
+    .unit-header .back-btn { display: inline-flex; align-items: center; gap: 6px; color: #333; font-weight: 600; font-size: 0.95rem; margin-bottom: 20px; opacity: 0.8; }
+    .unit-header .back-btn:hover { opacity: 1; text-decoration: underline; }
+    .unit-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.8rem; margin-bottom: 8px; }
+    .unit-header .unit-desc { opacity: 0.8; font-size: 0.95rem; }
+    .unit-content { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; }
+    .lesson-card { background: white; border-radius: 20px; padding: 28px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; }
+    .lesson-title { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.3rem; color: #E67700; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .lesson-title .num { width: 32px; height: 32px; background: #FFA94D; color: #333; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 700; }
+    .learn-box { background: #FFF9E6; border-radius: 12px; padding: 16px 20px; margin-bottom: 16px; border-left: 4px solid #FFA94D; }
+    .learn-box h4 { font-size: 0.95rem; color: #E67700; margin-bottom: 8px; }
+    .learn-box ul { padding-left: 20px; color: #555; font-size: 0.9rem; line-height: 1.8; }
+    .example-box { background: #F8F9FA; border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .example-box h4 { font-size: 0.9rem; color: #888; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .table-demo { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    .table-demo th, .table-demo td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+    .table-demo th { background: #FFF9E6; color: #E67700; }
+    .practice-box { background: linear-gradient(135deg, #E8F8F5 0%, #D6FFF0 100%); border-radius: 16px; padding: 24px; border: 2px solid #69DB7C; }
+    .practice-box h3 { font-family: 'ZCOOL KuaiLe', cursive; color: #2D8A4E; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .question { background: white; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+    .q-num { width: 28px; height: 28px; background: #69DB7C; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+    .q-text { font-size: 0.95rem; color: #333; }
+  </style>
+</head>
+<body>
+  <div class="unit-header">
+    <a href="index2.html" class="back-btn">← 返回二年级下册</a>
+    <h1>第一单元：数据收集整理</h1>
+    <p class="unit-desc">统计表 · 数据的收集与整理</p>
+  </div>
+
+  <div class="unit-content">
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">1</span>学习目标</div>
+      <div class="learn-box">
+        <h4>📌 本课重点</h4>
+        <ul>
+          <li>学会收集数据</li>
+          <li>认识简单的统计表</li>
+          <li>能根据统计表回答问题</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">2</span>统计表</div>
+      <div class="example-box">
+        <h4>📊 例：班级同学喜欢的水果</h4>
+        <table class="table-demo">
+          <tr><th>水果</th><th>苹果</th><th>香蕉</th><th>葡萄</th><th>橙子</th></tr>
+          <tr><td>人数</td><td>8</td><td>12</td><td>6</td><td>4</td></tr>
+        </table>
+        <p style="color:#555;font-size:0.9rem;line-height:1.8;margin-top:12px;">
+          从统计表可以看出：喜欢<span style="color:#E67700;font-weight:700;">香蕉</span>的同学最多，喜欢<span style="color:#E67700;font-weight:700;">橙子</span>的同学最少。
+        </p>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">3</span>画"正"字统计</div>
+      <div class="learn-box">
+        <h4>📝 记录方法</h4>
+        <ul>
+          <li>一个"正"字代表5票</li>
+          <li>画的时候先横后竖</li>
+          <li>最后数一数有几个"正"字</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="practice-box">
+      <h3>✏️ 练一练</h3>
+      <div class="question"><span class="q-num">1</span><span class="q-text">调查全班同学最喜欢哪个季节，制成统计表</span></div>
+      <div class="question"><span class="q-num">2</span><span class="q-text">哪个最多？哪个最少？</span></div>
+      <div class="question"><span class="q-num">3</span><span class="q-text">全班一共有多少人？</span></div>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><p class="footer-text">🧮 L-MATH 乐学数学 二年级下册</p></div></footer>
+</body>
+</html>

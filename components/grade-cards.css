@@ -1,0 +1,142 @@
+/* ============================================
+   年级卡片 - 导航组件
+   ============================================ */
+
+.grade-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-lg);
+}
+
+.grade-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-xl);
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition);
+  overflow: hidden;
+}
+
+/* 卡片背景装饰 */
+.grade-card-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity var(--transition);
+  border-radius: inherit;
+}
+
+.grade-card[data-grade="1"] .grade-card-bg { background: linear-gradient(135deg, #FFF0F0 0%, #FFE0E0 100%); }
+.grade-card[data-grade="2"] .grade-card-bg { background: linear-gradient(135deg, #FFF8ED 0%, #FFEDCC 100%); }
+.grade-card[data-grade="3"] .grade-card-bg { background: linear-gradient(135deg, #FFFCED 0%, #FFF5CC 100%); }
+.grade-card[data-grade="4"] .grade-card-bg { background: linear-gradient(135deg, #EDFFF0 0%, #D6FFE0 100%); }
+.grade-card[data-grade="5"] .grade-card-bg { background: linear-gradient(135deg, #EDF5FF 0%, #CCDFFF 100%); }
+.grade-card[data-grade="6"] .grade-card-bg { background: linear-gradient(135deg, #F3EDFF 0%, #E0CCFF 100%); }
+
+.grade-card:hover .grade-card-bg {
+  opacity: 1;
+}
+
+.grade-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+/* 年级图标 */
+.grade-card-icon {
+  position: relative;
+  z-index: 1;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-light);
+  flex-shrink: 0;
+  transition: all var(--transition);
+}
+
+.grade-card[data-grade="1"]:hover .grade-card-icon { background: var(--grade-1); }
+.grade-card[data-grade="2"]:hover .grade-card-icon { background: var(--grade-2); }
+.grade-card[data-grade="3"]:hover .grade-card-icon { background: var(--grade-3); }
+.grade-card[data-grade="4"]:hover .grade-card-icon { background: var(--grade-4); }
+.grade-card[data-grade="5"]:hover .grade-card-icon { background: var(--grade-5); }
+.grade-card[data-grade="6"]:hover .grade-card-icon { background: var(--grade-6); }
+
+/* 卡片信息 */
+.grade-card-info {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+.grade-card-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.grade-card-info p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-sm);
+}
+
+.grade-card-units {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--primary-bg);
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+}
+
+/* 箭头 */
+.grade-card-arrow {
+  position: relative;
+  z-index: 1;
+  font-size: 1.5rem;
+  color: var(--text-light);
+  transition: all var(--transition);
+  flex-shrink: 0;
+}
+
+.grade-card:hover .grade-card-arrow {
+  color: var(--primary);
+  transform: translateX(4px);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .grade-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .grade-card {
+    padding: var(--space-md);
+    gap: var(--space-md);
+  }
+
+  .grade-card-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+
+  .grade-card-info h3 {
+    font-size: 1.2rem;
+  }
+}

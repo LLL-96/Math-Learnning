@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>角的度量 | L-MATH 乐学数学</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../components/footer.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: linear-gradient(180deg, #FFF5EB 0%, #FFF 100%); min-height: 100vh; }
+    .unit-header { background: linear-gradient(135deg, #FF6B6B 0%, #FFA8A8 100%); color: white; padding: 48px 24px 32px; text-align: center; }
+    .unit-header .back-btn { display: inline-flex; align-items: center; gap: 6px; color: white; font-weight: 600; font-size: 0.95rem; margin-bottom: 20px; opacity: 0.9; }
+    .unit-header .back-btn:hover { opacity: 1; text-decoration: underline; }
+    .unit-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.8rem; margin-bottom: 8px; }
+    .unit-header .unit-desc { opacity: 0.9; font-size: 0.95rem; }
+    .unit-content { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; }
+    .lesson-card { background: white; border-radius: 20px; padding: 28px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; }
+    .lesson-title { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.3rem; color: #FF6B6B; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .lesson-title .num { width: 32px; height: 32px; background: #FF6B6B; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 700; }
+    .learn-box { background: #FFF5F5; border-radius: 12px; padding: 16px 20px; margin-bottom: 16px; border-left: 4px solid #FF6B6B; }
+    .learn-box h4 { font-size: 0.95rem; color: #FF6B6B; margin-bottom: 8px; }
+    .learn-box ul { padding-left: 20px; color: #555; font-size: 0.9rem; line-height: 1.8; }
+    .example-box { background: #F8F9FA; border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .example-box h4 { font-size: 0.9rem; color: #888; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .angle-types { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 20px 0; }
+    .angle-type { background: white; border-radius: 12px; padding: 16px; text-align: center; border: 2px solid #f0f0f0; }
+    .angle-type .icon { font-size: 2rem; margin-bottom: 8px; }
+    .angle-type .name { font-weight: 700; color: #333; font-size: 0.9rem; }
+    .angle-type .degree { font-size: 0.8rem; color: #FF6B6B; margin-top: 4px; }
+    .practice-box { background: linear-gradient(135deg, #E8F8F5 0%, #D6FFF0 100%); border-radius: 16px; padding: 24px; border: 2px solid #69DB7C; }
+    .practice-box h3 { font-family: 'ZCOOL KuaiLe', cursive; color: #2D8A4E; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .question { background: white; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+    .q-num { width: 28px; height: 28px; background: #69DB7C; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+    .q-text { font-size: 0.95rem; color: #333; }
+    @media (max-width: 600px) { .angle-types { grid-template-columns: repeat(2, 1fr); } }
+  </style>
+</head>
+<body>
+  <div class="unit-header">
+    <a href="index.html" class="back-btn">← 返回四年级上册</a>
+    <h1>第三单元：角的度量</h1>
+    <p class="unit-desc">认识角 · 角的分类 · 画角</p>
+  </div>
+
+  <div class="unit-content">
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">1</span>学习目标</div>
+      <div class="learn-box">
+        <h4>📌 本课重点</h4>
+        <ul>
+          <li>认识角的计量单位"度"</li>
+          <li>会用量角器量角和画角</li>
+          <li>认识锐角、直角、钝角、平角、周角</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">2</span>角的分类</div>
+      <div class="angle-types">
+        <div class="angle-type"><div class="icon">📐</div><div class="name">锐角</div><div class="degree">小于90°</div></div>
+        <div class="angle-type"><div class="icon">📏</div><div class="name">直角</div><div class="degree">等于90°</div></div>
+        <div class="angle-type"><div class="icon">📐</div><div class="name">钝角</div><div class="degree">大于90°小于180°</div></div>
+        <div class="angle-type"><div class="icon">➖</div><div class="name">平角</div><div class="degree">等于180°</div></div>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">3</span>用量角器量角</div>
+      <div class="example-box">
+        <h4>📐 步骤</h4>
+        <p style="color:#555;font-size:0.95rem;line-height:1.8;">
+          1. 把量角器的中心与角的顶点重合<br>
+          2. 0刻度线与角的一条边重合<br>
+          3. 角的另一条边所对的刻度就是角的度数
+        </p>
+      </div>
+    </div>
+
+    <div class="practice-box">
+      <h3>✏️ 练一练</h3>
+      <div class="question"><span class="q-num">1</span><span class="q-text">1周角 = ____平角 = ____直角</span></div>
+      <div class="question"><span class="q-num">2</span><span class="q-text">量一量三角尺上各角的度数</span></div>
+      <div class="question"><span class="q-num">3</span><span class="q-text">画一个60°的角</span></div>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><p class="footer-text">🧮 L-MATH 乐学数学 · 四年级上册</p></div></footer>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>认识人民币 | L-MATH 乐学数学</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../components/footer.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: linear-gradient(180deg, #FFF5EB 0%, #FFF 100%); min-height: 100vh; }
+    .unit-header { background: linear-gradient(135deg, #FF6B6B 0%, #FFA8A8 100%); color: white; padding: 48px 24px 32px; text-align: center; }
+    .unit-header .back-btn { display: inline-flex; align-items: center; gap: 6px; color: white; font-weight: 600; font-size: 0.95rem; margin-bottom: 20px; opacity: 0.9; }
+    .unit-header .back-btn:hover { opacity: 1; text-decoration: underline; }
+    .unit-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.8rem; margin-bottom: 8px; }
+    .unit-header .unit-desc { opacity: 0.9; font-size: 0.95rem; }
+    .unit-content { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; }
+    .lesson-card { background: white; border-radius: 20px; padding: 28px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; }
+    .lesson-title { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.3rem; color: #FF6B6B; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .lesson-title .num { width: 32px; height: 32px; background: #FF6B6B; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 700; }
+    .learn-box { background: #FFF5F5; border-radius: 12px; padding: 16px 20px; margin-bottom: 16px; border-left: 4px solid #FF6B6B; }
+    .learn-box h4 { font-size: 0.95rem; color: #FF6B6B; margin-bottom: 8px; }
+    .learn-box ul { padding-left: 20px; color: #555; font-size: 0.9rem; line-height: 1.8; }
+    .money-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin: 20px 0; }
+    .money-item { background: white; border-radius: 12px; padding: 14px 8px; text-align: center; border: 2px solid #FFF5F5; }
+    .money-item .icon { font-size: 1.8rem; margin-bottom: 6px; }
+    .money-item .value { font-weight: 700; color: #FF6B6B; font-size: 0.9rem; }
+    .exchange-box { background: #FFF9DB; border-radius: 12px; padding: 16px 20px; margin: 12px 0; border-left: 4px solid #E67700; }
+    .practice-box { background: linear-gradient(135deg, #E8F8F5 0%, #D6FFF0 100%); border-radius: 16px; padding: 24px; border: 2px solid #69DB7C; }
+    .practice-box h3 { font-family: 'ZCOOL KuaiLe', cursive; color: #2D8A4E; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .question { background: white; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+    .q-num { width: 28px; height: 28px; background: #69DB7C; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+    .q-text { font-size: 0.95rem; color: #333; }
+    @media (max-width: 600px) { .money-grid { grid-template-columns: repeat(3, 1fr); } }
+  </style>
+</head>
+<body>
+  <div class="unit-header">
+    <a href="index2.html" class="back-btn">← 返回一年级下册</a>
+    <h1>第五单元：认识人民币</h1>
+    <p class="unit-desc">人民币的单位 · 元角分的换算</p>
+  </div>
+
+  <div class="unit-content">
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">1</span>学习目标</div>
+      <div class="learn-box">
+        <h4>📌 本课重点</h4>
+        <ul>
+          <li>认识人民币的单位：元、角、分</li>
+          <li>会进行元、角、分的换算</li>
+          <li>会进行简单的人民币计算</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">2</span>认识人民币</div>
+      <div class="money-grid">
+        <div class="money-item"><div class="icon">💴</div><div class="value">1分</div></div>
+        <div class="money-item"><div class="icon">💴</div><div class="value">2分</div></div>
+        <div class="money-item"><div class="icon">💴</div><div class="value">5分</div></div>
+        <div class="money-item"><div class="icon">💵</div><div class="value">1角</div></div>
+        <div class="money-item"><div class="icon">💵</div><div class="value">2角</div></div>
+        <div class="money-item"><div class="icon">💵</div><div class="value">5角</div></div>
+        <div class="money-item"><div class="icon">🪙</div><div class="value">1元</div></div>
+        <div class="money-item"><div class="icon">🪙</div><div class="value">2元</div></div>
+        <div class="money-item"><div class="icon">💰</div><div class="value">5元</div></div>
+        <div class="money-item"><div class="icon">💰</div><div class="value">10元</div></div>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">3</span>元角分的换算</div>
+      <div class="exchange-box">
+        <p style="color:#555;font-size:0.95rem;line-height:1.8;">
+          <b style="color:#E67700;">1元 = 10角</b><br>
+          <b style="color:#E67700;">1角 = 10分</b><br>
+          <b style="color:#E67700;">1元 = 100分</b>
+        </p>
+      </div>
+      <div class="learn-box">
+        <h4>💱 换算练习</h4>
+        <ul>
+          <li>3元 = <b>30</b>角</li>
+          <li>50分 = <b>5</b>角</li>
+          <li>2元5角 = <b>25</b>角</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="practice-box">
+      <h3>✏️ 练一练</h3>
+      <div class="question"><span class="q-num">1</span><span class="q-text">5元 = （ ）角</span></div>
+      <div class="question"><span class="q-num">2</span><span class="q-text">18角 = （ ）元（ ）角</span></div>
+      <div class="question"><span class="q-num">3</span><span class="q-text">小明买橡皮花了1元5角，付了2元，应找回多少钱？</span></div>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><p class="footer-text">🧮 L-MATH 乐学数学 一年级下册</p></div></footer>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>表内乘法（一）| L-MATH 乐学数学</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../components/footer.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: linear-gradient(180deg, #FFF5EB 0%, #FFF 100%); min-height: 100vh; }
+    .unit-header { background: linear-gradient(135deg, #69DB7C 0%, #8CE99A 100%); color: white; padding: 48px 24px 32px; text-align: center; }
+    .unit-header .back-btn { display: inline-flex; align-items: center; gap: 6px; color: white; font-weight: 600; font-size: 0.95rem; margin-bottom: 20px; opacity: 0.9; }
+    .unit-header .back-btn:hover { opacity: 1; text-decoration: underline; }
+    .unit-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.8rem; margin-bottom: 8px; }
+    .unit-header .unit-desc { opacity: 0.9; font-size: 0.95rem; }
+    .unit-content { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; }
+    .lesson-card { background: white; border-radius: 20px; padding: 28px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; }
+    .lesson-title { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.3rem; color: #2D8A4E; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .lesson-title .num { width: 32px; height: 32px; background: #69DB7C; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 700; }
+    .learn-box { background: #E8F8F5; border-radius: 12px; padding: 16px 20px; margin-bottom: 16px; border-left: 4px solid #69DB7C; }
+    .learn-box h4 { font-size: 0.95rem; color: #2D8A4E; margin-bottom: 8px; }
+    .learn-box ul { padding-left: 20px; color: #555; font-size: 0.9rem; line-height: 1.8; }
+    .example-box { background: #F8F9FA; border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .example-box h4 { font-size: 0.9rem; color: #888; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .multiply-demo { display: flex; justify-content: center; align-items: center; gap: 16px; margin: 20px 0; font-size: 1.5rem; }
+    .multiply-demo .group { display: flex; gap: 4px; }
+    .multiply-demo .apple { font-size: 2rem; }
+    .multiply-demo .op { color: #69DB7C; font-weight: 700; }
+    .multiply-demo .result { color: #2D8A4E; font-weight: 700; }
+    .formula-box { background: linear-gradient(135deg, #E8F8F5 0%, #D6FFF0 100%); border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .formula-box h4 { font-size: 0.9rem; color: #2D8A4E; margin-bottom: 12px; }
+    .formula { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; text-align: center; }
+    .formula-item { background: white; border-radius: 8px; padding: 8px; font-size: 0.9rem; color: #333; }
+    .practice-box { background: linear-gradient(135deg, #FFF5F5 0%, #FFE8E8 100%); border-radius: 16px; padding: 24px; border: 2px solid #FF6B6B; }
+    .practice-box h3 { font-family: 'ZCOOL KuaiLe', cursive; color: #D63031; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .question { background: white; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+    .q-num { width: 28px; height: 28px; background: #FF6B6B; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+    .q-text { font-size: 0.95rem; color: #333; }
+  </style>
+</head>
+<body>
+  <div class="unit-header">
+    <a href="index.html" class="back-btn">← 返回二年级上册</a>
+    <h1>第四单元：表内乘法（一）</h1>
+    <p class="unit-desc">乘法的初步认识 · 1-6的乘法口诀</p>
+  </div>
+
+  <div class="unit-content">
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">1</span>学习目标</div>
+      <div class="learn-box">
+        <h4>📌 本课重点</h4>
+        <ul>
+          <li>理解乘法的意义：求几个相同加数的和</li>
+          <li>熟记1~6的乘法口诀</li>
+          <li>会用乘法解决简单问题</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">2</span>乘法的意义</div>
+      <div class="example-box">
+        <h4>🍎 数一数</h4>
+        <div class="multiply-demo">
+          <div class="group"><span class="apple">🍎</span><span class="apple">🍎</span><span class="apple">🍎</span></div>
+          <span class="op">+</span>
+          <div class="group"><span class="apple">🍎</span><span class="apple">🍎</span><span class="apple">🍎</span></div>
+          <span class="op">=</span>
+          <span class="result">6个</span>
+        </div>
+        <p style="text-align:center;color:#555;font-size:0.95rem;">3 + 3 = 6 → <b style="color:#2D8A4E;">3 × 2 = 6</b></p>
+        <p style="text-align:center;color:#888;font-size:0.85rem;margin-top:8px;">相同加数求和，可以用乘法！</p>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">3</span>乘法口诀</div>
+      <div class="formula-box">
+        <h4>📝 背一背</h4>
+        <div class="formula">
+          <div class="formula-item">一三得三</div>
+          <div class="formula-item">二三得六</div>
+          <div class="formula-item">三三得九</div>
+          <div class="formula-item">一四得四</div>
+          <div class="formula-item">二四得八</div>
+          <div class="formula-item">三四十二</div>
+          <div class="formula-item">一五得五</div>
+          <div class="formula-item">二五一十</div>
+          <div class="formula-item">三五十五</div>
+          <div class="formula-item">一六得六</div>
+          <div class="formula-item">二六十二</div>
+          <div class="formula-item">三六十八</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="practice-box">
+      <h3>✏️ 练一练</h3>
+      <div class="question"><span class="q-num">1</span><span class="q-text">4 × 3 = ?</span></div>
+      <div class="question"><span class="q-num">2</span><span class="q-text">5 × 2 = ?</span></div>
+      <div class="question"><span class="q-num">3</span><span class="q-text">每盘有3个苹果，4盘一共有几个？</span></div>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><p class="footer-text">🧮 L-MATH 乐学数学 · 二年级上册</p></div></footer>
+</body>
+</html>

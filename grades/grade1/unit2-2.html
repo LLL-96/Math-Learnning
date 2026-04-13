@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>20以内的退位减法 | L-MATH 乐学数学</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../components/footer.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: linear-gradient(180deg, #FFF5EB 0%, #FFF 100%); min-height: 100vh; }
+    .unit-header { background: linear-gradient(135deg, #FF6B6B 0%, #FFA8A8 100%); color: white; padding: 48px 24px 32px; text-align: center; }
+    .unit-header .back-btn { display: inline-flex; align-items: center; gap: 6px; color: white; font-weight: 600; font-size: 0.95rem; margin-bottom: 20px; opacity: 0.9; }
+    .unit-header .back-btn:hover { opacity: 1; text-decoration: underline; }
+    .unit-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.8rem; margin-bottom: 8px; }
+    .unit-header .unit-desc { opacity: 0.9; font-size: 0.95rem; }
+    .unit-content { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; }
+    .lesson-card { background: white; border-radius: 20px; padding: 28px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; }
+    .lesson-title { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.3rem; color: #FF6B6B; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .lesson-title .num { width: 32px; height: 32px; background: #FF6B6B; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 700; }
+    .learn-box { background: #FFF5F5; border-radius: 12px; padding: 16px 20px; margin-bottom: 16px; border-left: 4px solid #FF6B6B; }
+    .learn-box h4 { font-size: 0.95rem; color: #FF6B6B; margin-bottom: 8px; }
+    .learn-box ul { padding-left: 20px; color: #555; font-size: 0.9rem; line-height: 1.8; }
+    .example-box { background: #F8F9FA; border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .example-box h4 { font-size: 0.9rem; color: #888; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .step-box { background: white; border-radius: 12px; padding: 16px 20px; margin: 12px 0; border: 2px solid #FFF5F5; }
+    .step-title { font-weight: 700; color: #FF6B6B; margin-bottom: 8px; font-size: 0.95rem; }
+    .calc-demo { display: flex; align-items: center; gap: 12px; margin: 16px 0; flex-wrap: wrap; }
+    .calc-item { background: #FFF5F5; border-radius: 12px; padding: 12px 20px; font-size: 1.3rem; font-weight: 700; color: #FF6B6B; }
+    .calc-item .op { color: #888; font-size: 1.1rem; }
+    .practice-box { background: linear-gradient(135deg, #E8F8F5 0%, #D6FFF0 100%); border-radius: 16px; padding: 24px; border: 2px solid #69DB7C; }
+    .practice-box h3 { font-family: 'ZCOOL KuaiLe', cursive; color: #2D8A4E; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .question { background: white; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+    .q-num { width: 28px; height: 28px; background: #69DB7C; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+    .q-text { font-size: 0.95rem; color: #333; }
+  </style>
+</head>
+<body>
+  <div class="unit-header">
+    <a href="index2.html" class="back-btn">← 返回一年级下册</a>
+    <h1>第二单元：20以内的退位减法</h1>
+    <p class="unit-desc">破十法 · 连减法 · 想加法算减法</p>
+  </div>
+
+  <div class="unit-content">
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">1</span>学习目标</div>
+      <div class="learn-box">
+        <h4>📌 本课重点</h4>
+        <ul>
+          <li>掌握"破十法"计算退位减法</li>
+          <li>会用"想加法算减法"</li>
+          <li>正确计算20以内的退位减法</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">2</span>破十法</div>
+      <div class="step-box">
+        <div class="step-title">例：15 - 7 = ?</div>
+        <p style="color:#555;font-size:0.95rem;line-height:1.8;">
+          第一步：把15分成10和5<br>
+          第二步：10 - 7 = 3<br>
+          第三步：3 + 5 = <b style="color:#FF6B6B;font-size:1.1rem;">8</b>
+        </p>
+      </div>
+      <div class="calc-demo">
+        <div class="calc-item">15<span class="op"> - </span>7</div>
+        <div style="color:#888;">=</div>
+        <div class="calc-item">(10<span class="op"> + </span>5)<span class="op"> - </span>7</div>
+        <div style="color:#888;">=</div>
+        <div class="calc-item">10<span class="op"> - </span>7<span class="op"> + </span>5</div>
+        <div style="color:#888;">=</div>
+        <div class="calc-item" style="background:#FF6B6B;color:white;">8</div>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">3</span>想加法算减法</div>
+      <div class="step-box">
+        <div class="step-title">例：15 - 7 = ?</div>
+        <p style="color:#555;font-size:0.95rem;line-height:1.8;">
+          想：7 + <b style="color:#FF6B6B;">8</b> = 15<br>
+          所以：15 - 7 = <b style="color:#FF6B6B;font-size:1.1rem;">8</b>
+        </p>
+      </div>
+      <div class="learn-box">
+        <h4>💡 小提示</h4>
+        <ul>
+          <li>破十法：把被减数拆成10和几，先用10减</li>
+          <li>想加法：想哪个数加上减数等于被减数</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="practice-box">
+      <h3>✏️ 练一练</h3>
+      <div class="question"><span class="q-num">1</span><span class="q-text">用破十法计算：13 - 8 = ?</span></div>
+      <div class="question"><span class="q-num">2</span><span class="q-text">用想加法算减法：16 - 9 = ?</span></div>
+      <div class="question"><span class="q-num">3</span><span class="q-text">14 - 7 = ？用两种方法算一算</span></div>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><p class="footer-text">🧮 L-MATH 乐学数学 一年级下册</p></div></footer>
+</body>
+</html>
