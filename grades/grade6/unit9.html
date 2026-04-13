@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>总复习 | L-MATH 乐学数学</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../components/footer.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: linear-gradient(180deg, #FFF5EB 0%, #FFF 100%); min-height: 100vh; }
+    .unit-header { background: linear-gradient(135deg, #FF6B6B 0%, #FF8787 100%); color: white; padding: 48px 24px 32px; text-align: center; }
+    .unit-header .back-btn { display: inline-flex; align-items: center; gap: 6px; color: white; font-weight: 600; font-size: 0.95rem; margin-bottom: 20px; opacity: 0.9; }
+    .unit-header .back-btn:hover { opacity: 1; text-decoration: underline; }
+    .unit-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.8rem; margin-bottom: 8px; }
+    .unit-header .unit-desc { opacity: 0.9; font-size: 0.95rem; }
+    .unit-content { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; }
+    .lesson-card { background: white; border-radius: 20px; padding: 28px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; }
+    .lesson-title { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.3rem; color: #E03131; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .lesson-title .num { width: 32px; height: 32px; background: #FF6B6B; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 700; }
+    .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 16px 0; }
+    .review-card { background: #FFF5F5; border-radius: 16px; padding: 20px; border: 2px solid #FFC9C9; }
+    .review-card h4 { color: #E03131; font-size: 1.1rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .review-card ul { padding-left: 16px; color: #555; font-size: 0.85rem; line-height: 1.9; }
+    .formula-section { background: #F8F9FA; border-radius: 16px; padding: 24px; margin: 16px 0; }
+    .formula-section h4 { color: #E03131; font-size: 1.1rem; margin-bottom: 16px; }
+    .formula-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+    .formula-item { background: white; border-radius: 12px; padding: 16px; text-align: center; border: 1px solid #E9ECEF; }
+    .formula-item .name { font-size: 0.85rem; color: #888; margin-bottom: 8px; }
+    .formula-item .math { font-size: 1.1rem; color: #E03131; font-weight: 700; font-family: monospace; }
+    .tip-box { background: linear-gradient(135deg, #FFF9DB 0%, #FFF3BF 100%); border-radius: 12px; padding: 20px; border-left: 4px solid #FFD43B; margin: 16px 0; }
+    .tip-box h4 { color: #F08C00; margin-bottom: 8px; }
+    .tip-box p { color: #666; font-size: 0.9rem; line-height: 1.8; }
+    .practice-box { background: linear-gradient(135deg, #FFF5F5 0%, #FFE0E0 100%); border-radius: 16px; padding: 24px; border: 2px solid #FF6B6B; }
+    .practice-box h3 { font-family: 'ZCOOL KuaiLe', cursive; color: #E03131; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .question { background: white; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 12px; }
+    .q-num { width: 28px; height: 28px; background: #FF6B6B; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+    .q-text { font-size: 0.95rem; color: #333; line-height: 1.6; }
+    .checklist { background: white; border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .checklist h4 { color: #E03131; margin-bottom: 12px; }
+    .checklist-item { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
+    .checklist-item:last-child { border-bottom: none; }
+    .check-icon { width: 24px; height: 24px; border: 2px solid #FF6B6B; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #FF6B6B; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="unit-header">
+    <a href="index.html" class="back-btn">← 返回六年级上册</a>
+    <h1>第九单元：总复习</h1>
+    <p class="unit-desc">数与代数 · 图形与几何 · 统计与概率</p>
+  </div>
+
+  <div class="unit-content">
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">1</span>知识梳理</div>
+      <div class="review-grid">
+        <div class="review-card">
+          <h4>🔢 分数乘法</h4>
+          <ul>
+            <li>分数乘整数</li>
+            <li>分数乘分数</li>
+            <li>倒数概念</li>
+            <li>分数混合运算</li>
+          </ul>
+        </div>
+        <div class="review-card">
+          <h4>➗ 分数除法</h4>
+          <ul>
+            <li>分数除以整数</li>
+            <li>一个数除以分数</li>
+            <li>分数四则混合</li>
+            <li>解决问题</li>
+          </ul>
+        </div>
+        <div class="review-card">
+          <h4>📊 比</h4>
+          <ul>
+            <li>比的意义</li>
+            <li>比的基本性质</li>
+            <li>化简比</li>
+            <li>按比分配</li>
+          </ul>
+        </div>
+        <div class="review-card">
+          <h4>⭕ 圆</h4>
+          <ul>
+            <li>圆的认识</li>
+            <li>圆的周长</li>
+            <li>圆的面积</li>
+            <li>扇形</li>
+          </ul>
+        </div>
+        <div class="review-card">
+          <h4>📈 百分数</h4>
+          <ul>
+            <li>百分数的意义</li>
+            <li>百分数与小数互化</li>
+            <li>百分数与分数互化</li>
+            <li>百分数应用</li>
+          </ul>
+        </div>
+        <div class="review-card">
+          <h4>📉 统计</h4>
+          <ul>
+            <li>扇形统计图</li>
+            <li>统计图选择</li>
+            <li>数据分析</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">2</span>核心公式</div>
+      <div class="formula-section">
+        <h4>📐 圆的相关公式</h4>
+        <div class="formula-grid">
+          <div class="formula-item">
+            <div class="name">周长</div>
+            <div class="math">C = πd = 2πr</div>
+          </div>
+          <div class="formula-item">
+            <div class="name">面积</div>
+            <div class="math">S = πr²</div>
+          </div>
+          <div class="formula-item">
+            <div class="name">半圆周长</div>
+            <div class="math">C = πr + 2r</div>
+          </div>
+          <div class="formula-item">
+            <div class="name">圆环面积</div>
+            <div class="math">S = π(R²-r²)</div>
+          </div>
+        </div>
+      </div>
+      <div class="formula-section">
+        <h4>🧮 分数运算</h4>
+        <div class="formula-grid">
+          <div class="formula-item">
+            <div class="name">倒数</div>
+            <div class="math">a × 1/a = 1</div>
+          </div>
+          <div class="formula-item">
+            <div class="name">除法法则</div>
+            <div class="math">a÷b = a×1/b</div>
+          </div>
+          <div class="formula-item">
+            <div class="name">比与除法</div>
+            <div class="math">a:b = a÷b</div>
+          </div>
+          <div class="formula-item">
+            <div class="name">按比分配</div>
+            <div class="math">总量×对应份数/总份数</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">3</span>易错点提醒</div>
+      <div class="tip-box">
+        <h4>⚠️ 分数运算</h4>
+        <p>• 分数乘法：分子乘分子，分母乘分母，能约分的先约分<br>
+        • 分数除法：转化为乘以倒数后再计算<br>
+        • 结果要化成最简分数</p>
+      </div>
+      <div class="tip-box">
+        <h4>⚠️ 圆的相关计算</h4>
+        <p>• 计算周长时注意区分直径和半径<br>
+        • 面积公式中是 r²（半径的平方）<br>
+        • 半圆周长 = 圆周长的一半 + 直径</p>
+      </div>
+      <div class="tip-box">
+        <h4>⚠️ 百分数应用</h4>
+        <p>• 找准单位"1"的量<br>
+        • 增加百分之几 ≠ 增加到百分之几<br>
+        • 计算增长率：(新-原)÷原×100%</p>
+      </div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="num">4</span>复习检查清单</div>
+      <div class="checklist">
+        <h4>✅ 复习要点</h4>
+        <div class="checklist-item">
+          <span class="check-icon">☐</span>
+          <span>掌握分数乘除法的计算方法</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-icon">☐</span>
+          <span>理解比的意义并能化简比</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-icon">☐</span>
+          <span>熟练计算圆的周长和面积</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-icon">☐</span>
+          <span>掌握百分数与小数、分数的互化</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-icon">☐</span>
+          <span>能解决分数、百分数实际问题</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-icon">☐</span>
+          <span>能读懂扇形统计图</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="practice-box">
+      <h3>✏️ 综合练习</h3>
+      <div class="question"><span class="q-num">1</span><span class="q-text">计算：3/4 × 8/9 ÷ 2/3</span></div>
+      <div class="question"><span class="q-num">2</span><span class="q-text">一个圆的半径是5cm，求它的周长和面积。</span></div>
+      <div class="question"><span class="q-num">3</span><span class="q-text">把20克糖放入80克水中，糖占糖水的百分之几？</span></div>
+      <div class="question"><span class="q-num">4</span><span class="q-text">甲、乙两数的比是3:5，它们的和是72，求甲、乙两数。</span></div>
+      <div class="question"><span class="q-num">5</span><span class="q-text">某商品原价200元，先涨价10%，再降价10%，现价是多少元？</span></div>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><p class="footer-text">🧮 L-MATH 乐学数学 · 六年级上册</p></div></footer>
+</body>
+</html>
