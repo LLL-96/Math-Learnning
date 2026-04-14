@@ -91,11 +91,11 @@
 
     <div class="stats-box">
       <div class="stat-item">
-        <div class="num" id="available-count">27</div>
+        <div class="num" id="available-count">88</div>
         <div class="label">已上线单元</div>
       </div>
       <div class="stat-item">
-        <div class="num" id="total-questions">100+</div>
+        <div class="num" id="total-questions">350+</div>
         <div class="label">练习题数量</div>
       </div>
       <div class="stat-item">
@@ -641,12 +641,37 @@
   </footer>
 
   <script>
+    // 所有可用单元列表
+    const allAvailableUnits = [
+      // 一年级上册
+      'grade1-unit1', 'grade1-unit2', 'grade1-unit3', 'grade1-unit4', 'grade1-unit5', 'grade1-unit6', 'grade1-unit7', 'grade1-unit8',
+      // 一年级下册
+      'grade1-unit1-2', 'grade1-unit2-2', 'grade1-unit3-2', 'grade1-unit4-2', 'grade1-unit5-2', 'grade1-unit6-2', 'grade1-unit7-2',
+      // 二年级上册
+      'grade2-unit1', 'grade2-unit2', 'grade2-unit3', 'grade2-unit4', 'grade2-unit5', 'grade2-unit6', 'grade2-unit7', 'grade2-unit8',
+      // 三年级上册
+      'grade3-unit1', 'grade3-unit2', 'grade3-unit3', 'grade3-unit4', 'grade3-unit5', 'grade3-unit6', 'grade3-unit7', 'grade3-unit8',
+      // 三年级下册
+      'grade3-unit1-2', 'grade3-unit2-2', 'grade3-unit3-2', 'grade3-unit4-2', 'grade3-unit5-2', 'grade3-unit6-2', 'grade3-unit7-2', 'grade3-unit8-2', 'grade3-unit9-2',
+      // 四年级上册
+      'grade4-unit1', 'grade4-unit2', 'grade4-unit3', 'grade4-unit4', 'grade4-unit5', 'grade4-unit6', 'grade4-unit7', 'grade4-unit8',
+      // 四年级下册
+      'grade4-unit1-2', 'grade4-unit2-2', 'grade4-unit3-2', 'grade4-unit4-2', 'grade4-unit5-2', 'grade4-unit6-2', 'grade4-unit7-2', 'grade4-unit8-2', 'grade4-unit9-2',
+      // 五年级上册
+      'grade5-unit1', 'grade5-unit2', 'grade5-unit3', 'grade5-unit4', 'grade5-unit5', 'grade5-unit6', 'grade5-unit7',
+      // 五年级下册
+      'grade5-unit1-2', 'grade5-unit2-2', 'grade5-unit3-2', 'grade5-unit4-2', 'grade5-unit5-2', 'grade5-unit6-2', 'grade5-unit7-2', 'grade5-unit8-2',
+      // 六年级上册
+      'grade6-unit1', 'grade6-unit2', 'grade6-unit3', 'grade6-unit4', 'grade6-unit5', 'grade6-unit6', 'grade6-unit7', 'grade6-unit8', 'grade6-unit9',
+      // 六年级下册
+      'grade6-unit1-2', 'grade6-unit2-2', 'grade6-unit3-2', 'grade6-unit4-2', 'grade6-unit5-2', 'grade6-unit6-2'
+    ];
+    
     // 统计已完成练习数量并显示进度
     function updateStats() {
-      const availableUnits = ['grade1-unit1', 'grade1-unit2', 'grade1-unit3', 'grade1-unit4', 'grade1-unit5', 'grade2-unit4'];
       let completed = 0;
       
-      availableUnits.forEach(unit => {
+      allAvailableUnits.forEach(unit => {
         const history = localStorage.getItem(`practice-${unit}`);
         const progress = getUnitProgress(unit);
         
