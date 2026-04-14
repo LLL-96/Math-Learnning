@@ -1698,6 +1698,743 @@ const practiceDB = {
         explanation: '先烙1、2正面（2分），再烙1反面、3正面（2分），最后烙2、3反面（2分），共6分钟。'
       }
     ]
+  },
+  // 四年级下册
+  'grade4-unit1-2': {
+    title: '四则运算',
+    questions: [
+      {
+        type: 'choice',
+        question: '在没有括号的算式里，如果只有加减法或只有乘除法，要____计算。',
+        options: ['先算加法', '先算乘法', '从左往右', '从右往左'],
+        answer: 2,
+        explanation: '在没有括号的算式里，如果只有同级运算，要从左往右依次计算。'
+      },
+      {
+        type: 'choice',
+        question: '算式里有括号，要先算____。',
+        options: ['括号里面的', '括号外面的', '加法', '乘法'],
+        answer: 0,
+        explanation: '算式里有括号，要先算括号里面的。'
+      },
+      {
+        type: 'fill',
+        question: '25 + 75 - 50 = ____',
+        answer: '50',
+        explanation: '25+75=100，100-50=50。'
+      }
+    ]
+  },
+  'grade4-unit2-2': {
+    title: '观察物体（二）',
+    questions: [
+      {
+        type: 'choice',
+        question: '从不同的位置观察同一个物体，看到的形状____。',
+        options: ['一定相同', '可能不同', '一定不同', '无法确定'],
+        answer: 1,
+        explanation: '从不同的位置观察同一个物体，看到的形状可能不同。'
+      }
+    ]
+  },
+  'grade4-unit3-2': {
+    title: '运算定律',
+    questions: [
+      {
+        type: 'choice',
+        question: 'a + b = b + a，这是____。',
+        options: ['加法结合律', '加法交换律', '乘法交换律', '乘法结合律'],
+        answer: 1,
+        explanation: 'a+b=b+a是加法交换律。'
+      },
+      {
+        type: 'choice',
+        question: '(a + b) + c = a + (b + c)，这是____。',
+        options: ['加法交换律', '加法结合律', '乘法交换律', '乘法结合律'],
+        answer: 1,
+        explanation: '(a+b)+c=a+(b+c)是加法结合律。'
+      },
+      {
+        type: 'fill',
+        question: '25 × 4 × 8 = 25 × ____ × 4',
+        answer: '8',
+        explanation: '运用乘法交换律，25×4×8=25×8×4。'
+      }
+    ]
+  },
+  'grade4-unit4-2': {
+    title: '小数的意义和性质',
+    questions: [
+      {
+        type: 'choice',
+        question: '0.1表示____。',
+        options: ['十分之一', '百分之一', '千分之一', '一'],
+        answer: 0,
+        explanation: '0.1表示十分之一。'
+      },
+      {
+        type: 'choice',
+        question: '0.50化简后是____。',
+        options: ['0.5', '0.05', '5', '50'],
+        answer: 0,
+        explanation: '根据小数的性质，0.50=0.5。'
+      },
+      {
+        type: 'fill',
+        question: '0.3里面有____个0.1。',
+        answer: '3',
+        explanation: '0.3里面有3个0.1。'
+      }
+    ]
+  },
+  'grade4-unit5-2': {
+    title: '三角形',
+    questions: [
+      {
+        type: 'choice',
+        question: '三角形有____条边。',
+        options: ['2', '3', '4', '5'],
+        answer: 1,
+        explanation: '三角形有3条边。'
+      },
+      {
+        type: 'choice',
+        question: '三角形的内角和是____度。',
+        options: ['90', '180', '270', '360'],
+        answer: 1,
+        explanation: '三角形的内角和是180度。'
+      },
+      {
+        type: 'choice',
+        question: '等边三角形的三个角都等于____度。',
+        options: ['30', '45', '60', '90'],
+        answer: 2,
+        explanation: '等边三角形的三个角都等于60度。'
+      }
+    ]
+  },
+  'grade4-unit6-2': {
+    title: '小数的加法和减法',
+    questions: [
+      {
+        type: 'choice',
+        question: '计算小数加减法时，小数点要____。',
+        options: ['对齐', '不对齐', '向左移', '向右移'],
+        answer: 0,
+        explanation: '计算小数加减法时，小数点要对齐。'
+      },
+      {
+        type: 'fill',
+        question: '3.5 + 2.8 = ____',
+        answer: '6.3',
+        explanation: '3.5+2.8=6.3。'
+      },
+      {
+        type: 'choice',
+        question: '5 - 2.5 = ____',
+        options: ['2.5', '3.5', '3', '7.5'],
+        answer: 0,
+        explanation: '5-2.5=2.5。'
+      }
+    ]
+  },
+  'grade4-unit7-2': {
+    title: '图形的运动（二）',
+    questions: [
+      {
+        type: 'choice',
+        question: '一个图形沿着一条直线对折后，两部分完全重合，这样的图形叫做____。',
+        options: ['轴对称图形', '中心对称图形', '旋转图形', '平移图形'],
+        answer: 0,
+        explanation: '这样的图形叫做轴对称图形。'
+      }
+    ]
+  },
+  'grade4-unit8-2': {
+    title: '平均数与条形统计图',
+    questions: [
+      {
+        type: 'choice',
+        question: '求平均数的方法是：总数量 ÷ ____。',
+        options: ['总份数', '总数', '份数', '数量'],
+        answer: 0,
+        explanation: '平均数=总数量÷总份数。'
+      },
+      {
+        type: 'fill',
+        question: '小明语文考了90分，数学考了96分，平均分是____分。',
+        answer: '93',
+        explanation: '(90+96)÷2=93分。'
+      }
+    ]
+  },
+  'grade4-unit9-2': {
+    title: '数学广角-鸡兔同笼',
+    questions: [
+      {
+        type: 'choice',
+        question: '鸡兔同笼，上有8头，下有22足，鸡有____只。',
+        options: ['3', '4', '5', '6'],
+        answer: 2,
+        explanation: '假设全是兔，8×4=32足，多32-22=10足，每只鸡多算2足，鸡有10÷2=5只。'
+      }
+    ]
+  },
+  // 五年级上册
+  'grade5-unit1': {
+    title: '小数乘法',
+    questions: [
+      {
+        type: 'choice',
+        question: '2.5 × 4 = ?',
+        options: ['10', '1', '100', '0.1'],
+        answer: 0,
+        explanation: '2.5×4=10。'
+      },
+      {
+        type: 'choice',
+        question: '0.25 × 0.4 = ?',
+        options: ['0.1', '1', '0.01', '10'],
+        answer: 0,
+        explanation: '0.25×0.4=0.1。'
+      },
+      {
+        type: 'fill',
+        question: '1.25 × 8 = ____',
+        answer: '10',
+        explanation: '1.25×8=10。'
+      }
+    ]
+  },
+  'grade5-unit2': {
+    title: '位置',
+    questions: [
+      {
+        type: 'choice',
+        question: '数对(3,4)表示第____列，第____行。',
+        options: ['3,4', '4,3', '3,3', '4,4'],
+        answer: 0,
+        explanation: '数对(3,4)表示第3列，第4行。'
+      }
+    ]
+  },
+  'grade5-unit3': {
+    title: '小数除法',
+    questions: [
+      {
+        type: 'choice',
+        question: '7.2 ÷ 0.8 = ?',
+        options: ['9', '0.9', '90', '0.09'],
+        answer: 0,
+        explanation: '7.2÷0.8=9。'
+      },
+      {
+        type: 'choice',
+        question: '3.5 ÷ 0.5 = ?',
+        options: ['7', '0.7', '70', '0.07'],
+        answer: 0,
+        explanation: '3.5÷0.5=7。'
+      },
+      {
+        type: 'fill',
+        question: '0.48 ÷ 0.6 = ____',
+        answer: '0.8',
+        explanation: '0.48÷0.6=0.8。'
+      }
+    ]
+  },
+  'grade5-unit4': {
+    title: '可能性',
+    questions: [
+      {
+        type: 'choice',
+        question: '抛一枚硬币，正面朝上的可能性是____。',
+        options: ['1', '1/2', '0', '2'],
+        answer: 1,
+        explanation: '抛硬币正面朝上的可能性是1/2。'
+      },
+      {
+        type: 'choice',
+        question: '盒子里有3个红球和2个白球，摸到红球的可能性____摸到白球的可能性。',
+        options: ['大于', '小于', '等于', '无法确定'],
+        answer: 0,
+        explanation: '红球多，摸到红球的可能性大于摸到白球的可能性。'
+      }
+    ]
+  },
+  'grade5-unit5': {
+    title: '简易方程',
+    questions: [
+      {
+        type: 'choice',
+        question: '含有未知数的____叫做方程。',
+        options: ['式子', '等式', '不等式', '算式'],
+        answer: 1,
+        explanation: '含有未知数的等式叫做方程。'
+      },
+      {
+        type: 'choice',
+        question: 'x + 5 = 12，x = ____',
+        options: ['5', '7', '12', '17'],
+        answer: 1,
+        explanation: 'x=12-5=7。'
+      },
+      {
+        type: 'fill',
+        question: '2x = 16，x = ____',
+        answer: '8',
+        explanation: 'x=16÷2=8。'
+      }
+    ]
+  },
+  'grade5-unit6': {
+    title: '多边形的面积',
+    questions: [
+      {
+        type: 'choice',
+        question: '平行四边形的面积 = ____。',
+        options: ['底×高', '底+高', '底-高', '底÷高'],
+        answer: 0,
+        explanation: '平行四边形面积=底×高。'
+      },
+      {
+        type: 'choice',
+        question: '三角形的面积 = ____。',
+        options: ['底×高', '底×高÷2', '底+高', '底-高'],
+        answer: 1,
+        explanation: '三角形面积=底×高÷2。'
+      },
+      {
+        type: 'fill',
+        question: '一个平行四边形底是8厘米，高是5厘米，面积是____平方厘米。',
+        answer: '40',
+        explanation: '面积=8×5=40平方厘米。'
+      }
+    ]
+  },
+  'grade5-unit7': {
+    title: '数学广角-植树问题',
+    questions: [
+      {
+        type: 'choice',
+        question: '在一条长100米的小路一边植树，每隔5米植一棵（两端都植），一共要植____棵。',
+        options: ['19', '20', '21', '22'],
+        answer: 2,
+        explanation: '100÷5+1=21棵。'
+      },
+      {
+        type: 'choice',
+        question: '在圆形花坛周围植树，棵数____间隔数。',
+        options: ['大于', '小于', '等于', '无法确定'],
+        answer: 2,
+        explanation: '圆形植树，棵数等于间隔数。'
+      }
+    ]
+  },
+  // 五年级下册
+  'grade5-unit1-2': {
+    title: '观察物体（三）',
+    questions: [
+      {
+        type: 'choice',
+        question: '从正面、上面、左面观察物体，最多能看到____个面。',
+        options: ['1', '2', '3', '4'],
+        answer: 2,
+        explanation: '最多能看到3个面。'
+      }
+    ]
+  },
+  'grade5-unit2-2': {
+    title: '因数与倍数',
+    questions: [
+      {
+        type: 'choice',
+        question: '12的因数有____个。',
+        options: ['4', '5', '6', '7'],
+        answer: 2,
+        explanation: '12的因数有1、2、3、4、6、12，共6个。'
+      },
+      {
+        type: 'choice',
+        question: '最小的质数是____。',
+        options: ['1', '2', '3', '4'],
+        answer: 1,
+        explanation: '最小的质数是2。'
+      },
+      {
+        type: 'fill',
+        question: '既是2的倍数又是5的倍数的数，个位一定是____。',
+        answer: '0',
+        explanation: '既是2的倍数又是5的倍数的数，个位一定是0。'
+      }
+    ]
+  },
+  'grade5-unit3-2': {
+    title: '长方体和正方体',
+    questions: [
+      {
+        type: 'choice',
+        question: '长方体有____个面。',
+        options: ['4', '5', '6', '8'],
+        answer: 2,
+        explanation: '长方体有6个面。'
+      },
+      {
+        type: 'choice',
+        question: '正方体的12条棱长度____。',
+        options: ['相等', '不相等', '有的相等', '无法确定'],
+        answer: 0,
+        explanation: '正方体的12条棱长度都相等。'
+      },
+      {
+        type: 'fill',
+        question: '一个正方体棱长是4厘米，表面积是____平方厘米。',
+        answer: '96',
+        explanation: '表面积=4×4×6=96平方厘米。'
+      }
+    ]
+  },
+  'grade5-unit4-2': {
+    title: '分数的意义和性质',
+    questions: [
+      {
+        type: 'choice',
+        question: '把单位"1"平均分成8份，每份是____。',
+        options: ['1/8', '8', '1/4', '1/2'],
+        answer: 0,
+        explanation: '平均分成8份，每份是1/8。'
+      },
+      {
+        type: 'choice',
+        question: '3/4的分数单位是____。',
+        options: ['1/3', '1/4', '3/4', '4'],
+        answer: 1,
+        explanation: '3/4的分数单位是1/4。'
+      }
+    ]
+  },
+  'grade5-unit5-2': {
+    title: '图形的运动（三）',
+    questions: [
+      {
+        type: 'choice',
+        question: '钟表指针的运动是____。',
+        options: ['平移', '旋转', '对称', '缩放'],
+        answer: 1,
+        explanation: '钟表指针的运动是旋转。'
+      }
+    ]
+  },
+  'grade5-unit6-2': {
+    title: '分数的加法和减法',
+    questions: [
+      {
+        type: 'choice',
+        question: '1/4 + 1/4 = ____',
+        options: ['1/8', '2/4', '1/2', '2/8'],
+        answer: 2,
+        explanation: '1/4+1/4=2/4=1/2。'
+      },
+      {
+        type: 'fill',
+        question: '3/5 - 1/5 = ____',
+        answer: '2/5',
+        explanation: '3/5-1/5=2/5。'
+      }
+    ]
+  },
+  'grade5-unit7-2': {
+    title: '折线统计图',
+    questions: [
+      {
+        type: 'choice',
+        question: '折线统计图能清楚地看出数量的____。',
+        options: ['多少', '变化趋势', '比例', '关系'],
+        answer: 1,
+        explanation: '折线统计图能清楚地看出数量的变化趋势。'
+      }
+    ]
+  },
+  'grade5-unit8-2': {
+    title: '数学广角-找次品',
+    questions: [
+      {
+        type: 'choice',
+        question: '有3瓶药，其中1瓶少2片，用天平至少称____次能保证找出次品。',
+        options: ['1', '2', '3', '4'],
+        answer: 0,
+        explanation: '把其中2瓶放在天平两边，如果平衡，剩下的是次品；如果不平衡，轻的是次品。只需1次。'
+      }
+    ]
+  },
+  // 六年级上册
+  'grade6-unit1': {
+    title: '分数乘法',
+    questions: [
+      {
+        type: 'choice',
+        question: '1/2 × 1/3 = ____',
+        options: ['1/5', '1/6', '2/3', '3/2'],
+        answer: 1,
+        explanation: '1/2×1/3=1/6。'
+      },
+      {
+        type: 'choice',
+        question: '3/4 × 8 = ____',
+        options: ['6', '5', '7', '8'],
+        answer: 0,
+        explanation: '3/4×8=6。'
+      },
+      {
+        type: 'fill',
+        question: '2/5 × 5/8 = ____',
+        answer: '1/4',
+        explanation: '2/5×5/8=10/40=1/4。'
+      }
+    ]
+  },
+  'grade6-unit2': {
+    title: '位置与方向（二）',
+    questions: [
+      {
+        type: 'choice',
+        question: '北偏东30°也可以说成东偏北____°。',
+        options: ['30', '60', '90', '120'],
+        answer: 1,
+        explanation: '北偏东30°=东偏北60°。'
+      }
+    ]
+  },
+  'grade6-unit3': {
+    title: '分数除法',
+    questions: [
+      {
+        type: 'choice',
+        question: '1/2 ÷ 1/4 = ____',
+        options: ['1/8', '2', '1/2', '4'],
+        answer: 1,
+        explanation: '1/2÷1/4=1/2×4=2。'
+      },
+      {
+        type: 'choice',
+        question: '一个数除以分数，等于这个数____分数的倒数。',
+        options: ['加上', '减去', '乘以', '除以'],
+        answer: 2,
+        explanation: '一个数除以分数，等于这个数乘以分数的倒数。'
+      },
+      {
+        type: 'fill',
+        question: '3/5 ÷ 3 = ____',
+        answer: '1/5',
+        explanation: '3/5÷3=3/5×1/3=1/5。'
+      }
+    ]
+  },
+  'grade6-unit4': {
+    title: '比',
+    questions: [
+      {
+        type: 'choice',
+        question: '2:3可以写成____。',
+        options: ['2/3', '3/2', '2+3', '2-3'],
+        answer: 0,
+        explanation: '2:3可以写成2/3。'
+      },
+      {
+        type: 'choice',
+        question: '比的前项和后项同时乘或除以相同的数（0除外），比值____。',
+        options: ['变大', '变小', '不变', '无法确定'],
+        answer: 2,
+        explanation: '比的基本性质：比的前项和后项同时乘或除以相同的数（0除外），比值不变。'
+      }
+    ]
+  },
+  'grade6-unit5': {
+    title: '圆',
+    questions: [
+      {
+        type: 'choice',
+        question: '圆的周长公式是____。',
+        options: ['C=πr', 'C=2πr', 'C=πr²', 'C=2r'],
+        answer: 1,
+        explanation: '圆的周长公式是C=2πr或C=πd。'
+      },
+      {
+        type: 'choice',
+        question: '圆的面积公式是____。',
+        options: ['S=πr', 'S=2πr', 'S=πr²', 'S=2r'],
+        answer: 2,
+        explanation: '圆的面积公式是S=πr²。'
+      },
+      {
+        type: 'fill',
+        question: '一个圆的半径是3厘米，周长是____厘米。（π取3.14）',
+        answer: '18.84',
+        explanation: '周长=2×3.14×3=18.84厘米。'
+      }
+    ]
+  },
+  'grade6-unit6': {
+    title: '百分数（一）',
+    questions: [
+      {
+        type: 'choice',
+        question: '50%可以写成____。',
+        options: ['0.5', '5', '50', '0.05'],
+        answer: 0,
+        explanation: '50%=0.5。'
+      },
+      {
+        type: 'choice',
+        question: '出勤率 = ____ ÷ 应到人数 × 100%。',
+        options: ['实到人数', '缺勤人数', '总人数', '出勤人数'],
+        answer: 0,
+        explanation: '出勤率=实到人数÷应到人数×100%。'
+      }
+    ]
+  },
+  'grade6-unit7': {
+    title: '扇形统计图',
+    questions: [
+      {
+        type: 'choice',
+        question: '扇形统计图能清楚地看出各部分占总数的____。',
+        options: ['具体数量', '百分比', '变化趋势', '关系'],
+        answer: 1,
+        explanation: '扇形统计图能清楚地看出各部分占总数的百分比。'
+      }
+    ]
+  },
+  'grade6-unit8': {
+    title: '数学广角-数与形',
+    questions: [
+      {
+        type: 'choice',
+        question: '1+3+5+7+9 = ____²',
+        options: ['3', '4', '5', '6'],
+        answer: 2,
+        explanation: '1+3+5+7+9=25=5²。'
+      }
+    ]
+  },
+  'grade6-unit9': {
+    title: '总复习',
+    questions: [
+      {
+        type: 'choice',
+        question: '一个数的倒数是它本身，这个数是____。',
+        options: ['0', '1', '-1', '1或-1'],
+        answer: 3,
+        explanation: '1和-1的倒数都是它们本身。'
+      },
+      {
+        type: 'fill',
+        question: '3/4 = ____% = ____（填小数）',
+        answer: '75,0.75',
+        explanation: '3/4=75%=0.75。'
+      }
+    ]
+  },
+  // 六年级下册
+  'grade6-unit1-2': {
+    title: '负数',
+    questions: [
+      {
+        type: 'choice',
+        question: '-5读作____。',
+        options: ['减5', '负5', '零下5', '5'],
+        answer: 1,
+        explanation: '-5读作负5。'
+      },
+      {
+        type: 'choice',
+        question: '在数轴上，-3在-2的____边。',
+        options: ['左', '右', '上', '下'],
+        answer: 0,
+        explanation: '在数轴上，-3在-2的左边。'
+      }
+    ]
+  },
+  'grade6-unit2-2': {
+    title: '百分数（二）',
+    questions: [
+      {
+        type: 'choice',
+        question: '八折表示现价是原价的____%。',
+        options: ['8', '80', '20', '88'],
+        answer: 1,
+        explanation: '八折表示现价是原价的80%。'
+      },
+      {
+        type: 'choice',
+        question: '存入银行的钱叫做____。',
+        options: ['利息', '本金', '利率', '本息'],
+        answer: 1,
+        explanation: '存入银行的钱叫做本金。'
+      }
+    ]
+  },
+  'grade6-unit3-2': {
+    title: '圆柱与圆锥',
+    questions: [
+      {
+        type: 'choice',
+        question: '圆柱的体积公式是____。',
+        options: ['V=πr²h', 'V=2πrh', 'V=πdh', 'V=2πr²h'],
+        answer: 0,
+        explanation: '圆柱体积=底面积×高=πr²h。'
+      },
+      {
+        type: 'choice',
+        question: '等底等高的圆锥体积是圆柱体积的____。',
+        options: ['1/2', '1/3', '2倍', '3倍'],
+        answer: 1,
+        explanation: '等底等高的圆锥体积是圆柱体积的1/3。'
+      }
+    ]
+  },
+  'grade6-unit4-2': {
+    title: '比例',
+    questions: [
+      {
+        type: 'choice',
+        question: '表示两个比相等的式子叫做____。',
+        options: ['比', '比例', '比值', '分数'],
+        answer: 1,
+        explanation: '表示两个比相等的式子叫做比例。'
+      },
+      {
+        type: 'choice',
+        question: '在比例里，两个外项的积____两个内项的积。',
+        options: ['大于', '小于', '等于', '无法确定'],
+        answer: 2,
+        explanation: '在比例里，两个外项的积等于两个内项的积。'
+      }
+    ]
+  },
+  'grade6-unit5-2': {
+    title: '数学广角-鸽巢问题',
+    questions: [
+      {
+        type: 'choice',
+        question: '把4个苹果放进3个抽屉里，至少有一个抽屉里放____个苹果。',
+        options: ['1', '2', '3', '4'],
+        answer: 1,
+        explanation: '4÷3=1余1，至少有一个抽屉放1+1=2个。'
+      }
+    ]
+  },
+  'grade6-unit6-2': {
+    title: '整理和复习',
+    questions: [
+      {
+        type: 'choice',
+        question: '一个三角形三个内角的比是1:2:3，这个三角形是____三角形。',
+        options: ['锐角', '直角', '钝角', '等腰'],
+        answer: 1,
+        explanation: '180°×3/6=90°，是直角三角形。'
+      }
+    ]
   }
 };
 
