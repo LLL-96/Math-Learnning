@@ -1191,14 +1191,26 @@ class PracticeSystem {
   
   saveProgress(percentage) {
     const key = `practice-${this.unitId}`;
-    const history = JSON.parse(localStorage.getItem(key) || '[]');
+    let history = [];
+    try {
+      const stored = localStorage.getItem(key);
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        if (Array.isArray(parsed)) {
+          history = parsed;
+        }
+      }
+    } catch (e) {
+      console.warn('Failed to parse practice history:', e);
+      history = [];
+    }
     history.push({
       date: new Date().toISOString(),
       score: this.score,
       total: this.data.questions.length,
       percentage: percentage
     });
-    localStorage.setItem(key, JSON.stringify(history.slice(-10))); // 只保留最近10次
+    localStorage.setItem(key, JSON.stringify(history.slice(-10)));
   }
   
   showNotFound() {
@@ -1224,8 +1236,23 @@ function initPractice(unitId) {
 // 获取学习进度
 function getProgress(unitId) {
   const key = `practice-${unitId}`;
-  const history = JSON.parse(localStorage.getItem(key) || '[]');
-  if (history.length === 0) return null;
+  try {
+    const stored = localStorage.getItem(key);
+    if (stored) {
+      const parsed = JSON.parse(stored);
+      if (Array.isArray(parsed)) {
+        return parsed;
+      }
+    }
+  } catch (e) {
+    console.warn('Failed to get progress:', e);
+  }
+  return null;
+}
+
+function getProgressStats(unitId) {
+  const history = getProgress(unitId);
+  if (!history || history.length === 0) return null;
   
   const latest = history[history.length - 1];
   return {
@@ -1237,5 +1264,5 @@ function getProgress(unitId) {
 
 // 导出模块
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { PracticeSystem, practiceDB, getProgress };
+  module.exports = { PracticeSystem, practiceDB, getProgress, getProgressStats };
 }

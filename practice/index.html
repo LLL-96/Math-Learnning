@@ -679,15 +679,23 @@
     // 获取单元进度
     function getUnitProgress(unitId) {
       const key = `practice-${unitId}`;
-      const history = JSON.parse(localStorage.getItem(key) || '[]');
-      if (history.length === 0) return null;
-      
-      const latest = history[history.length - 1];
-      return {
-        lastScore: latest.percentage,
-        attempts: history.length,
-        bestScore: Math.max(...history.map(h => h.percentage))
-      };
+      try {
+        const stored = localStorage.getItem(key);
+        if (stored) {
+          const history = JSON.parse(stored);
+          if (Array.isArray(history) && history.length > 0) {
+            const latest = history[history.length - 1];
+            return {
+              lastScore: latest.percentage,
+              attempts: history.length,
+              bestScore: Math.max(...history.map(h => h.percentage))
+            };
+          }
+        }
+      } catch (e) {
+        console.warn('Failed to get unit progress:', e);
+      }
+      return null;
     }
     
     updateStats();
