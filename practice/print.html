@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>打印练习题 | L-MATH 乐学数学</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #fff; font-family: 'Nunito', 'ZCOOL KuaiLe', sans-serif; }
+    
+    .print-header {
+      background: linear-gradient(135deg, #4DABF7 0%, #74C0FC 100%);
+      color: white; padding: 40px 24px; text-align: center;
+    }
+    .print-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.8rem; margin-bottom: 8px; }
+    .print-header p { opacity: 0.9; }
+    
+    .print-container { max-width: 800px; margin: 0 auto; padding: 32px 24px; }
+    
+    .controls {
+      background: #F8F9FA; border-radius: 16px; padding: 20px 24px;
+      margin-bottom: 32px; display: flex; gap: 16px; flex-wrap: wrap;
+      align-items: center; justify-content: space-between;
+    }
+    .unit-select {
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    }
+    .unit-select label { font-weight: 600; color: #333; }
+    .unit-select select {
+      padding: 10px 16px; border: 2px solid #E9ECEF; border-radius: 10px;
+      font-size: 1rem; min-width: 200px; cursor: pointer;
+    }
+    .unit-select select:focus { outline: none; border-color: #4DABF7; }
+    
+    .print-btn {
+      padding: 12px 28px; background: #4DABF7; color: white;
+      border: none; border-radius: 10px; font-size: 1rem; font-weight: 700;
+      cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 8px;
+    }
+    .print-btn:hover { background: #2b7ed9; }
+    
+    .worksheet {
+      background: white; border: 2px solid #E9ECEF; border-radius: 16px;
+      padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+    .worksheet-header {
+      text-align: center; margin-bottom: 32px; padding-bottom: 24px;
+      border-bottom: 2px dashed #E9ECEF;
+    }
+    .worksheet-header h2 {
+      font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.6rem; color: #2D3436;
+      margin-bottom: 8px;
+    }
+    .worksheet-header .meta {
+      color: #888; font-size: 0.9rem;
+    }
+    .student-info {
+      display: flex; gap: 32px; justify-content: center; flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .info-field {
+      display: flex; align-items: center; gap: 8px;
+    }
+    .info-field label { color: #666; font-size: 0.9rem; }
+    .info-field .blank {
+      width: 120px; height: 28px; border-bottom: 2px solid #333;
+    }
+    
+    .questions-list { display: flex; flex-direction: column; gap: 24px; }
+    .question-item {
+      display: flex; gap: 16px; padding: 20px; background: #F8F9FA;
+      border-radius: 12px;
+    }
+    .question-num {
+      width: 32px; height: 32px; background: #4DABF7; color: white;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.9rem; flex-shrink: 0;
+    }
+    .question-content { flex: 1; }
+    .question-text {
+      font-size: 1.05rem; color: #2D3436; margin-bottom: 16px; line-height: 1.6;
+    }
+    .options-list {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+    }
+    .option-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 16px; background: white; border-radius: 8px;
+      border: 1px solid #E9ECEF;
+    }
+    .option-label {
+      width: 24px; height: 24px; border: 2px solid #4DABF7;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 0.8rem; font-weight: 700; color: #4DABF7;
+    }
+    .option-text { color: #555; font-size: 0.95rem; }
+    
+    .fill-answer {
+      width: 100%; max-width: 200px; height: 40px;
+      border: 2px solid #E9ECEF; border-radius: 8px;
+    }
+    
+    .score-section {
+      margin-top: 32px; padding-top: 24px;
+      border-top: 2px dashed #E9ECEF;
+      display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px;
+    }
+    .score-field {
+      text-align: center;
+    }
+    .score-field label {
+      display: block; color: #666; font-size: 0.9rem; margin-bottom: 8px;
+    }
+    .score-field .score-box {
+      width: 100px; height: 50px; border: 2px solid #333;
+      border-radius: 8px;
+    }
+    
+    .back-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: #4DABF7; font-weight: 600; margin-bottom: 20px;
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+    
+    /* 打印样式 */
+    @media print {
+      .print-header, .controls, .back-link { display: none; }
+      .print-container { padding: 0; }
+      .worksheet {
+        border: none; box-shadow: none; padding: 20px;
+      }
+      .question-item { break-inside: avoid; }
+    }
+    
+    .empty-state {
+      text-align: center; padding: 60px 20px;
+    }
+    .empty-state-emoji { font-size: 4rem; margin-bottom: 20px; }
+    .empty-state h3 {
+      font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.4rem;
+      color: #2D3436; margin-bottom: 12px;
+    }
+    .empty-state p { color: #888; }
+  </style>
+</head>
+<body>
+  <div class="print-header">
+    <h1>🖨️ 打印练习题</h1>
+    <p>生成纸质练习题，方便课堂练习</p>
+  </div>
+
+  <div class="print-container">
+    <a href="index.html" class="back-link">← 返回练习中心</a>
+    
+    <div class="controls">
+      <div class="unit-select">
+        <label>选择单元：</label>
+        <select id="unit-select">
+          <option value="">请选择单元</option>
+          <optgroup label="一年级上册">
+            <option value="grade1-unit1">准备课 - 数一数</option>
+            <option value="grade1-unit2">位置</option>
+            <option value="grade1-unit3">1~5的认识和加减法</option>
+            <option value="grade1-unit4">认识图形（一）</option>
+            <option value="grade1-unit5">6~10的认识和加减法</option>
+            <option value="grade1-unit6">11~20各数的认识</option>
+            <option value="grade1-unit7">认识钟表</option>
+            <option value="grade1-unit8">20以内的进位加法</option>
+          </optgroup>
+          <optgroup label="一年级下册">
+            <option value="grade1-unit1-2">认识图形（二）</option>
+            <option value="grade1-unit2-2">20以内的退位减法</option>
+            <option value="grade1-unit3-2">分类与整理</option>
+            <option value="grade1-unit4-2">100以内数的认识</option>
+            <option value="grade1-unit5-2">认识人民币</option>
+            <option value="grade1-unit6-2">100以内的加法和减法（一）</option>
+            <option value="grade1-unit7-2">找规律</option>
+          </optgroup>
+          <optgroup label="二年级上册">
+            <option value="grade2-unit1">长度单位</option>
+            <option value="grade2-unit2">100以内的加法和减法（二）</option>
+            <option value="grade2-unit3">角的初步认识</option>
+            <option value="grade2-unit4">表内乘法（一）</option>
+            <option value="grade2-unit5">观察物体（一）</option>
+            <option value="grade2-unit6">表内乘法（二）</option>
+            <option value="grade2-unit7">认识时间</option>
+            <option value="grade2-unit8">数学广角——搭配（一）</option>
+          </optgroup>
+        </select>
+      </div>
+      <button class="print-btn" onclick="window.print()">🖨️ 打印</button>
+    </div>
+
+    <div id="worksheet-container">
+      <div class="empty-state">
+        <div class="empty-state-emoji">📄</div>
+        <h3>请选择要打印的单元</h3>
+        <p>从上方选择单元，生成练习题</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="practice.js"></script>
+  <script>
+    const unitSelect = document.getElementById('unit-select');
+    const worksheetContainer = document.getElementById('worksheet-container');
+    
+    unitSelect.addEventListener('change', function() {
+      const unitId = this.value;
+      if (!unitId || !practiceDB[unitId]) {
+        worksheetContainer.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-state-emoji">📄</div>
+            <h3>请选择要打印的单元</h3>
+            <p>从上方选择单元，生成练习题</p>
+          </div>
+        `;
+        return;
+      }
+      
+      const data = practiceDB[unitId];
+      const date = new Date().toLocaleDateString('zh-CN');
+      
+      let questionsHTML = data.questions.map((q, idx) => {
+        let optionsHTML = '';
+        if (q.type === 'choice') {
+          optionsHTML = q.options.map((opt, optIdx) => `
+            <div class="option-item">
+              <span class="option-label">${String.fromCharCode(65 + optIdx)}</span>
+              <span class="option-text">${opt}</span>
+            </div>
+          `).join('');
+          optionsHTML = `<div class="options-list">${optionsHTML}</div>`;
+        } else if (q.type === 'fill') {
+          optionsHTML = '<div class="fill-answer"></div>';
+        }
+        
+        return `
+          <div class="question-item">
+            <span class="question-num">${idx + 1}</span>
+            <div class="question-content">
+              <div class="question-text">${q.question}</div>
+              ${optionsHTML}
+            </div>
+          </div>
+        `;
+      }).join('');
+      
+      worksheetContainer.innerHTML = `
+        <div class="worksheet">
+          <div class="worksheet-header">
+            <h2>${data.title}</h2>
+            <div class="meta">L-MATH 乐学数学练习题 · ${date}</div>
+            <div class="student-info">
+              <div class="info-field">
+                <label>姓名：</label>
+                <div class="blank"></div>
+              </div>
+              <div class="info-field">
+                <label>班级：</label>
+                <div class="blank"></div>
+              </div>
+              <div class="info-field">
+                <label>得分：</label>
+                <div class="blank"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="questions-list">
+            ${questionsHTML}
+          </div>
+          
+          <div class="score-section">
+            <div class="score-field">
+              <label>家长签字</label>
+              <div class="score-box"></div>
+            </div>
+            <div class="score-field">
+              <label>老师批改</label>
+              <div class="score-box"></div>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>

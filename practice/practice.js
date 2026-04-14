@@ -491,6 +491,225 @@ const practiceDB = {
         explanation: '2×3=6种走法。'
       }
     ]
+  },
+  'grade1-unit1-2': {
+    title: '认识图形（二）',
+    questions: [
+      {
+        type: 'choice',
+        question: '下面哪个是长方形？',
+        options: ['🔵', '📐', '🔺', '⚽'],
+        answer: 1,
+        explanation: '📐是长方形，有四条边，四个直角。'
+      },
+      {
+        type: 'choice',
+        question: '正方形有____条边，____个角。',
+        options: ['3条边，3个角', '4条边，4个角', '5条边，5个角', '6条边，6个角'],
+        answer: 1,
+        explanation: '正方形有4条边，4个直角。'
+      },
+      {
+        type: 'choice',
+        question: '圆形有____条边。',
+        options: ['0条', '1条', '2条', '3条'],
+        answer: 0,
+        explanation: '圆形没有直的边，是圆圆的。'
+      },
+      {
+        type: 'choice',
+        question: '三角形有____条边。',
+        options: ['2条', '3条', '4条', '5条'],
+        answer: 1,
+        explanation: '三角形有3条边，3个角。'
+      }
+    ]
+  },
+  'grade1-unit2-2': {
+    title: '20以内的退位减法',
+    questions: [
+      {
+        type: 'choice',
+        question: '15 - 7 = ?',
+        options: ['6', '7', '8', '9'],
+        answer: 2,
+        explanation: '用破十法：10-7=3，3+5=8。'
+      },
+      {
+        type: 'choice',
+        question: '13 - 8 = ?',
+        options: ['4', '5', '6', '7'],
+        answer: 1,
+        explanation: '用破十法：10-8=2，2+3=5。'
+      },
+      {
+        type: 'fill',
+        question: '16 - 9 = ____',
+        answer: '7',
+        explanation: '想：9+7=16，所以16-9=7。'
+      },
+      {
+        type: 'choice',
+        question: '12 - 5 = ?',
+        options: ['5', '6', '7', '8'],
+        answer: 2,
+        explanation: '用破十法：10-5=5，5+2=7。'
+      }
+    ]
+  },
+  'grade1-unit3-2': {
+    title: '分类与整理',
+    questions: [
+      {
+        type: 'choice',
+        question: '把苹果、香蕉、橘子归为一类，是按____分类。',
+        options: ['颜色', '形状', '种类', '大小'],
+        answer: 2,
+        explanation: '它们都是水果，按种类（水果类）分类。'
+      },
+      {
+        type: 'choice',
+        question: '把红色的球、红色的积木、红色的汽车归为一类，是按____分类。',
+        options: ['颜色', '形状', '用途', '大小'],
+        answer: 0,
+        explanation: '它们都是红色的，按颜色分类。'
+      },
+      {
+        type: 'choice',
+        question: '下面哪个不属于同一类？🐱🐶🐭🚗',
+        options: ['🐱', '🐶', '🐭', '🚗'],
+        answer: 3,
+        explanation: '🐱🐶🐭都是动物，🚗是汽车，不属于同一类。'
+      }
+    ]
+  },
+  'grade1-unit4-2': {
+    title: '100以内数的认识',
+    questions: [
+      {
+        type: 'choice',
+        question: '36里面有____个十和____个一。',
+        options: ['3个十和6个一', '6个十和3个一', '3个十和3个一', '6个十和6个一'],
+        answer: 0,
+        explanation: '36 = 30 + 6，所以是3个十和6个一。'
+      },
+      {
+        type: 'fill',
+        question: '5个十和7个一合起来是____。',
+        answer: '57',
+        explanation: '5个十是50，7个一是7，50+7=57。'
+      },
+      {
+        type: 'choice',
+        question: '从50数到60，一共要数____个数。',
+        options: ['9个', '10个', '11个', '12个'],
+        answer: 2,
+        explanation: '50、51、52、53、54、55、56、57、58、59、60，共11个数。'
+      },
+      {
+        type: 'choice',
+        question: '最大的两位数是____。',
+        options: ['90', '99', '100', '10'],
+        answer: 1,
+        explanation: '最大的两位数是99。'
+      }
+    ]
+  },
+  'grade1-unit5-2': {
+    title: '认识人民币',
+    questions: [
+      {
+        type: 'choice',
+        question: '1元 = ____角。',
+        options: ['10角', '100角', '5角', '50角'],
+        answer: 0,
+        explanation: '1元等于10角。'
+      },
+      {
+        type: 'choice',
+        question: '1角 = ____分。',
+        options: ['1分', '10分', '100分', '5分'],
+        answer: 1,
+        explanation: '1角等于10分。'
+      },
+      {
+        type: 'choice',
+        question: '一支铅笔8角，付1元，应找回____。',
+        options: ['1角', '2角', '8角', '9角'],
+        answer: 1,
+        explanation: '1元=10角，10-8=2角，应找回2角。'
+      },
+      {
+        type: 'fill',
+        question: '3元5角 = ____角。',
+        answer: '35',
+        explanation: '3元=30角，30+5=35角。'
+      }
+    ]
+  },
+  'grade1-unit6-2': {
+    title: '100以内的加法和减法（一）',
+    questions: [
+      {
+        type: 'choice',
+        question: '35 + 20 = ?',
+        options: ['45', '55', '65', '75'],
+        answer: 1,
+        explanation: '35+20，十位3+2=5，个位还是5，所以是55。'
+      },
+      {
+        type: 'choice',
+        question: '48 - 30 = ?',
+        options: ['15', '18', '28', '38'],
+        answer: 1,
+        explanation: '48-30，十位4-3=1，个位还是8，所以是18。'
+      },
+      {
+        type: 'fill',
+        question: '26 + 3 = ____',
+        answer: '29',
+        explanation: '个位6+3=9，十位不变，所以是29。'
+      },
+      {
+        type: 'choice',
+        question: '52 - 8 = ?',
+        options: ['42', '44', '46', '48'],
+        answer: 1,
+        explanation: '个位2不够减8，向十位借1，12-8=4，十位4，所以是44。'
+      }
+    ]
+  },
+  'grade1-unit7-2': {
+    title: '找规律',
+    questions: [
+      {
+        type: 'choice',
+        question: '2、4、6、8、____，横线上应该填几？',
+        options: ['9', '10', '11', '12'],
+        answer: 1,
+        explanation: '规律是每次加2，8+2=10。'
+      },
+      {
+        type: 'choice',
+        question: '🔴🔵🔴🔵🔴____，横线上应该画什么？',
+        options: ['🔴', '🔵', '🔶', '🔷'],
+        answer: 1,
+        explanation: '规律是🔴🔵重复，🔴后面是🔵。'
+      },
+      {
+        type: 'fill',
+        question: '5、10、15、20、____，横线上应该填几？',
+        answer: '25',
+        explanation: '规律是每次加5，20+5=25。'
+      },
+      {
+        type: 'choice',
+        question: '30、25、20、15、____，横线上应该填几？',
+        options: ['5', '10', '12', '14'],
+        answer: 1,
+        explanation: '规律是每次减5，15-5=10。'
+      }
+    ]
   }
 };
 
