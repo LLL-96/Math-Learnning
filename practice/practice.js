@@ -749,6 +749,587 @@ const practiceDB = {
         explanation: '5+4=9，7-4=3，6+4=10'
       }
     ]
+  },
+  // 一年级上册缺失单元
+  'grade1-unit6': {
+    title: '11-20各数的认识',
+    questions: [
+      {
+        type: 'choice',
+        question: '15里面有____个十和____个一。',
+        options: ['1个十和5个一', '5个十和1个一', '15个十', '1个一和5个十'],
+        answer: 0,
+        explanation: '15的十位是1，表示1个十；个位是5，表示5个一。'
+      },
+      {
+        type: 'choice',
+        question: '10 + 7 = ?',
+        options: ['16', '17', '18', '70'],
+        answer: 1,
+        explanation: '10加几就等于十几，10+7=17。'
+      },
+      {
+        type: 'fill',
+        question: '1个十和3个一合起来是____。',
+        answer: '13',
+        explanation: '1个十是10，3个一是3，10+3=13。'
+      },
+      {
+        type: 'choice',
+        question: '从10数到20，一共要数____个数。',
+        options: ['9个', '10个', '11个', '12个'],
+        answer: 2,
+        explanation: '10、11、12、13、14、15、16、17、18、19、20，共11个数。'
+      }
+    ]
+  },
+  'grade1-unit7': {
+    title: '认识钟表',
+    questions: [
+      {
+        type: 'choice',
+        question: '分针指向12，时针指向3，是____时。',
+        options: ['12时', '3时', '6时', '9时'],
+        answer: 1,
+        explanation: '分针指向12，时针指向几就是几时，所以是3时。'
+      },
+      {
+        type: 'choice',
+        question: '分针指向6，时针在3和4之间，是____。',
+        options: ['3时', '4时', '3时半', '4时半'],
+        answer: 2,
+        explanation: '分针指向6表示半小时，时针在3和4之间表示3点多，所以是3时半。'
+      },
+      {
+        type: 'fill',
+        question: '6时整，时针指向____，分针指向____。',
+        answer: '6,12',
+        explanation: '6时整，时针指向6，分针指向12。'
+      },
+      {
+        type: 'choice',
+        question: '小明早上7时起床，时针应该指向____。',
+        options: ['6', '7', '8', '12'],
+        answer: 1,
+        explanation: '7时整，时针指向7，分针指向12。'
+      }
+    ]
+  },
+  'grade1-unit8': {
+    title: '20以内进位加法',
+    questions: [
+      {
+        type: 'choice',
+        question: '9 + 5 = ?',
+        options: ['13', '14', '15', '16'],
+        answer: 1,
+        explanation: '用凑十法：把5分成1和4，9+1=10，10+4=14。'
+      },
+      {
+        type: 'choice',
+        question: '8 + 7 = ?',
+        options: ['14', '15', '16', '17'],
+        answer: 1,
+        explanation: '用凑十法：把7分成2和5，8+2=10，10+5=15。'
+      },
+      {
+        type: 'fill',
+        question: '7 + 6 = ____',
+        answer: '13',
+        explanation: '用凑十法：把6分成3和3，7+3=10，10+3=13。'
+      },
+      {
+        type: 'choice',
+        question: '9 + 9 = ?',
+        options: ['17', '18', '19', '20'],
+        answer: 1,
+        explanation: '用凑十法：把第二个9分成1和8，9+1=10，10+8=18。'
+      }
+    ]
+  },
+  // 一年级下册单元
+  'grade1-unit1-2': {
+    title: '认识图形（二）',
+    questions: [
+      {
+        type: 'choice',
+        question: '下面哪个是长方形？',
+        options: ['🔵', '📐', '🔺', '⚽'],
+        answer: 1,
+        explanation: '📐是长方形，有四条边，四个直角。'
+      },
+      {
+        type: 'choice',
+        question: '正方形有____条边，____个角。',
+        options: ['3条边，3个角', '4条边，4个角', '5条边，5个角', '6条边，6个角'],
+        answer: 1,
+        explanation: '正方形有4条边，4个直角。'
+      },
+      {
+        type: 'choice',
+        question: '圆形有____条边。',
+        options: ['0条', '1条', '2条', '3条'],
+        answer: 0,
+        explanation: '圆形是曲线图形，没有直边。'
+      },
+      {
+        type: 'choice',
+        question: '三角形有____条边。',
+        options: ['2条', '3条', '4条', '5条'],
+        answer: 1,
+        explanation: '三角形有3条边，3个角。'
+      }
+    ]
+  },
+  'grade1-unit2-2': {
+    title: '20以内的退位减法',
+    questions: [
+      {
+        type: 'choice',
+        question: '15 - 7 = ?',
+        options: ['6', '7', '8', '9'],
+        answer: 2,
+        explanation: '用破十法：把15分成10和5，10-7=3，3+5=8。'
+      },
+      {
+        type: 'choice',
+        question: '13 - 5 = ?',
+        options: ['6', '7', '8', '9'],
+        answer: 2,
+        explanation: '用破十法：把13分成10和3，10-5=5，5+3=8。'
+      },
+      {
+        type: 'fill',
+        question: '12 - 6 = ____',
+        answer: '6',
+        explanation: '用破十法：把12分成10和2，10-6=4，4+2=6。'
+      },
+      {
+        type: 'choice',
+        question: '小明有14颗糖，吃了8颗，还剩____颗。',
+        options: ['5', '6', '7', '8'],
+        answer: 1,
+        explanation: '14-8=6，用破十法：把14分成10和4，10-8=2，2+4=6。'
+      }
+    ]
+  },
+  'grade1-unit3-2': {
+    title: '分类与整理',
+    questions: [
+      {
+        type: 'choice',
+        question: '把苹果、香蕉、橘子分为一类，是按____分类。',
+        options: ['颜色', '形状', '种类', '大小'],
+        answer: 2,
+        explanation: '苹果、香蕉、橘子都是水果，按种类（水果）分类。'
+      },
+      {
+        type: 'choice',
+        question: '把红色球和蓝色球分开，是按____分类。',
+        options: ['颜色', '形状', '大小', '材质'],
+        answer: 0,
+        explanation: '红色和蓝色是颜色，按颜色分类。'
+      },
+      {
+        type: 'choice',
+        question: '下面哪个不是学习用品？',
+        options: ['✏️', '📚', '🍎', '📐'],
+        answer: 2,
+        explanation: '🍎是苹果，属于水果，不是学习用品。'
+      },
+      {
+        type: 'choice',
+        question: '🐶🐱🐭 和 🍎🍌🍊 可以按____分类。',
+        options: ['颜色', '动物和水果', '大小', '形状'],
+        answer: 1,
+        explanation: '🐶🐱🐭是动物，🍎🍌🍊是水果，按动物和水果分类。'
+      }
+    ]
+  },
+  'grade1-unit4-2': {
+    title: '100以内数的认识',
+    questions: [
+      {
+        type: 'choice',
+        question: '45里面有____个十和____个一。',
+        options: ['4个十和5个一', '5个十和4个一', '45个十', '4个一和5个十'],
+        answer: 0,
+        explanation: '45的十位是4，表示4个十；个位是5，表示5个一。'
+      },
+      {
+        type: 'choice',
+        question: '从50数到60，一共要数____个数。',
+        options: ['9个', '10个', '11个', '12个'],
+        answer: 2,
+        explanation: '50、51、52、53、54、55、56、57、58、59、60，共11个数。'
+      },
+      {
+        type: 'fill',
+        question: '5个十和7个一合起来是____。',
+        answer: '57',
+        explanation: '5个十是50，7个一是7，50+7=57。'
+      },
+      {
+        type: 'choice',
+        question: '最大的两位数是____。',
+        options: ['90', '99', '100', '10'],
+        answer: 1,
+        explanation: '最大的两位数是99，十位和个位都是最大的数字9。'
+      }
+    ]
+  },
+  'grade1-unit5-2': {
+    title: '认识人民币',
+    questions: [
+      {
+        type: 'choice',
+        question: '1元 = ____角。',
+        options: ['10角', '100角', '1角', '1000角'],
+        answer: 0,
+        explanation: '1元等于10角。'
+      },
+      {
+        type: 'choice',
+        question: '1角 = ____分。',
+        options: ['1分', '10分', '100分', '1000分'],
+        answer: 1,
+        explanation: '1角等于10分。'
+      },
+      {
+        type: 'choice',
+        question: '一支铅笔5角，买2支需要____。',
+        options: ['5角', '10角', '1元', '2元'],
+        answer: 1,
+        explanation: '5角+5角=10角，10角=1元。'
+      },
+      {
+        type: 'fill',
+        question: '1元 - 3角 = ____角。',
+        answer: '7',
+        explanation: '1元=10角，10角-3角=7角。'
+      }
+    ]
+  },
+  'grade1-unit6-2': {
+    title: '100以内加减法（一）',
+    questions: [
+      {
+        type: 'choice',
+        question: '25 + 30 = ?',
+        options: ['45', '55', '65', '75'],
+        answer: 1,
+        explanation: '25+30，十位2+3=5，个位5+0=5，所以是55。'
+      },
+      {
+        type: 'choice',
+        question: '68 - 20 = ?',
+        options: ['38', '48', '58', '88'],
+        answer: 1,
+        explanation: '68-20，十位6-2=4，个位8-0=8，所以是48。'
+      },
+      {
+        type: 'fill',
+        question: '45 + 23 = ____',
+        answer: '68',
+        explanation: '45+23，个位5+3=8，十位4+2=6，所以是68。'
+      },
+      {
+        type: 'choice',
+        question: '小明有56元，花了30元，还剩____元。',
+        options: ['26', '36', '46', '86'],
+        answer: 0,
+        explanation: '56-30=26，十位5-3=2，个位6-0=6。'
+      }
+    ]
+  },
+  'grade1-unit7-2': {
+    title: '找规律',
+    questions: [
+      {
+        type: 'choice',
+        question: '2、4、6、8、____，横线上应该填几？',
+        options: ['9', '10', '11', '12'],
+        answer: 1,
+        explanation: '规律是每次加2，8+2=10。'
+      },
+      {
+        type: 'choice',
+        question: '🔴🔵🔴🔵🔴____，横线上应该画什么？',
+        options: ['🔴', '🔵', '🔶', '🔷'],
+        answer: 1,
+        explanation: '规律是🔴🔵重复，🔴后面是🔵。'
+      },
+      {
+        type: 'fill',
+        question: '5、10、15、20、____，横线上应该填几？',
+        answer: '25',
+        explanation: '规律是每次加5，20+5=25。'
+      },
+      {
+        type: 'choice',
+        question: '30、25、20、15、____，横线上应该填几？',
+        options: ['5', '10', '12', '14'],
+        answer: 1,
+        explanation: '规律是每次减5，15-5=10。'
+      }
+    ]
+  },
+  // 三年级上册
+  'grade3-unit1': {
+    title: '时、分、秒',
+    questions: [
+      {
+        type: 'choice',
+        question: '1小时 = ____分钟。',
+        options: ['60', '100', '30', '10'],
+        answer: 0,
+        explanation: '1小时等于60分钟。'
+      },
+      {
+        type: 'choice',
+        question: '1分钟 = ____秒。',
+        options: ['30', '60', '100', '10'],
+        answer: 1,
+        explanation: '1分钟等于60秒。'
+      },
+      {
+        type: 'fill',
+        question: '2小时30分钟 = ____分钟。',
+        answer: '150',
+        explanation: '2小时=120分钟，120+30=150分钟。'
+      },
+      {
+        type: 'choice',
+        question: '小明从家到学校用了15分钟，合____秒。',
+        options: ['60', '900', '150', '1500'],
+        answer: 1,
+        explanation: '15分钟=15×60=900秒。'
+      }
+    ]
+  },
+  'grade3-unit2': {
+    title: '万以内的加法和减法（一）',
+    questions: [
+      {
+        type: 'choice',
+        question: '350 + 240 = ?',
+        options: ['490', '580', '590', '680'],
+        answer: 2,
+        explanation: '350+240，百位3+2=5，十位5+4=9，个位0+0=0，所以是590。'
+      },
+      {
+        type: 'choice',
+        question: '720 - 380 = ?',
+        options: ['240', '340', '440', '340'],
+        answer: 1,
+        explanation: '720-380，个位0-0=0，十位2不够减8，向百位借1，12-8=4，百位6-3=3，所以是340。'
+      },
+      {
+        type: 'fill',
+        question: '460 + 270 = ____',
+        answer: '730',
+        explanation: '460+270=730。'
+      },
+      {
+        type: 'choice',
+        question: '一台电视580元，一个音响240元，一共____元。',
+        options: ['720', '820', '620', '920'],
+        answer: 1,
+        explanation: '580+240=820元。'
+      }
+    ]
+  },
+  'grade3-unit3': {
+    title: '测量',
+    questions: [
+      {
+        type: 'choice',
+        question: '1千米 = ____米。',
+        options: ['10', '100', '1000', '10000'],
+        answer: 2,
+        explanation: '1千米等于1000米。'
+      },
+      {
+        type: 'choice',
+        question: '1吨 = ____千克。',
+        options: ['10', '100', '1000', '10000'],
+        answer: 2,
+        explanation: '1吨等于1000千克。'
+      },
+      {
+        type: 'fill',
+        question: '5000米 = ____千米。',
+        answer: '5',
+        explanation: '1000米=1千米，5000÷1000=5千米。'
+      },
+      {
+        type: 'choice',
+        question: '一辆汽车重约2____。',
+        options: ['克', '千克', '吨', '米'],
+        answer: 2,
+        explanation: '汽车很重，用吨作单位，约2吨。'
+      }
+    ]
+  },
+  'grade3-unit4': {
+    title: '万以内的加法和减法（二）',
+    questions: [
+      {
+        type: 'choice',
+        question: '456 + 378 = ?',
+        options: ['724', '824', '834', '734'],
+        answer: 1,
+        explanation: '456+378，个位6+8=14写4进1，十位5+7+1=13写3进1，百位4+3+1=8，所以是834。'
+      },
+      {
+        type: 'choice',
+        question: '702 - 385 = ?',
+        options: ['317', '327', '417', '307'],
+        answer: 0,
+        explanation: '702-385，个位2不够减5，向十位借1，12-5=7，十位9-8=1，百位6-3=3，所以是317。'
+      },
+      {
+        type: 'fill',
+        question: '538 + 276 = ____',
+        answer: '814',
+        explanation: '538+276=814。'
+      },
+      {
+        type: 'choice',
+        question: '验算加法可以用____。',
+        options: ['加法', '减法', '乘法', '除法'],
+        answer: 1,
+        explanation: '验算加法可以用减法：和 - 一个加数 = 另一个加数。'
+      }
+    ]
+  },
+  'grade3-unit5': {
+    title: '倍的认识',
+    questions: [
+      {
+        type: 'choice',
+        question: '6是3的____倍。',
+        options: ['2', '3', '9', '18'],
+        answer: 0,
+        explanation: '6÷3=2，所以6是3的2倍。'
+      },
+      {
+        type: 'choice',
+        question: '8的4倍是____。',
+        options: ['12', '24', '32', '36'],
+        answer: 2,
+        explanation: '8×4=32，所以8的4倍是32。'
+      },
+      {
+        type: 'fill',
+        question: '15是5的____倍。',
+        answer: '3',
+        explanation: '15÷5=3，所以15是5的3倍。'
+      },
+      {
+        type: 'choice',
+        question: '小明有6本书，小红有2本，小明的书是小红的____倍。',
+        options: ['2', '3', '4', '12'],
+        answer: 1,
+        explanation: '6÷2=3，小明的书是小红的3倍。'
+      }
+    ]
+  },
+  'grade3-unit6': {
+    title: '多位数乘一位数',
+    questions: [
+      {
+        type: 'choice',
+        question: '24 × 3 = ?',
+        options: ['62', '72', '82', '92'],
+        answer: 1,
+        explanation: '24×3，4×3=12写2进1，2×3+1=7，所以是72。'
+      },
+      {
+        type: 'choice',
+        question: '305 × 4 = ?',
+        options: ['1220', '1200', '1320', '1420'],
+        answer: 0,
+        explanation: '305×4，5×4=20写0进2，0×4+2=2，3×4=12，所以是1220。'
+      },
+      {
+        type: 'fill',
+        question: '125 × 8 = ____',
+        answer: '1000',
+        explanation: '125×8=1000。'
+      },
+      {
+        type: 'choice',
+        question: '0乘任何数都得____。',
+        options: ['0', '1', '原数', '不确定'],
+        answer: 0,
+        explanation: '0乘任何数都得0。'
+      }
+    ]
+  },
+  'grade3-unit7': {
+    title: '长方形和正方形',
+    questions: [
+      {
+        type: 'choice',
+        question: '长方形有____条边，____个角。',
+        options: ['3,3', '4,4', '5,5', '6,6'],
+        answer: 1,
+        explanation: '长方形有4条边，4个直角。'
+      },
+      {
+        type: 'choice',
+        question: '正方形的四条边都____。',
+        options: ['相等', '不相等', '平行', '垂直'],
+        answer: 0,
+        explanation: '正方形的四条边都相等。'
+      },
+      {
+        type: 'fill',
+        question: '一个长方形长8厘米，宽5厘米，周长是____厘米。',
+        answer: '26',
+        explanation: '周长=(8+5)×2=26厘米。'
+      },
+      {
+        type: 'choice',
+        question: '一个正方形边长6厘米，周长是____厘米。',
+        options: ['12', '18', '24', '36'],
+        answer: 2,
+        explanation: '正方形周长=边长×4=6×4=24厘米。'
+      }
+    ]
+  },
+  'grade3-unit8': {
+    title: '分数的初步认识',
+    questions: [
+      {
+        type: 'choice',
+        question: '把一个蛋糕平均分成4份，每份是它的____。',
+        options: ['1/2', '1/3', '1/4', '1/5'],
+        answer: 2,
+        explanation: '平均分成4份，每份是1/4。'
+      },
+      {
+        type: 'choice',
+        question: '3/5读作____。',
+        options: ['三分之五', '五分之三', '五三分', '三五分'],
+        answer: 1,
+        explanation: '3/5读作五分之三。'
+      },
+      {
+        type: 'fill',
+        question: '5个1/8是____。',
+        answer: '5/8',
+        explanation: '5个1/8就是5/8。'
+      },
+      {
+        type: 'choice',
+        question: '1/3 ____ 1/4（填>或<）',
+        options: ['>', '<', '=', '无法比较'],
+        answer: 0,
+        explanation: '分子相同，分母小的分数大，1/3 > 1/4。'
+      }
+    ]
   }
 };
 
