@@ -199,6 +199,66 @@
     
     /* 导航栏调整 */
     .navbar { background: rgba(255,255,255,0.95) !important; }
+    
+    /* 排序题样式 */
+    .order-container { margin: 20px 0; }
+    .order-hint { color: #888; font-size: 0.9rem; margin-bottom: 16px; }
+    .order-list { display: flex; flex-direction: column; gap: 12px; }
+    .order-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 16px 20px; background: #F8F9FA; border: 2px solid #E9ECEF;
+      border-radius: 12px; cursor: pointer; transition: all 0.2s;
+    }
+    .order-item:hover { background: #FFF4EE; border-color: #FF6B35; }
+    .order-item.selected { background: #FFF4EE; border-color: #FF6B35; box-shadow: 0 0 0 3px rgba(255,107,53,0.2); }
+    .order-item.correct { background: #D4EDDA; border-color: #28A745; }
+    .order-item.wrong { background: #F8D7DA; border-color: #DC3545; }
+    .order-num {
+      width: 28px; height: 28px; background: #FF6B35; color: white;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.85rem;
+    }
+    .order-text { font-size: 1rem; color: #333; }
+    
+    /* 匹配题样式 */
+    .match-container { margin: 20px 0; }
+    .match-hint { color: #888; font-size: 0.9rem; margin-bottom: 16px; }
+    .match-area { display: flex; gap: 40px; justify-content: center; align-items: flex-start; }
+    .match-column { display: flex; flex-direction: column; gap: 12px; }
+    .match-item {
+      padding: 14px 24px; background: #F8F9FA; border: 2px solid #E9ECEF;
+      border-radius: 12px; cursor: pointer; transition: all 0.2s;
+      min-width: 120px; text-align: center;
+    }
+    .match-item:hover { background: #FFF4EE; border-color: #FF6B35; }
+    .match-item.selected { background: #FFF4EE; border-color: #FF6B35; box-shadow: 0 0 0 3px rgba(255,107,53,0.2); }
+    .match-item.matched { background: #E8F4FF; border-color: #4DABF7; }
+    .match-text { font-size: 1rem; color: #333; }
+    .match-result { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+    .match-pair {
+      background: #E8F4FF; color: #2b7ed9; padding: 8px 16px;
+      border-radius: 20px; font-size: 0.9rem;
+    }
+    
+    /* 拖拽填空题样式 */
+    .drag-container { margin: 20px 0; }
+    .drag-hint { color: #888; font-size: 0.9rem; margin-bottom: 16px; }
+    .drag-slots { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+    .drag-slot {
+      min-width: 100px; min-height: 50px; background: white;
+      border: 2px dashed #CCC; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; color: #666; cursor: pointer; padding: 10px 20px;
+    }
+    .drag-slot.filled { border-style: solid; border-color: #4DABF7; background: #E8F4FF; color: #2b7ed9; }
+    .drag-options { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .drag-option {
+      padding: 12px 24px; background: #F8F9FA; border: 2px solid #E9ECEF;
+      border-radius: 12px; cursor: pointer; transition: all 0.2s;
+      font-size: 1rem;
+    }
+    .drag-option:hover { background: #FFF4EE; border-color: #FF6B35; }
+    .drag-option.selected { background: #FF6B35; color: white; border-color: #FF6B35; }
   </style>
 </head>
 <body>

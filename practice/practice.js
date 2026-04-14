@@ -710,6 +710,45 @@ const practiceDB = {
         explanation: '规律是每次减5，15-5=10。'
       }
     ]
+  },
+  // 新题型示例单元
+  'demo-order': {
+    title: '🎯 排序题示例',
+    questions: [
+      {
+        type: 'order',
+        question: '请按从小到大的顺序排列这些数字：',
+        items: ['15', '3', '9', '6', '12'],
+        correctOrder: [1, 3, 2, 4, 0],
+        explanation: '正确的顺序是：3、6、9、12、15'
+      }
+    ]
+  },
+  'demo-match': {
+    title: '🎯 连线匹配题示例',
+    questions: [
+      {
+        type: 'match',
+        question: '请将算式和正确答案连线：',
+        left: ['3+5', '7+2', '4+6', '9+1'],
+        right: ['8', '9', '10', '10'],
+        correctPairs: [[0, 0], [1, 1], [2, 2], [3, 3]],
+        explanation: '3+5=8，7+2=9，4+6=10，9+1=10'
+      }
+    ]
+  },
+  'demo-drag': {
+    title: '🎯 拖拽填空题示例',
+    questions: [
+      {
+        type: 'drag',
+        question: '请把正确的数字填入空格：',
+        slots: ['5 + __ = 9', '7 - __ = 3', '__ + 4 = 10'],
+        options: ['4', '4', '6'],
+        correctAnswers: [0, 1, 2],
+        explanation: '5+4=9，7-4=3，6+4=10'
+      }
+    ]
   }
 };
 
@@ -770,6 +809,69 @@ class PracticeSystem {
           <button class="submit-btn" onclick="practice.submitFill()">提交答案</button>
         </div>
       `;
+    } else if (question.type === 'order') {
+      // 拖拽排序题
+      const itemsHTML = question.items.map((item, idx) => `
+        <div class="order-item" draggable="true" data-index="${idx}" onclick="practice.moveOrderItem(${idx})">
+          <span class="order-num">${idx + 1}</span>
+          <span class="order-text">${item}</span>
+        </div>
+      `).join('');
+      optionsHTML = `
+        <div class="order-container" id="order-container">
+          <p class="order-hint">👆 点击两个项目交换位置，按正确顺序排列</p>
+          <div class="order-list">${itemsHTML}</div>
+          <button class="submit-btn" onclick="practice.submitOrder()" style="margin-top: 20px;">提交答案</button>
+        </div>
+      `;
+    } else if (question.type === 'match') {
+      // 连线匹配题
+      const leftHTML = question.left.map((item, idx) => `
+        <div class="match-item left-item" data-index="${idx}" onclick="practice.selectMatchLeft(${idx})">
+          <span class="match-text">${item}</span>
+        </div>
+      `).join('');
+      const rightHTML = question.right.map((item, idx) => `
+        <div class="match-item right-item" data-index="${idx}" onclick="practice.selectMatchRight(${idx})">
+          <span class="match-text">${item}</span>
+        </div>
+      `).join('');
+      optionsHTML = `
+        <div class="match-container">
+          <p class="match-hint">👆 点击左边和右边的项目进行配对</p>
+          <div class="match-area">
+            <div class="match-column" id="match-left">${leftHTML}</div>
+            <div class="match-lines" id="match-lines"></div>
+            <div class="match-column" id="match-right">${rightHTML}</div>
+          </div>
+          <div class="match-result" id="match-result"></div>
+          <button class="submit-btn" onclick="practice.submitMatch()" style="margin-top: 20px;">提交答案</button>
+        </div>
+      `;
+      this.matchPairs = [];
+      this.selectedLeft = null;
+    } else if (question.type === 'drag') {
+      // 拖拽填空题
+      const slotsHTML = question.slots.map((slot, idx) => `
+        <div class="drag-slot" data-index="${idx}" onclick="practice.dropToSlot(${idx})">
+          ${slot}
+        </div>
+      `).join('');
+      const optionsDragHTML = question.options.map((opt, idx) => `
+        <div class="drag-option" draggable="true" data-index="${idx}" onclick="practice.selectDragOption(${idx})">
+          ${opt}
+        </div>
+      `).join('');
+      optionsHTML = `
+        <div class="drag-container">
+          <p class="drag-hint">👆 点击下方选项填入上方空格</p>
+          <div class="drag-slots">${slotsHTML}</div>
+          <div class="drag-options">${optionsDragHTML}</div>
+          <button class="submit-btn" onclick="practice.submitDrag()" style="margin-top: 20px;">提交答案</button>
+        </div>
+      `;
+      this.dragSelections = {};
+      this.selectedDragOption = null;
     }
     
     quizBody.innerHTML = `
@@ -836,6 +938,170 @@ class PracticeSystem {
     this.answers.push({
       question: this.currentQuestion,
       selected: userAnswer,
+      correct: isCorrect
+    });
+    
+    if (isCorrect) this.score++;
+    
+    setTimeout(() => this.showNextButton(), 1500);
+  }
+  
+  // 排序题相关方法
+  moveOrderItem(index) {
+    const container = document.getElementById('order-container');
+    const items = container.querySelectorAll('.order-item');
+    
+    if (this.selectedOrderIndex === undefined) {
+      this.selectedOrderIndex = index;
+      items[index].classList.add('selected');
+    } else {
+      // 交换两个项目
+      const parent = items[0].parentNode;
+      const item1 = items[this.selectedOrderIndex];
+      const item2 = items[index];
+      
+      const next1 = item1.nextSibling;
+      const next2 = item2.nextSibling;
+      
+      parent.insertBefore(item1, next2);
+      parent.insertBefore(item2, next1);
+      
+      // 更新序号
+      parent.querySelectorAll('.order-item').forEach((item, idx) => {
+        item.querySelector('.order-num').textContent = idx + 1;
+        item.classList.remove('selected');
+      });
+      
+      delete this.selectedOrderIndex;
+    }
+  }
+  
+  submitOrder() {
+    const container = document.getElementById('order-container');
+    const items = container.querySelectorAll('.order-item');
+    const currentOrder = Array.from(items).map(item => parseInt(item.dataset.index));
+    const question = this.data.questions[this.currentQuestion];
+    const isCorrect = JSON.stringify(currentOrder) === JSON.stringify(question.correctOrder);
+    
+    items.forEach(item => {
+      item.style.pointerEvents = 'none';
+      item.classList.add(isCorrect ? 'correct' : 'wrong');
+    });
+    
+    this.showFeedback(isCorrect, question.explanation);
+    
+    this.answers.push({
+      question: this.currentQuestion,
+      selected: currentOrder,
+      correct: isCorrect
+    });
+    
+    if (isCorrect) this.score++;
+    
+    setTimeout(() => this.showNextButton(), 1500);
+  }
+  
+  // 匹配题相关方法
+  selectMatchLeft(index) {
+    const items = document.querySelectorAll('.left-item');
+    items.forEach(item => item.classList.remove('selected'));
+    items[index].classList.add('selected');
+    this.selectedLeft = index;
+  }
+  
+  selectMatchRight(index) {
+    if (this.selectedLeft === null) return;
+    
+    const leftItems = document.querySelectorAll('.left-item');
+    const rightItems = document.querySelectorAll('.right-item');
+    
+    // 检查是否已配对
+    const existingPair = this.matchPairs.find(p => p.left === this.selectedLeft);
+    if (existingPair) {
+      existingPair.right = index;
+    } else {
+      this.matchPairs.push({ left: this.selectedLeft, right: index });
+    }
+    
+    // 更新显示
+    leftItems[this.selectedLeft].classList.remove('selected');
+    leftItems[this.selectedLeft].classList.add('matched');
+    rightItems[index].classList.add('matched');
+    
+    // 显示配对结果
+    const resultDiv = document.getElementById('match-result');
+    resultDiv.innerHTML = this.matchPairs.map(p => `
+      <span class="match-pair">${this.data.questions[this.currentQuestion].left[p.left]} 
+      ↔ ${this.data.questions[this.currentQuestion].right[p.right]}</span>
+    `).join('');
+    
+    this.selectedLeft = null;
+  }
+  
+  submitMatch() {
+    const question = this.data.questions[this.currentQuestion];
+    const userPairs = this.matchPairs.map(p => `${p.left}-${p.right}`).sort().join(',');
+    const correctPairs = question.correctPairs.map(p => `${p[0]}-${p[1]}`).sort().join(',');
+    const isCorrect = userPairs === correctPairs;
+    
+    document.querySelectorAll('.match-item').forEach(item => {
+      item.style.pointerEvents = 'none';
+    });
+    
+    this.showFeedback(isCorrect, question.explanation);
+    
+    this.answers.push({
+      question: this.currentQuestion,
+      selected: this.matchPairs,
+      correct: isCorrect
+    });
+    
+    if (isCorrect) this.score++;
+    
+    setTimeout(() => this.showNextButton(), 1500);
+  }
+  
+  // 拖拽填空题相关方法
+  selectDragOption(index) {
+    const options = document.querySelectorAll('.drag-option');
+    options.forEach(opt => opt.classList.remove('selected'));
+    options[index].classList.add('selected');
+    this.selectedDragOption = index;
+  }
+  
+  dropToSlot(index) {
+    if (this.selectedDragOption === null) return;
+    
+    const slots = document.querySelectorAll('.drag-slot');
+    const question = this.data.questions[this.currentQuestion];
+    
+    slots[index].textContent = question.options[this.selectedDragOption];
+    slots[index].dataset.value = this.selectedDragOption;
+    slots[index].classList.add('filled');
+    
+    this.dragSelections[index] = this.selectedDragOption;
+    
+    document.querySelectorAll('.drag-option')[this.selectedDragOption].classList.remove('selected');
+    this.selectedDragOption = null;
+  }
+  
+  submitDrag() {
+    const question = this.data.questions[this.currentQuestion];
+    const userAnswers = question.slots.map((_, idx) => this.dragSelections[idx]);
+    const isCorrect = JSON.stringify(userAnswers) === JSON.stringify(question.correctAnswers);
+    
+    document.querySelectorAll('.drag-slot').forEach(slot => {
+      slot.style.pointerEvents = 'none';
+    });
+    document.querySelectorAll('.drag-option').forEach(opt => {
+      opt.style.pointerEvents = 'none';
+    });
+    
+    this.showFeedback(isCorrect, question.explanation);
+    
+    this.answers.push({
+      question: this.currentQuestion,
+      selected: userAnswers,
       correct: isCorrect
     });
     
