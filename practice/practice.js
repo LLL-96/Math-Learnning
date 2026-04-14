@@ -1330,6 +1330,374 @@ const practiceDB = {
         explanation: '分子相同，分母小的分数大，1/3 > 1/4。'
       }
     ]
+  },
+  // 三年级下册
+  'grade3-unit1-2': {
+    title: '位置与方向（一）',
+    questions: [
+      {
+        type: 'choice',
+        question: '太阳从____方升起，从____方落下。',
+        options: ['东,西', '西,东', '南,北', '北,南'],
+        answer: 0,
+        explanation: '太阳从东方升起，从西方落下。'
+      },
+      {
+        type: 'choice',
+        question: '面向北方，后面是____方。',
+        options: ['东', '南', '西', '北'],
+        answer: 1,
+        explanation: '面向北方时，后面是南方。'
+      },
+      {
+        type: 'choice',
+        question: '地图通常是按上____下____左____右____绘制的。',
+        options: ['北,南,西,东', '南,北,东,西', '东,西,南,北', '西,东,北,南'],
+        answer: 0,
+        explanation: '地图通常按上北下南、左西右东绘制。'
+      }
+    ]
+  },
+  'grade3-unit2-2': {
+    title: '除数是一位数的除法',
+    questions: [
+      {
+        type: 'choice',
+        question: '84 ÷ 4 = ?',
+        options: ['21', '22', '20', '24'],
+        answer: 0,
+        explanation: '84÷4，8÷4=2，4÷4=1，所以是21。'
+      },
+      {
+        type: 'choice',
+        question: '0 ÷ 5 = ?',
+        options: ['5', '1', '0', '无法计算'],
+        answer: 2,
+        explanation: '0除以任何非零数都得0。'
+      },
+      {
+        type: 'fill',
+        question: '96 ÷ 3 = ____',
+        answer: '32',
+        explanation: '96÷3=32。'
+      },
+      {
+        type: 'choice',
+        question: '有余数的除法中，余数必须____除数。',
+        options: ['大于', '小于', '等于', '大于或等于'],
+        answer: 1,
+        explanation: '余数必须小于除数。'
+      }
+    ]
+  },
+  'grade3-unit3-2': {
+    title: '复式统计表',
+    questions: [
+      {
+        type: 'choice',
+        question: '复式统计表可以表示____组数据。',
+        options: ['1', '2', '多', '3'],
+        answer: 2,
+        explanation: '复式统计表可以表示多组数据，便于比较。'
+      },
+      {
+        type: 'choice',
+        question: '统计表由____组成。',
+        options: ['行和列', '只有行', '只有列', '数字'],
+        answer: 0,
+        explanation: '统计表由行和列组成。'
+      }
+    ]
+  },
+  'grade3-unit4-2': {
+    title: '两位数乘两位数',
+    questions: [
+      {
+        type: 'choice',
+        question: '12 × 13 = ?',
+        options: ['156', '146', '136', '166'],
+        answer: 0,
+        explanation: '12×13=156。'
+      },
+      {
+        type: 'choice',
+        question: '25 × 40 = ?',
+        options: ['100', '1000', '10000', '100000'],
+        answer: 1,
+        explanation: '25×40=1000。'
+      },
+      {
+        type: 'fill',
+        question: '30 × 50 = ____',
+        answer: '1500',
+        explanation: '30×50=1500。'
+      }
+    ]
+  },
+  'grade3-unit5-2': {
+    title: '面积',
+    questions: [
+      {
+        type: 'choice',
+        question: '边长1厘米的正方形，面积是____。',
+        options: ['1厘米', '1平方厘米', '1立方米', '1平方分米'],
+        answer: 1,
+        explanation: '边长1厘米的正方形面积是1平方厘米。'
+      },
+      {
+        type: 'choice',
+        question: '长方形面积 = ____。',
+        options: ['长+宽', '长×宽', '长-宽', '长÷宽'],
+        answer: 1,
+        explanation: '长方形面积=长×宽。'
+      },
+      {
+        type: 'fill',
+        question: '一个长方形长8厘米，宽5厘米，面积是____平方厘米。',
+        answer: '40',
+        explanation: '面积=8×5=40平方厘米。'
+      }
+    ]
+  },
+  'grade3-unit6-2': {
+    title: '年、月、日',
+    questions: [
+      {
+        type: 'choice',
+        question: '一年有____个月。',
+        options: ['10', '11', '12', '13'],
+        answer: 2,
+        explanation: '一年有12个月。'
+      },
+      {
+        type: 'choice',
+        question: '大月有____天。',
+        options: ['28', '29', '30', '31'],
+        answer: 3,
+        explanation: '大月有31天。'
+      },
+      {
+        type: 'choice',
+        question: '平年2月有____天。',
+        options: ['28', '29', '30', '31'],
+        answer: 0,
+        explanation: '平年2月有28天，闰年2月有29天。'
+      }
+    ]
+  },
+  'grade3-unit7-2': {
+    title: '小数的初步认识',
+    questions: [
+      {
+        type: 'choice',
+        question: '0.5读作____。',
+        options: ['零点五', '零五', '五分', '五'],
+        answer: 0,
+        explanation: '0.5读作零点五。'
+      },
+      {
+        type: 'choice',
+        question: '1元5角写成小数是____元。',
+        options: ['1.5', '0.15', '15', '0.5'],
+        answer: 0,
+        explanation: '5角=0.5元，1元5角=1.5元。'
+      },
+      {
+        type: 'fill',
+        question: '0.3 + 0.4 = ____',
+        answer: '0.7',
+        explanation: '0.3+0.4=0.7。'
+      }
+    ]
+  },
+  'grade3-unit8-2': {
+    title: '数学广角-搭配（二）',
+    questions: [
+      {
+        type: 'choice',
+        question: '用1、2、3能组成____个不同的两位数。',
+        options: ['3', '6', '9', '12'],
+        answer: 1,
+        explanation: '12、13、21、23、31、32，共6个。'
+      },
+      {
+        type: 'choice',
+        question: '从甲地到乙地有2条路，从乙地到丙地有3条路，从甲地到丙地有____种走法。',
+        options: ['5种', '6种', '8种', '9种'],
+        answer: 1,
+        explanation: '2×3=6种走法。'
+      }
+    ]
+  },
+  'grade3-unit9-2': {
+    title: '总复习',
+    questions: [
+      {
+        type: 'choice',
+        question: '最大的三位数是____。',
+        options: ['900', '990', '999', '1000'],
+        answer: 2,
+        explanation: '最大的三位数是999。'
+      },
+      {
+        type: 'choice',
+        question: '1千米 = ____米。',
+        options: ['10', '100', '1000', '10000'],
+        answer: 2,
+        explanation: '1千米=1000米。'
+      }
+    ]
+  },
+  // 四年级上册
+  'grade4-unit1': {
+    title: '大数的认识',
+    questions: [
+      {
+        type: 'choice',
+        question: '10个一万是____。',
+        options: ['一百万', '十万', '一万', '一亿'],
+        answer: 1,
+        explanation: '10个一万是十万。'
+      },
+      {
+        type: 'choice',
+        question: '100个一百万是____。',
+        options: ['一千万', '一亿', '十亿', '一百万'],
+        answer: 1,
+        explanation: '100个一百万是一亿。'
+      },
+      {
+        type: 'fill',
+        question: '一个数从右边起，第五位是____位。',
+        answer: '万',
+        explanation: '从右起：个、十、百、千、万，第五位是万位。'
+      }
+    ]
+  },
+  'grade4-unit2': {
+    title: '公顷和平方千米',
+    questions: [
+      {
+        type: 'choice',
+        question: '1公顷 = ____平方米。',
+        options: ['100', '1000', '10000', '100000'],
+        answer: 2,
+        explanation: '1公顷=10000平方米。'
+      },
+      {
+        type: 'choice',
+        question: '1平方千米 = ____公顷。',
+        options: ['10', '100', '1000', '10000'],
+        answer: 1,
+        explanation: '1平方千米=100公顷。'
+      }
+    ]
+  },
+  'grade4-unit3': {
+    title: '角的度量',
+    questions: [
+      {
+        type: 'choice',
+        question: '一个周角 = ____度。',
+        options: ['90', '180', '270', '360'],
+        answer: 3,
+        explanation: '一个周角=360度。'
+      },
+      {
+        type: 'choice',
+        question: '一个平角 = ____个直角。',
+        options: ['1', '2', '3', '4'],
+        answer: 1,
+        explanation: '平角=180度，直角=90度，180÷90=2。'
+      },
+      {
+        type: 'fill',
+        question: '用量角器量角时，量角器的中心要和角的____重合。',
+        answer: '顶点',
+        explanation: '量角器的中心要和角的顶点重合。'
+      }
+    ]
+  },
+  'grade4-unit4': {
+    title: '三位数乘两位数',
+    questions: [
+      {
+        type: 'choice',
+        question: '125 × 8 = ?',
+        options: ['100', '1000', '10000', '800'],
+        answer: 1,
+        explanation: '125×8=1000。'
+      },
+      {
+        type: 'choice',
+        question: '250 × 40 = ?',
+        options: ['1000', '10000', '100000', '100'],
+        answer: 1,
+        explanation: '250×40=10000。'
+      }
+    ]
+  },
+  'grade4-unit5': {
+    title: '平行四边形和梯形',
+    questions: [
+      {
+        type: 'choice',
+        question: '平行四边形的对边____。',
+        options: ['相等', '不相等', '垂直', '平行'],
+        answer: 0,
+        explanation: '平行四边形的对边相等且平行。'
+      },
+      {
+        type: 'choice',
+        question: '梯形有____组对边平行。',
+        options: ['0', '1', '2', '3'],
+        answer: 1,
+        explanation: '梯形只有一组对边平行。'
+      }
+    ]
+  },
+  'grade4-unit6': {
+    title: '除数是两位数的除法',
+    questions: [
+      {
+        type: 'choice',
+        question: '360 ÷ 40 = ?',
+        options: ['9', '90', '8', '80'],
+        answer: 0,
+        explanation: '360÷40=9。'
+      },
+      {
+        type: 'choice',
+        question: '试商时，如果余数比除数大，说明商____。',
+        options: ['正好', '偏大', '偏小', '无法确定'],
+        answer: 2,
+        explanation: '余数比除数大，说明商偏小，需要调大。'
+      }
+    ]
+  },
+  'grade4-unit7': {
+    title: '条形统计图',
+    questions: [
+      {
+        type: 'choice',
+        question: '条形统计图能清楚地看出数量的____。',
+        options: ['多少', '变化', '比例', '关系'],
+        answer: 0,
+        explanation: '条形统计图能清楚地看出数量的多少。'
+      }
+    ]
+  },
+  'grade4-unit8': {
+    title: '数学广角-优化',
+    questions: [
+      {
+        type: 'choice',
+        question: '烙一张饼需要4分钟（正反面各2分钟），一次只能烙2张，烙3张饼最少需要____分钟。',
+        options: ['6', '8', '10', '12'],
+        answer: 0,
+        explanation: '先烙1、2正面（2分），再烙1反面、3正面（2分），最后烙2、3反面（2分），共6分钟。'
+      }
+    ]
   }
 };
 
