@@ -5,45 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>总复习 | L-MATH 乐学数学</title>
   <link rel="stylesheet" href="../../assets/css/style.css">
-  <link rel="stylesheet" href="../../components/footer.css">
+  <link rel="stylesheet" href="../../assets/css/unit.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: linear-gradient(180deg, #FFF5EB 0%, #FFF 100%); min-height: 100vh; }
-    .unit-header { background: linear-gradient(135deg, #FF6B6B 0%, #FF8787 100%); color: white; padding: 48px 24px 32px; text-align: center; }
-    .unit-header .back-btn { display: inline-flex; align-items: center; gap: 6px; color: white; font-weight: 600; font-size: 0.95rem; margin-bottom: 20px; opacity: 0.9; }
-    .unit-header .back-btn:hover { opacity: 1; text-decoration: underline; }
-    .unit-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.8rem; margin-bottom: 8px; }
-    .unit-header .unit-desc { opacity: 0.9; font-size: 0.95rem; }
-    .unit-content { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; }
-    .lesson-card { background: white; border-radius: 20px; padding: 28px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; }
-    .lesson-title { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.3rem; color: #E03131; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
-    .lesson-title .num { width: 32px; height: 32px; background: #FF6B6B; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 700; }
-    .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 16px 0; }
-    .review-card { background: #FFF5F5; border-radius: 16px; padding: 20px; border: 2px solid #FFC9C9; }
-    .review-card h4 { color: #E03131; font-size: 1.1rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-    .review-card ul { padding-left: 16px; color: #555; font-size: 0.85rem; line-height: 1.9; }
-    .formula-section { background: #F8F9FA; border-radius: 16px; padding: 24px; margin: 16px 0; }
-    .formula-section h4 { color: #E03131; font-size: 1.1rem; margin-bottom: 16px; }
-    .formula-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
-    .formula-item { background: white; border-radius: 12px; padding: 16px; text-align: center; border: 1px solid #E9ECEF; }
-    .formula-item .name { font-size: 0.85rem; color: #888; margin-bottom: 8px; }
-    .formula-item .math { font-size: 1.1rem; color: #E03131; font-weight: 700; font-family: monospace; }
-    .tip-box { background: linear-gradient(135deg, #FFF9DB 0%, #FFF3BF 100%); border-radius: 12px; padding: 20px; border-left: 4px solid #FFD43B; margin: 16px 0; }
-    .tip-box h4 { color: #F08C00; margin-bottom: 8px; }
-    .tip-box p { color: #666; font-size: 0.9rem; line-height: 1.8; }
-    .practice-box { background: linear-gradient(135deg, #FFF5F5 0%, #FFE0E0 100%); border-radius: 16px; padding: 24px; border: 2px solid #FF6B6B; }
-    .practice-box h3 { font-family: 'ZCOOL KuaiLe', cursive; color: #E03131; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
-    .question { background: white; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 12px; }
-    .q-num { width: 28px; height: 28px; background: #FF6B6B; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
-    .q-text { font-size: 0.95rem; color: #333; line-height: 1.6; }
-    .checklist { background: white; border-radius: 12px; padding: 20px; margin: 16px 0; }
-    .checklist h4 { color: #E03131; margin-bottom: 12px; }
-    .checklist-item { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
-    .checklist-item:last-child { border-bottom: none; }
-    .check-icon { width: 24px; height: 24px; border: 2px solid #FF6B6B; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #FF6B6B; font-weight: bold; }
+    body { padding-top: 64px; }
+    .grade-header, .unit-header { margin-top: -64px; padding-top: calc(48px + 64px); }
+
+    .unit-header { background: linear-gradient(135deg, #FF6B6B 0%, #FF8787 100%); }
+    .lesson-title { color: #E03131; }
+    .lesson-title .num { background: #E03131; }
+    .learn-box { background: #F3F0FF; border-left-color: #9775FA; }
+    .learn-box h4 { color: #7C3AED; }
+    .practice-box { background: linear-gradient(135deg, #FFF5F5 0%, #FFE0E0 100%); border-color: #FF6B6B; }
+    .practice-box h3 { color: #E03131; }
+    .q-num { background: #FF6B6B; }
   </style>
+  <link rel="stylesheet" href="../../components/navbar.css">
 </head>
 <body>
+  <nav class="navbar" id="main-navbar">
+    <div class="nav-brand">
+      <a href="../../index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
+        <span class="nav-logo">🧮</span>
+        <span class="nav-title">L-MATH 乐学数学</span>
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="../../index.html">首页</a>
+      <a href="../../practice/index.html">练习中心</a>
+    </div>
+  </nav>
   <div class="unit-header">
     <a href="index.html" class="back-btn">← 返回六年级上册</a>
     <h1>第九单元：总复习</h1>

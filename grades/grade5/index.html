@@ -5,28 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>五年级 · 上 | L-MATH 乐学数学</title>
   <link rel="stylesheet" href="../../assets/css/style.css">
-  <link rel="stylesheet" href="../../components/grade-cards.css">
-  <link rel="stylesheet" href="../../components/footer.css">
+  <link rel="stylesheet" href="../../assets/css/grade.css">
   <style>
-    body { background: #FFFBF5; }
-    .grade-header { background: linear-gradient(135deg, #4DABF7 0%, #74C0FC 100%); color: white; padding: 48px 24px 64px; text-align: center; }
-    .grade-header .grade-emoji { font-size: 3rem; margin-bottom: 12px; }
-    .grade-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 2rem; margin-bottom: 8px; }
-    .grade-header p { opacity: 0.9; }
-    .grade-header .grade-badge { display: inline-block; background: rgba(255,255,255,0.25); padding: 4px 16px; border-radius: 999px; font-size: 0.85rem; margin-top: 12px; }
-    .grade-body { padding: 32px 24px; max-width: 900px; margin: 0 auto; }
-    .unit-card { background: white; border-radius: 16px; padding: 20px 24px; margin-bottom: 16px; display: flex; align-items: center; gap: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid #f0f0f0; transition: all 0.3s; text-decoration: none; color: inherit; }
-    .unit-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
-    .unit-num { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; color: white; flex-shrink: 0; }
-    .unit-info { flex: 1; }
-    .unit-info h3 { font-size: 1.1rem; color: #2D3436; margin-bottom: 4px; }
-    .unit-info p { font-size: 0.85rem; color: #888; }
-    .unit-arrow { color: #ccc; font-size: 1.2rem; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: #2b7ed9; font-weight: 600; font-size: 0.95rem; margin-bottom: 24px; }
-    .back-link:hover { text-decoration: underline; }
+    body { padding-top: 64px; }
+    .grade-header, .unit-header { margin-top: -64px; padding-top: calc(48px + 64px); }
+
+    .grade-header { background: linear-gradient(135deg, #4DABF7 0%, #74C0FC 100%); }
   </style>
+  <link rel="stylesheet" href="../../components/navbar.css">
 </head>
 <body>
+  <nav class="navbar" id="main-navbar">
+    <div class="nav-brand">
+      <a href="../../index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
+        <span class="nav-logo">🧮</span>
+        <span class="nav-title">L-MATH 乐学数学</span>
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="../../index.html">首页</a>
+      <a href="../../practice/index.html">练习中心</a>
+    </div>
+  </nav>
   <div class="grade-header">
     <div class="grade-emoji">🌟</div>
     <h1>五年级 · 上册</h1>

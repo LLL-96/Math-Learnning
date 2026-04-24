@@ -1,0 +1,544 @@
+/* ============================================
+   L-MATH 乐学数学 - 单元页面共享样式
+   用于 grades/gradeX/unitN.html 页面
+   ============================================ */
+
+/* 页面背景 */
+body {
+  background: linear-gradient(180deg, #FFF5EB 0%, #FFF 100%);
+  min-height: 100vh;
+}
+
+/* 单元头部 */
+.unit-header {
+  color: white;
+  padding: 48px 24px 32px;
+  text-align: center;
+}
+
+.unit-header .back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.unit-header .back-btn:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.unit-header h1 {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.unit-header .unit-desc {
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+/* 单元内容区 */
+.unit-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+/* 课程卡片 */
+.lesson-card {
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border: 1px solid #f0f0f0;
+}
+
+/* 课程标题 */
+.lesson-title {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lesson-title .num {
+  width: 32px;
+  height: 32px;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* 学习框 */
+.learn-box {
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  border-left: 4px solid;
+}
+
+.learn-box h4 {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.learn-box ul {
+  padding-left: 20px;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+/* 示例框 */
+.example-box {
+  background: #F8F9FA;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 16px 0;
+}
+
+.example-box h4 {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 计算步骤 */
+.calc-step {
+  background: white;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 12px 0;
+}
+
+.calc-step .formula {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 8px 0;
+  font-family: monospace;
+}
+
+.calc-step p {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* 步骤框 */
+.step-box {
+  background: white;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 12px 0;
+  border: 2px solid #FFF5F5;
+}
+
+.step-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+/* 计算演示 */
+.calc-demo {
+  font-family: monospace;
+  font-size: 1.3rem;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 16px 0;
+}
+
+.calc-item {
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.calc-item .op {
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.calc-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 2rem;
+  flex-wrap: wrap;
+}
+
+.calc-operator {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: white;
+}
+
+/* 图片行 */
+.pic-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 3rem;
+  margin: 16px 0;
+}
+
+/* 数字卡片 */
+.number-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 2.5rem;
+  margin: 20px 0;
+}
+
+.number-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  min-width: 100px;
+}
+
+.number-card .digit {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+.number-card .objects {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+/* 练习框 */
+.practice-box {
+  border-radius: 16px;
+  padding: 24px;
+  border: 2px solid;
+}
+
+.practice-box h3 {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 题目 */
+.question {
+  background: white;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.q-num {
+  width: 28px;
+  height: 28px;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.q-text {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* 检查按钮 */
+.check-btn {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 20px auto 0;
+  padding: 12px 24px;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.check-btn:hover {
+  transform: scale(1.02);
+}
+
+/* 面包屑导航 */
+.breadcrumb {
+  background: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-item span {
+  color: #888;
+}
+
+.breadcrumb-separator {
+  color: #ccc;
+}
+
+/* 复习网格（六年级总复习等） */
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.review-card {
+  border-radius: 16px;
+  padding: 20px;
+  border: 2px solid;
+}
+
+.review-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.review-card ul {
+  padding-left: 16px;
+  color: #555;
+  font-size: 0.85rem;
+  line-height: 1.9;
+}
+
+/* 公式区 */
+.formula-section {
+  background: #F8F9FA;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 16px 0;
+}
+
+.formula-section h4 {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.formula-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.formula-item {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  border: 1px solid #E9ECEF;
+}
+
+.formula-item .name {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.formula-item .math {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: monospace;
+}
+
+/* 提示框 */
+.tip-box {
+  border-radius: 12px;
+  padding: 20px;
+  border-left: 4px solid #FFD43B;
+  margin: 16px 0;
+}
+
+.tip-box h4 {
+  margin-bottom: 8px;
+}
+
+.tip-box p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+/* 检查清单 */
+.checklist {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 16px 0;
+}
+
+.checklist h4 {
+  margin-bottom: 12px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.checklist-item:last-child {
+  border-bottom: none;
+}
+
+.check-icon {
+  width: 24px;
+  height: 24px;
+  border: 2px solid;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* 植树问题专用 */
+.tree-demo {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 12px 0;
+  border: 2px solid #E9ECEF;
+  text-align: center;
+}
+
+.tree-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+
+.tree-icon {
+  font-size: 2rem;
+}
+
+.gap-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.formula-box {
+  border-radius: 12px;
+  padding: 20px;
+  margin: 16px 0;
+  text-align: center;
+}
+
+.formula-box .formula {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.formula-box .desc {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 8px;
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.case-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  border: 2px solid #E9ECEF;
+  text-align: center;
+}
+
+.case-card h5 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.case-card p {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* ============================================
+   年级主题色 - 通过 CSS 变量覆盖
+   在各 unit 页面的 <style> 中只需设置：
+   :root { --theme: #FF6B6B; --theme-light: #FFF5F5; }
+   即可自动适配颜色
+   ============================================ */
+
+/* 通用主题色适配（当设置了 --theme 变量时） */
+.theme-grade1 { --theme: #FF6B6B; --theme-light: #FFF5F5; --theme-dark: #E03131; }
+.theme-grade2 { --theme: #FFA94D; --theme-light: #FFF9E6; --theme-dark: #E67700; }
+.theme-grade3 { --theme: #FFD93D; --theme-light: #FFF9DB; --theme-dark: #E8B400; }
+.theme-grade4 { --theme: #69DB7C; --theme-light: #E8F8F5; --theme-dark: #2D8A4E; }
+.theme-grade5 { --theme: #4DABF7; --theme-light: #E8F4FF; --theme-dark: #2b7ed9; }
+.theme-grade6 { --theme: #9775FA; --theme-light: #F3F0FF; --theme-dark: #7C3AED; }

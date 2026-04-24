@@ -1,0 +1,195 @@
+/* ============================================
+   L-MATH 乐学数学 - 年级列表页共享样式
+   用于 grades/gradeX/index.html 和 index2.html
+   ============================================ */
+
+/* 页面背景 */
+body {
+  background: #FFFBF5;
+}
+
+/* 年级头部 */
+.grade-header {
+  color: white;
+  padding: 48px 24px 64px;
+  text-align: center;
+}
+
+.grade-header .grade-emoji {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.grade-header h1 {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.grade-header p {
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+.grade-header .grade-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.25);
+  padding: 4px 16px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin-top: 12px;
+}
+
+/* 年级主体 */
+.grade-body {
+  padding: 32px 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* 单元卡片 */
+.unit-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.unit-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.unit-num {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.unit-info {
+  flex: 1;
+}
+
+.unit-info h3 {
+  font-size: 1.1rem;
+  color: #2D3436;
+  margin-bottom: 4px;
+}
+
+.unit-info p {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.unit-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.unit-desc {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.unit-arrow {
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+/* 返回链接 */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: #FF6B6B;
+}
+
+/* 学期切换标签 */
+.semester-tabs {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.semester-tab {
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: white;
+  color: #666;
+  border: 2px solid #eee;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.semester-tab.active {
+  background: #FF6B6B;
+  color: white;
+  border-color: #FF6B6B;
+}
+
+.semester-tab:hover:not(.active) {
+  border-color: #FF6B6B;
+  color: #FF6B6B;
+}
+
+/* 面包屑导航 */
+.breadcrumb {
+  background: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.breadcrumb-item a {
+  color: #FF6B6B;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-item span {
+  color: #888;
+}
+
+.breadcrumb-separator {
+  color: #ccc;
+}

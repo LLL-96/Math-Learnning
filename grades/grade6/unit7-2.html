@@ -1,4 +1,31 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>数学广角——鸽巢问题 | L-MATH 乐学数学</title><link rel="stylesheet" href="../../assets/css/style.css"><link rel="stylesheet" href="../../components/footer.css"><style>* { margin: 0; padding: 0; box-sizing: border-box; } body { background: linear-gradient(180deg, #FFF5EB 0%, #FFF 100%); min-height: 100vh; } .unit-header { background: linear-gradient(135deg, #FF6B6B 0%, #FFA8A8 100%); color: white; padding: 48px 24px 32px; text-align: center; } .unit-header .back-btn { color: white; font-weight: 600; font-size: 0.95rem; margin-bottom: 20px; opacity: 0.9; display: inline-flex; align-items: center; gap: 6px; text-decoration: none; } .unit-header h1 { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.8rem; margin-bottom: 8px; } .unit-header .unit-desc { opacity: 0.9; font-size: 0.95rem; } .unit-content { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; } .lesson-card { background: white; border-radius: 20px; padding: 28px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; } .lesson-title { font-family: 'ZCOOL KuaiLe', cursive; font-size: 1.3rem; color: #FF6B6B; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; } .lesson-title .num { width: 32px; height: 32px; background: #FF6B6B; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 700; } .learn-box { background: #FFF5F5; border-radius: 12px; padding: 16px 20px; margin-bottom: 16px; border-left: 4px solid #FF6B6B; } .learn-box h4 { color: #FF6B6B; margin-bottom: 8px; font-size: 0.95rem; } .learn-box ul { padding-left: 20px; color: #555; font-size: 0.9rem; line-height: 1.8; } .practice-box { background: linear-gradient(135deg, #E8F8F5 0%, #D6FFF0 100%); border-radius: 16px; padding: 24px; border: 2px solid #69DB7C; } .practice-box h3 { font-family: 'ZCOOL KuaiLe', cursive; color: #2D8A4E; margin-bottom: 16px; } .question { background: white; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; } .q-num { width: 28px; height: 28px; background: #69DB7C; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; } .q-text { font-size: 0.95rem; color: #333; }</style></head>
-<body><div class="unit-header"><a href="index2.html" class="back-btn">← 返回六年级下册</a><h1>第七单元：数学广角——鸽巢问题</h1><p class="unit-desc">抽屉原理</p></div><div class="unit-content"><div class="lesson-card"><div class="lesson-title"><span class="num">1</span>学习目标</div><div class="learn-box"><h4>📌 本课重点</h4><ul><li>理解鸽巢问题的原理</li><li>会用抽屉原理解题</li><li>能进行简单的推理</li></ul></div></div><div class="lesson-card"><div class="lesson-title"><span class="num">2</span>抽屉原理</div><div class="learn-box"><h4>🐦 基本原理</h4><ul><li>把n+1个物品放入n个抽屉，至少有一个抽屉有2个或以上物品</li><li>例：把4支笔放进3个笔筒，至少1个笔筒有2支笔</li></ul></div></div><div class="lesson-card"><div class="lesson-title"><span class="num">3</span>解题方法</div><div class="learn-box"><h4>📝 例题</h4><ul><li>某班13名同学，至少有几人在同月出生？</li><li>解：13÷12=1……1，所以至少有2人</li><li>方法：物体数÷抽屉数，看商和余数</li></ul></div></div><div class="practice-box"><h3>✏️ 练一练</h3><div class="question"><span class="q-num">1</span><span class="q-text">把5个苹果放进4个盘子，至少有几个苹果的盘子里有2个以上苹果？</span></div><div class="question"><span class="q-num">2</span><span class="q-text">25双袜子（颜色相同），至少取几只必有1双？</span></div><div class="question"><span class="q-num">3</span><span class="q-text">说说什么是"至少"和"保证"？</span></div></div></div><footer class="footer"><div class="container"><p class="footer-text">🧮 L-MATH 乐学数学 六年级下册</p></div></footer></body></html>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>数学广角——鸽巢问题 | L-MATH 乐学数学</title><link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/unit.css">
+  <style>
+    body { padding-top: 64px; }
+    .grade-header, .unit-header { margin-top: -64px; padding-top: calc(48px + 64px); }
+
+    .unit-header { background: linear-gradient(135deg, #FF6B6B 0%, #FFA8A8 100%); }
+    .lesson-title { color: #FF6B6B; }
+    .lesson-title .num { background: #FF6B6B; }
+    .learn-box { background: #FFF5F5; border-left-color: #FF6B6B; }
+    .learn-box h4 { color: #FF6B6B; }
+    .practice-box { background: linear-gradient(135deg, #E8F8F5 0%, #D6FFF0 100%); border-color: #69DB7C; }
+    .practice-box h3 { color: #2D8A4E; }
+    .q-num { background: #69DB7C; }
+  </style>  <link rel="stylesheet" href="../../components/navbar.css">
+</head>
+<body>
+  <nav class="navbar" id="main-navbar">
+    <div class="nav-brand">
+      <a href="../../index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
+        <span class="nav-logo">🧮</span>
+        <span class="nav-title">L-MATH 乐学数学</span>
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="../../index.html">首页</a>
+      <a href="../../practice/index.html">练习中心</a>
+    </div>
+  </nav><div class="unit-header"><a href="index2.html" class="back-btn">← 返回六年级下册</a><h1>第七单元：数学广角——鸽巢问题</h1><p class="unit-desc">抽屉原理</p></div><div class="unit-content"><div class="lesson-card"><div class="lesson-title"><span class="num">1</span>学习目标</div><div class="learn-box"><h4>📌 本课重点</h4><ul><li>理解鸽巢问题的原理</li><li>会用抽屉原理解题</li><li>能进行简单的推理</li></ul></div></div><div class="lesson-card"><div class="lesson-title"><span class="num">2</span>抽屉原理</div><div class="learn-box"><h4>🐦 基本原理</h4><ul><li>把n+1个物品放入n个抽屉，至少有一个抽屉有2个或以上物品</li><li>例：把4支笔放进3个笔筒，至少1个笔筒有2支笔</li></ul></div></div><div class="lesson-card"><div class="lesson-title"><span class="num">3</span>解题方法</div><div class="learn-box"><h4>📝 例题</h4><ul><li>某班13名同学，至少有几人在同月出生？</li><li>解：13÷12=1……1，所以至少有2人</li><li>方法：物体数÷抽屉数，看商和余数</li></ul></div></div><div class="practice-box"><h3>✏️ 练一练</h3><div class="question"><span class="q-num">1</span><span class="q-text">把5个苹果放进4个盘子，至少有几个苹果的盘子里有2个以上苹果？</span></div><div class="question"><span class="q-num">2</span><span class="q-text">25双袜子（颜色相同），至少取几只必有1双？</span></div><div class="question"><span class="q-num">3</span><span class="q-text">说说什么是"至少"和"保证"？</span></div></div></div><footer class="footer"><div class="container"><p class="footer-text">🧮 L-MATH 乐学数学 六年级下册</p></div></footer></body></html>

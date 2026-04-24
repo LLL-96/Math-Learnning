@@ -288,8 +288,15 @@
     const urlParams = new URLSearchParams(window.location.search);
     const unitId = urlParams.get('unit') || 'grade1-unit1';
     
-    // 初始化练习
-    initPractice(unitId);
+    // 从unitId提取年级，按需加载对应题库
+    const grade = unitId.split('-')[0];
+    
+    loadGradeData(grade).then(() => {
+      initPractice(unitId);
+    }).catch(() => {
+      // 加载失败时仍然尝试初始化（可能已有缓存数据）
+      initPractice(unitId);
+    });
   </script>
 </body>
 </html>
