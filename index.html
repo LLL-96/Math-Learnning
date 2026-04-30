@@ -14,10 +14,17 @@
   <meta property="og:url" content="https://lll-96.github.io/Math-Learnning/">
   <meta property="og:image" content="https://lll-96.github.io/Math-Learnning/assets/images/og-image.svg">
   <link rel="canonical" href="https://lll-96.github.io/Math-Learnning/">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#FF6B35">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/bundle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="components/navbar.css">
+  <link rel="stylesheet" href="components/hero.css">
+  <link rel="stylesheet" href="components/grade-cards.css">
+  <link rel="stylesheet" href="components/footer.css">
 </head>
 <body>
   <!-- 导航栏 -->
@@ -216,6 +223,11 @@
       "priceCurrency": "CNY"
     }
   }
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').catch(() => {});
+    }
   </script>
 </body>
 </html>

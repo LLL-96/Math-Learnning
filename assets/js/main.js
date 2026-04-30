@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         navbar.classList.remove('navbar-scrolled');
       }
-    });
+    }, { passive: true });
   }
 
   // 滚动动画 - Intersection Observer

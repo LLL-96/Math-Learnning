@@ -1,0 +1,21 @@
+{
+  "name": "L-MATH 乐学数学",
+  "short_name": "L-MATH",
+  "description": "免费小学数学人教版学习平台，涵盖一至六年级全部知识点",
+  "start_url": "/Math-Learnning/",
+  "scope": "/Math-Learnning/",
+  "display": "standalone",
+  "background_color": "#FFFBF5",
+  "theme_color": "#FF6B35",
+  "orientation": "portrait-primary",
+  "lang": "zh-CN",
+  "categories": ["education", "kids"],
+  "icons": [
+    {
+      "src": "assets/images/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
